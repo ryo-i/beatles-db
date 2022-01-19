@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- スプシのデータをJSON化してBK [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - ビートルズ楽曲データをスプレッドシートで整理中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

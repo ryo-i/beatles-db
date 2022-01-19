@@ -15,10 +15,28 @@ function Inner() {
   // Hooks
   const [title, setTitle] = useState('内容が無いよう');
   const [text, setText] = useState('へんじがない、ただのしかばねのようだ。');
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const url = 'https://beatles-db-default-rtdb.firebaseio.com/values.json';
 
   useEffect(() => {
     hello();
-  });
+
+    async function getJsonData (url) {
+      try {
+        const res = await fetch(url);
+        const resJson = await res.json();
+        setIsLoaded(true);
+        console.log('resJson', resJson);
+      } catch(error) {
+        setIsLoaded(true);
+        setError(error);
+        console.log('err', error);
+      }
+    };
+
+    getJsonData(url);
+  }, []);
 
   // JSX
   return (
