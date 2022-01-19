@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- Vercelにデプロイ [#2](https://github.com/ryo-i/beatles-db/issues/2)
+- スプシのデータをJSON化してBK [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - ビートルズ楽曲データをスプレッドシートで整理中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
