@@ -51,11 +51,14 @@ function About() {
             <h1>{ pageTitle }</h1>
             <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
             <section>
+                <h2>進捗</h2>
+                <ul>
+                    <li>Realtime DBのデータをfetchで読み込んでconsoleに表示 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>ビートルズ楽曲データをスプレッドシートで整理中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
+                </ul>
+            </section>
+            <section>
                 <h2>使い方</h2>
-                <section>
-                    <h3>タイトル</h3>
-                    <p>説明説明説明説明説明説明説明説明</p>
-                </section>
                 <section>
                     <h3>タイトル</h3>
                     <p>説明説明説明説明説明説明説明説明</p>
