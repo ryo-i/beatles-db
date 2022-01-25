@@ -8,8 +8,8 @@
 
 ## 進捗（コミット）
 
+- メンバーのソロワークも同じ詳細度の項目にできるか調査中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- ビートルズ楽曲データをスプレッドシートで整理中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 
