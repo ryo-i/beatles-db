@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- メンバーのソロワークも同じ詳細度の項目にできるか調査中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- メンバーごとのパート列を追加し、追記中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）
