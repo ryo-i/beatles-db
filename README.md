@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- メンバーごとのパート列を追加し、追記中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- Beatles Firstとシングル5枚目まで追記 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）

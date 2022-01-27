@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>メンバーごとのパート列を追加し、追記中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
+                    <li>Beatles Firstとシングル5枚目まで追記 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                     <li>Realtime DBのデータをfetchで読み込んでconsoleに表示 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                 </ul>
             </section>
