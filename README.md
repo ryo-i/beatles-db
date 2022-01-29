@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 4thアルバムの入力終了 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- 5thアルバムの入力終了 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）
