@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ホワイトアルバム2枚目を追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- イエローサブマリンを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）
