@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>EP盤の入力、編成列追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
+                    <li>ソロ作品のレーベル名を入力 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                     <li>Realtime DBのデータをfetchで読み込んでconsoleに表示 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                 </ul>
             </section>
