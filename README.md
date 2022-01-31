@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ソロ作品のレーベル名を入力 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- ソロ作品入力中（不思議の壁） [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）
