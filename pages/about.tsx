@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>ソロ作品入力中（不思議の壁） <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
+                    <li>不思議の壁、インドメンバーとロンドンメンバーに分けて記載 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                     <li>Realtime DBのデータをfetchで読み込んでconsoleに表示 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                 </ul>
             </section>
