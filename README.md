@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 不思議の壁、インドメンバーとロンドンメンバーに分けて記載 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- ジョンソロシングル、ライブまで入力 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）
