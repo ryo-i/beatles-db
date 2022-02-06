@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- Lennon-McCartneyのメイン作者、アビーロードまで入力 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- Lennon-McCartneyのメイン作者、レットイットビーまで入力 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）

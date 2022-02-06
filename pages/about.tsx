@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>Lennon-McCartneyのメイン作者、アビーロードまで入力 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
+                    <li>Lennon-McCartneyのメイン作者、レットイットビーまで入力 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                     <li>Realtime DBのデータをfetchで読み込んでconsoleに表示 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                 </ul>
             </section>
