@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- メンバーの参加不参加がわかる列を追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- ボーカルのメイン(and)、サブ(width)の区別（サブをカッコ付きに） [#1](https://github.com/ryo-i/beatles-db/issues/1)
 - Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）
