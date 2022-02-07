@@ -8,8 +8,8 @@
 
 ## 進捗（コミット）
 
+- Realtime DBに改訂版のデータをimportしてconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
-- Realtime DBのデータをfetchで読み込んでconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 
 ## 詳細（ブログ）
 
