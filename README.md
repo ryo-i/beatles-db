@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- Realtime DBに改訂版のデータをimportしてconsoleに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- データファイルをgitignoreでコミット除外 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
