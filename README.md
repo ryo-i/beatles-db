@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- とりあえずページに表示（未整形） [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 曲名、作品名、発売日のみ抜粋表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

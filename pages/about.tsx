@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>とりあえずページに表示（未整形） <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>曲名、作品名、発売日のみ抜粋表示 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
