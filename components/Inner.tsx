@@ -27,10 +27,13 @@ const Section = styled.section`
       dl {
         margin: 0;
         dt {
-          margin: 0 0 10px;
+          line-height: 1.25;
+          margin: 0 0 5px;
         }
         dd {
           font-size: 12px;
+          line-height: 1.5;
+          margin: 0;
         }
         .format {
           background: #ddd;
