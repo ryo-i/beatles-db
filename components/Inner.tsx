@@ -28,15 +28,30 @@ function Inner() {
   const [beatleData, setBeatleData] = useState([]);
   const [beatleKey, setBeatleKey] = useState([]);
   const [beatleVal, setBeatleVal] = useState([]);
+  const [sellDay, setSellDay] = useState(0);
+  const [artist, setArtist] = useState(0);
+  const [title, setTitle] = useState(0);
+  const [num, setNum] = useState(0);
+  const [song, setSong] = useState(0);
+
   const url = 'https://beatles-db-default-rtdb.firebaseio.com/values.json';
 
 
-  const getKey = (data) => {
-    console.log('data[0]', data[0]);
-    const result = [];
-
-    console.log('result', result);
-    setBeatleKey(result);
+  const setKeyNo = (data) => {
+    console.log('data', data);
+    for (let i = 0; i < data.length; i++) {
+      if (data[i] === '発売日') {
+        setSellDay(i);
+      } else if (data[i] === 'アーティスト') {
+        setArtist(i);
+      } else if (data[i] === '収録作品') {
+        setTitle(i);
+      } else if (data[i] === 'No.') {
+        setNum(i);
+      } else if (data[i] === '曲名') {
+        setSong(i);
+      }
+    }
   }
 
 
@@ -49,6 +64,7 @@ function Inner() {
         // console.log('resJson', resJson);
         setBeatleData(resJson);
         setBeatleKey(resJson[0]);
+        setKeyNo(resJson[0]);
 
         const getVal = [];
         for (let i = 1; i < resJson.length; i++) {
@@ -75,9 +91,9 @@ function Inner() {
             {beatleVal.map((data, index) =>
             <li key={index}>
               <dl>
-                <dt>{beatleKey[10]}:</dt><dd>{data[10]}</dd>
-                <dt>{beatleKey[7]}:</dt><dd>{data[7]}</dd>
-                <dt>{beatleKey[1]}:</dt><dd>{data[1]}</dd>
+                <dt>{beatleKey[num]}:</dt><dd>{data[num]}</dd>
+                <dt>{beatleKey[song]}:</dt><dd>{data[song]}</dd>
+                <dt>{beatleKey[sellDay]}:</dt><dd>{data[sellDay]}</dd>
               </dl>
             </li>
             )}
