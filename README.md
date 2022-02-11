@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- データ修正したので項目名で表示できるよう変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- レイアウトを手直し [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

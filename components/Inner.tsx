@@ -4,19 +4,45 @@ import styled from 'styled-components';
 
 // CSS in JS
 const Section = styled.section`
-  dl {
-    display: flex;
-    flex-wrap: wrap;
-    dt, dd {
-      margin: 0 0 5px;
-    }
-    dt {
-      width: 20%;
-    }
-    dd {
-      width: 80%;
+  ul {
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      border-bottom: #ccc 1px solid;
+      padding: 10px;
+      figure, .icon {
+        margin: 0;
+      }
+      .icon {
+        background: #A63744;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 10px 0 0;
+      }
+      dl {
+        margin: 0;
+        dt {
+          margin: 0 0 10px;
+        }
+        dd {
+          font-size: 12px;
+        }
+        .format {
+          background: #ddd;
+          padding : 3px 5px;
+          font-size: 10px;
+          border-radius: 3px;
+        }
+      }
     }
   }
+
+
 `;
 
 
@@ -25,11 +51,13 @@ function Inner() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [beatleData, setBeatleData] = useState([]);
   const [beatleKey, setBeatleKey] = useState([]);
   const [beatleVal, setBeatleVal] = useState([]);
+  const [sellYear, setSellYear] = useState(0);
   const [sellDay, setSellDay] = useState(0);
+  const [icon, setIcon] = useState(0);
   const [artist, setArtist] = useState(0);
+  const [format, setFormat] = useState(0);
   const [title, setTitle] = useState(0);
   const [num, setNum] = useState(0);
   const [song, setSong] = useState(0);
@@ -40,10 +68,16 @@ function Inner() {
   const setKeyNo = (data) => {
     console.log('data', data);
     for (let i = 0; i < data.length; i++) {
-      if (data[i] === '発売日') {
+      if (data[i] === '発売年') {
+        setSellYear(i);
+      } else if (data[i] === '発売日') {
         setSellDay(i);
+      } else if (data[i] === 'アイコン') {
+        setIcon(i);
       } else if (data[i] === 'アーティスト') {
         setArtist(i);
+      } else if (data[i] === '形態') {
+        setFormat(i);
       } else if (data[i] === '収録作品') {
         setTitle(i);
       } else if (data[i] === 'No.') {
@@ -62,7 +96,6 @@ function Inner() {
         const resJson = await res.json();
         setIsLoaded(true);
         // console.log('resJson', resJson);
-        setBeatleData(resJson);
         setBeatleKey(resJson[0]);
         setKeyNo(resJson[0]);
 
@@ -90,10 +123,10 @@ function Inner() {
           <ul>
             {beatleVal.map((data, index) =>
             <li key={index}>
+              <figure><p className="icon">{data[icon]}</p></figure>
               <dl>
-                <dt>{beatleKey[num]}:</dt><dd>{data[num]}</dd>
-                <dt>{beatleKey[song]}:</dt><dd>{data[song]}</dd>
-                <dt>{beatleKey[sellDay]}:</dt><dd>{data[sellDay]}</dd>
+                <dt>{data[num]}. {data[song]}</dt>
+                <dd><span className="format">{data[format]}</span> {data[artist]} ({data[title]} - {data[sellYear]})</dd>
               </dl>
             </li>
             )}
