@@ -10,9 +10,10 @@ const Section = styled.section`
       display: flex;
       align-items: center;
       border-bottom: #ccc 1px solid;
-      padding: 10px;
-      figure, .icon {
+      padding: 14px 0;
+      dd, figure, p {
         margin: 0;
+        line-height: 1.5;
       }
       .icon {
         background: #A63744;
@@ -22,24 +23,44 @@ const Section = styled.section`
         line-height: 40px;
         text-align: center;
         border-radius: 50%;
-        margin: 0 10px 0 0;
+        margin: 0 16px 0 0;
       }
       dl {
         margin: 0;
+        flex: 1;
         dt {
-          line-height: 1.25;
           margin: 0 0 5px;
+          display: flex;
+          align-items: center;
+          .num {
+            margin: 0 8px 0 0;
+            font-size: 10px;
+            background: #ddd;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 3px;
+          }
+          .song {
+            font-size: 18px;
+            line-height: 1.25;
+            flex: 1;
+          }
         }
         dd {
           font-size: 12px;
-          line-height: 1.5;
-          margin: 0;
-        }
-        .format {
-          background: #ddd;
-          padding : 3px 5px;
-          font-size: 10px;
-          border-radius: 3px;
+          color: #333;
+          .title {
+            font-weight: bold;
+          }
+          .format {
+            background: #999;
+            color: #fff;
+            padding : 3px 5px;
+            font-size: 10px;
+            border-radius: 3px;
+          }
         }
       }
     }
@@ -128,8 +149,14 @@ function Inner() {
             <li key={index}>
               <figure><p className="icon">{data[icon]}</p></figure>
               <dl>
-                <dt>{data[num]}. {data[song]}</dt>
-                <dd><span className="format">{data[format]}</span> {data[artist]} ({data[title]} - {data[sellYear]})</dd>
+                <dt>
+                  <p className="num">{data[num]}</p>
+                  <p className="song">{data[song]}</p>
+                </dt>
+                <dd>
+                  <p className="title-area"><span className="format">{data[format]}</span> <span className="title">{data[title]}</span> ({data[sellYear]})</p>
+                  <p className="artist">{data[artist]}</p>
+                </dd>
               </dl>
             </li>
             )}
