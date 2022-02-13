@@ -1,6 +1,21 @@
 import React, { useState, useEffect }  from 'react';
 import styled from 'styled-components';
 
+// import { initializeApp } from 'firebase/app';
+
+// TODO: Replace the following with your app's Firebase project configuration
+/* const firebaseConfig = {
+  apiKey: "AIzaSyBG1jiFZhzyw88ZnbyNXAeq0G6PzaajRzk",
+  authDomain: "beatles-db.firebaseapp.com",
+  databaseURL: "https://beatles-db-default-rtdb.firebaseio.com",
+  projectId: "beatles-db",
+  storageBucket: "beatles-db.appspot.com",
+  messagingSenderId: "736457789706",
+  appId: "1:736457789706:web:dc4a57762f35cf7494aaf3"
+}; */
+
+// const app = initializeApp(firebaseConfig); */
+
 
 // CSS in JS
 const Section = styled.section`
@@ -29,7 +44,7 @@ const Section = styled.section`
         margin: 0;
         flex: 1;
         dt {
-          margin: 0 0 5px;
+          margin: 0 0 10px;
           display: flex;
           align-items: center;
           .num {
@@ -51,13 +66,16 @@ const Section = styled.section`
         dd {
           font-size: 12px;
           color: #333;
+          .title-area {
+            margin: 0 0 0px;
+          }
           .title {
             font-weight: bold;
           }
           .format {
             background: #999;
             color: #fff;
-            padding : 3px 5px;
+            padding : 3px;
             font-size: 10px;
             border-radius: 3px;
           }
@@ -65,8 +83,6 @@ const Section = styled.section`
       }
     }
   }
-
-
 `;
 
 
@@ -77,6 +93,7 @@ function Inner() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [beatleKey, setBeatleKey] = useState([]);
   const [beatleVal, setBeatleVal] = useState([]);
+  const [search, setSearch] = useState('すべて');
   const [sellYear, setSellYear] = useState(0);
   const [sellDay, setSellDay] = useState(0);
   const [icon, setIcon] = useState(0);
@@ -86,11 +103,10 @@ function Inner() {
   const [num, setNum] = useState(0);
   const [song, setSong] = useState(0);
 
-  const url = 'https://beatles-db-default-rtdb.firebaseio.com/values.json';
+  const url = 'data/beatles.json';
 
 
   const setKeyNo = (data) => {
-    console.log('data', data);
     for (let i = 0; i < data.length; i++) {
       if (data[i] === '発売年') {
         setSellYear(i);
@@ -119,13 +135,14 @@ function Inner() {
         const res = await fetch(url);
         const resJson = await res.json();
         setIsLoaded(true);
-        // console.log('resJson', resJson);
-        setBeatleKey(resJson[0]);
-        setKeyNo(resJson[0]);
+        const data = resJson.values;
+        // console.log('data', data);
+        setBeatleKey(data[0]);
+        setKeyNo(data[0]);
 
         const getVal = [];
-        for (let i = 1; i < resJson.length; i++) {
-          getVal.push(resJson[i]);
+        for (let i = 1; i < data.length; i++) {
+          getVal.push(data[i]);
         }
         setBeatleVal(getVal);
       } catch(error) {
@@ -143,7 +160,7 @@ function Inner() {
     <>
       {
         <Section>
-          <h2>楽曲一覧</h2>
+          <h2>「{search}」の楽曲一覧</h2>
           <ul>
             {beatleVal.map((data, index) =>
             <li key={index}>

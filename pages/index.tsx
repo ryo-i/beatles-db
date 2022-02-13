@@ -7,8 +7,8 @@ import Data from '../data/data.json';
 
 const headerTitle = Data.header.title;
 const headerText = Data.header.text;
-const pageTitle = Data.main.title;
-const pageText = Data.main.text;
+const pageTitle = 'ビートルズ楽曲一覧';
+const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
 
 function Home() {
