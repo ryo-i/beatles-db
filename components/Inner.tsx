@@ -67,7 +67,7 @@ const Section = styled.section`
           font-size: 12px;
           color: #333;
           .title-area {
-            margin: 0 0 0px;
+            margin: 0 0 5px;
           }
           .title {
             font-weight: bold;
@@ -75,6 +75,7 @@ const Section = styled.section`
           .format {
             background: #999;
             color: #fff;
+            margin: 0 8px 0 0;
             padding : 3px;
             font-size: 10px;
             border-radius: 3px;
@@ -171,7 +172,7 @@ function Inner() {
                   <p className="song">{data[song]}</p>
                 </dt>
                 <dd>
-                  <p className="title-area"><span className="format">{data[format]}</span> <span className="title">{data[title]}</span> ({data[sellYear]})</p>
+                  <p className="title-area"><span className="format">{data[format]}</span><span className="title">{data[title]}</span> ({data[sellYear]})</p>
                   <p className="artist">{data[artist]}</p>
                 </dd>
               </dl>
