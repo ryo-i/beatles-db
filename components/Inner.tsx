@@ -130,39 +130,40 @@ function Inner() {
   }
 
 
-  useEffect(() => {
-    async function getJsonData (url) {
-      try {
-        const res = await fetch(url);
-        const resJson = await res.json();
-        setIsLoaded(true);
-        const data = resJson.values;
-        // console.log('data', data);
-        setBeatleKey(data[0]);
-        setKeyNo(data[0]);
+  const SongList = () => {
+    useEffect(() => {
+      async function getJsonData (url) {
+        try {
+          const res = await fetch(url);
+          const resJson = await res.json();
+          setIsLoaded(true);
+          const data = resJson.values;
+          // console.log('data', data);
+          setBeatleKey(data[0]);
+          setKeyNo(data[0]);
 
-        const getVal = [];
-        for (let i = 1; i < data.length; i++) {
-          getVal.push(data[i]);
+          const getVal = [];
+          for (let i = 1; i < data.length; i++) {
+            getVal.push(data[i]);
+          }
+          setBeatleVal(getVal);
+        } catch(error) {
+          setIsLoaded(true);
+          setError(error);
+          console.log('err', error);
         }
-        setBeatleVal(getVal);
-      } catch(error) {
-        setIsLoaded(true);
-        setError(error);
-        console.log('err', error);
-      }
-    };
+      };
+      getJsonData(url);
+    }, []);
 
-    getJsonData(url);
-  }, []);
 
-  // JSX
-  return (
-    <>
-      {
-        <Section>
-          <h2>「{search}」の楽曲一覧</h2>
-          <ul>
+    if (error) {
+      return <p>エラー: {error.message}</p>;
+    } else if (!isLoaded) {
+      return <p>読み込み中...</p>;
+    } else {
+      return (
+        <ul>
             {beatleVal.map((data, index) =>
             <li key={index}>
               <figure><p className="icon">{data[icon]}</p></figure>
@@ -179,8 +180,19 @@ function Inner() {
             </li>
             )}
           </ul>
-        </Section>
+      );
+    }
+  };
 
+
+  // JSX
+  return (
+    <>
+      {
+        <Section>
+          <h2>「{search}」の楽曲一覧</h2>
+          <SongList />
+        </Section>
       }
     </>
   );
