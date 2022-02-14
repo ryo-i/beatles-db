@@ -130,33 +130,33 @@ function Inner() {
   }
 
 
-  const SongList = () => {
-    useEffect(() => {
-      async function getJsonData (url) {
-        try {
-          const res = await fetch(url);
-          const resJson = await res.json();
-          setIsLoaded(true);
-          const data = resJson.values;
-          // console.log('data', data);
-          setBeatleKey(data[0]);
-          setKeyNo(data[0]);
+  useEffect(() => {
+    async function getJsonData (url) {
+      try {
+        const res = await fetch(url);
+        const resJson = await res.json();
+        setIsLoaded(true);
+        const data = resJson.values;
+        // console.log('data', data);
+        setBeatleKey(data[0]);
+        setKeyNo(data[0]);
 
-          const getVal = [];
-          for (let i = 1; i < data.length; i++) {
-            getVal.push(data[i]);
-          }
-          setBeatleVal(getVal);
-        } catch(error) {
-          setIsLoaded(true);
-          setError(error);
-          console.log('err', error);
+        const getVal = [];
+        for (let i = 1; i < data.length; i++) {
+          getVal.push(data[i]);
         }
-      };
-      getJsonData(url);
-    }, []);
+        setBeatleVal(getVal);
+      } catch(error) {
+        setIsLoaded(true);
+        setError(error);
+        console.log('err', error);
+      }
+    };
+    getJsonData(url);
+  }, []);
 
 
+  const SongList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
@@ -165,19 +165,19 @@ function Inner() {
       return (
         <ul>
             {beatleVal.map((data, index) =>
-            <li key={index}>
-              <figure><p className="icon">{data[icon]}</p></figure>
-              <dl>
-                <dt>
-                  <p className="num">{data[num]}</p>
-                  <p className="song">{data[song]}</p>
-                </dt>
-                <dd>
-                  <p className="title-area"><span className="format">{data[format]}</span><span className="title">{data[title]}</span> ({data[sellYear]})</p>
-                  <p className="artist">{data[artist]}</p>
-                </dd>
-              </dl>
-            </li>
+              <li key={index}>
+                <figure><p className="icon">{data[icon]}</p></figure>
+                <dl>
+                  <dt>
+                    <p className="num">{data[num]}</p>
+                    <p className="song">{data[song]}</p>
+                  </dt>
+                  <dd>
+                    <p className="title-area"><span className="format">{data[format]}</span><span className="title">{data[title]}</span> ({data[sellYear]})</p>
+                    <p className="artist">{data[artist]}</p>
+                  </dd>
+                </dl>
+              </li>
             )}
           </ul>
       );

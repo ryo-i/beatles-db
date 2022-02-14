@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲一覧をコンポーネント化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 読み込み処理とliタグ生成を分離 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
