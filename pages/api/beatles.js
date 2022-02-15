@@ -1,5 +1,5 @@
 export default (req, res) => {
-  res.status(200).json(beatlesData)
+  res.status(200).json(beatlesData);
 }
 
 const beatlesData = {
