@@ -1,21 +1,6 @@
 import React, { useState, useEffect }  from 'react';
 import styled from 'styled-components';
 
-// import { initializeApp } from 'firebase/app';
-
-// TODO: Replace the following with your app's Firebase project configuration
-/* const firebaseConfig = {
-  apiKey: "AIzaSyBG1jiFZhzyw88ZnbyNXAeq0G6PzaajRzk",
-  authDomain: "beatles-db.firebaseapp.com",
-  databaseURL: "https://beatles-db-default-rtdb.firebaseio.com",
-  projectId: "beatles-db",
-  storageBucket: "beatles-db.appspot.com",
-  messagingSenderId: "736457789706",
-  appId: "1:736457789706:web:dc4a57762f35cf7494aaf3"
-}; */
-
-// const app = initializeApp(firebaseConfig); */
-
 
 // CSS in JS
 const Section = styled.section`
@@ -102,10 +87,9 @@ function Inner() {
   const [format, setFormat] = useState(0);
   const [title, setTitle] = useState(0);
   const [num, setNum] = useState(0);
-  const [song, setSong] = useState(0);
+  const [track, setTrack] = useState(0);
 
-  const url = 'data/beatles.json';
-
+  const url = 'api/beatles';
 
   const setKeyNo = (data) => {
     for (let i = 0; i < data.length; i++) {
@@ -124,7 +108,7 @@ function Inner() {
       } else if (data[i] === 'No.') {
         setNum(i);
       } else if (data[i] === '曲名') {
-        setSong(i);
+        setTrack(i);
       }
     }
   }
@@ -170,7 +154,7 @@ function Inner() {
                 <dl>
                   <dt>
                     <p className="num">{data[num]}</p>
-                    <p className="song">{data[song]}</p>
+                    <p className="song">{data[track]}</p>
                   </dt>
                   <dd>
                     <p className="title-area"><span className="format">{data[format]}</span><span className="title">{data[title]}</span> ({data[sellYear]})</p>

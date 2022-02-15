@@ -1,4 +1,8 @@
-{
+export default (req, res) => {
+  res.status(200).json(beatlesData)
+}
+
+const beatlesData = {
   "range": "'BEATLES DB'!A1:AW1182",
   "majorDimension": "ROWS",
   "values": [
