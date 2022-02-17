@@ -90,6 +90,7 @@ function Inner() {
   const [track, setTrack] = useState(0);
 
   const url = 'api/beatles';
+  // const url = 'api/beatles/123'; // test(track)
 
   const setKeyNo = (data) => {
     for (let i = 0; i < data.length; i++) {

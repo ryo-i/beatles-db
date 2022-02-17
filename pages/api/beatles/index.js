@@ -1,4 +1,4 @@
-import beatlesData from './data/beatles.json';
+import beatlesData from '../data/beatles.json';
 
 export default (req, res) => {
   console.log(req.query);
