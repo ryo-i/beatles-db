@@ -80,8 +80,10 @@ function Inner() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [tracksData, setTracksData] = useState([]);
   const {search, setSearch} = useContext(Context);
-  setSearch('すべて');
 
+  useEffect(() => {
+    setSearch('すべて');
+  });
 
   // url
   const url = 'api/beatles';
