@@ -6,7 +6,7 @@ import Data from '../../data/data.json';
 
 
 // Component
-const Post = () => {
+const Track = () => {
   const router = useRouter();
   const { no } = router.query;
 
@@ -38,4 +38,4 @@ const Post = () => {
     );
 }
 
-export default Post;
+export default Track;

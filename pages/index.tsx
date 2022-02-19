@@ -1,3 +1,4 @@
+import React, { useState, createContext }  from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Inner from '../components/Inner';
@@ -11,7 +12,15 @@ const pageTitle = 'ビートルズ楽曲一覧';
 const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
 
+export const Context = React.createContext({} as {
+  search: string
+  setSearch: React.Dispatch<React.SetStateAction<string>>
+});
+
+
 function Home() {
+  const [search, setSearch] = useState('');
+
   return (
     <>
       <Head>
@@ -24,7 +33,9 @@ function Home() {
       <main>
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-        <Inner />
+        <Context.Provider value={{search, setSearch}} >
+          <Inner />
+        </Context.Provider>
       </main>
       <Footer />
     </>

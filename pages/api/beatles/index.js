@@ -11,7 +11,7 @@ let number = 0;
 let track = 0;
 
 
-// Set Key Number
+// Set Key Numbers
 const setKeyNumber = (data) => {
   for (let i = 0; i < data.length; i++) {
     if (data[i] === 'year') {

@@ -1,4 +1,5 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect, useContext }  from 'react';
+import { Context } from '../pages/index';
 import styled from 'styled-components';
 
 
@@ -77,8 +78,9 @@ function Inner() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [beatleVal, setBeatleVal] = useState([]);
-  const [search, setSearch] = useState('すべて');
+  const [tracksData, setTracksData] = useState([]);
+  const {search, setSearch} = useContext(Context);
+  setSearch('すべて');
 
 
   // url
@@ -86,23 +88,23 @@ function Inner() {
   // const url = 'api/beatles/123'; // test(track)
 
 
-  //  Get Json Data
+  //  Get Tracks Data
   useEffect(() => {
-    async function getJsonData (url) {
+    async function getTracksData (url) {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
         setIsLoaded(true);
         const data = resJson;
         // console.log('data', data);
-        setBeatleVal(data);
+        setTracksData(data);
       } catch(error) {
         setIsLoaded(true);
         setError(error);
         console.log('err', error);
       }
     };
-    getJsonData(url);
+    getTracksData(url);
   }, []);
 
 
@@ -115,7 +117,7 @@ function Inner() {
     } else {
       return (
         <ul>
-            {beatleVal.map((data, index) =>
+            {tracksData.map((data, index) =>
               <li key={index}>
                 <figure><p className="icon">{data.category}</p></figure>
                 <dl>
