@@ -77,60 +77,25 @@ function Inner() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [beatleKey, setBeatleKey] = useState([]);
   const [beatleVal, setBeatleVal] = useState([]);
   const [search, setSearch] = useState('すべて');
-  const [sellYear, setSellYear] = useState(0);
-  const [sellDay, setSellDay] = useState(0);
-  const [icon, setIcon] = useState(0);
-  const [artist, setArtist] = useState(0);
-  const [format, setFormat] = useState(0);
-  const [title, setTitle] = useState(0);
-  const [num, setNum] = useState(0);
-  const [track, setTrack] = useState(0);
 
+
+  // url
   const url = 'api/beatles';
   // const url = 'api/beatles/123'; // test(track)
 
-  const setKeyNo = (data) => {
-    for (let i = 0; i < data.length; i++) {
-      if (data[i] === 'year') {
-        setSellYear(i);
-      } else if (data[i] === 'date') {
-        setSellDay(i);
-      } else if (data[i] === 'category') {
-        setIcon(i);
-      } else if (data[i] === 'artist') {
-        setArtist(i);
-      } else if (data[i] === 'format') {
-        setFormat(i);
-      } else if (data[i] === 'title') {
-        setTitle(i);
-      } else if (data[i] === 'number') {
-        setNum(i);
-      } else if (data[i] === 'track') {
-        setTrack(i);
-      }
-    }
-  }
 
-
+  //  Get Json Data
   useEffect(() => {
     async function getJsonData (url) {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
         setIsLoaded(true);
-        const data = resJson.values;
+        const data = resJson;
         // console.log('data', data);
-        setBeatleKey(data[0]);
-        setKeyNo(data[0]);
-
-        const getVal = [];
-        for (let i = 1; i < data.length; i++) {
-          getVal.push(data[i]);
-        }
-        setBeatleVal(getVal);
+        setBeatleVal(data);
       } catch(error) {
         setIsLoaded(true);
         setError(error);
@@ -141,7 +106,8 @@ function Inner() {
   }, []);
 
 
-  const SongList = () => {
+  // Track List
+  const TrackList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
@@ -151,15 +117,15 @@ function Inner() {
         <ul>
             {beatleVal.map((data, index) =>
               <li key={index}>
-                <figure><p className="icon">{data[icon]}</p></figure>
+                <figure><p className="icon">{data.category}</p></figure>
                 <dl>
                   <dt>
-                    <p className="num">{data[num]}</p>
-                    <p className="song">{data[track]}</p>
+                    <p className="num">{data.number}</p>
+                    <p className="song">{data.track}</p>
                   </dt>
                   <dd>
-                    <p className="title-area"><span className="format">{data[format]}</span><span className="title">{data[title]}</span> ({data[sellYear]})</p>
-                    <p className="artist">{data[artist]}</p>
+                    <p className="title-area"><span className="format">{data.format}</span><span className="title">{data.title}</span> ({data.year})</p>
+                    <p className="artist">{data.artist}</p>
                   </dd>
                 </dl>
               </li>
@@ -176,7 +142,7 @@ function Inner() {
       {
         <Section>
           <h2>「{search}」の楽曲一覧</h2>
-          <SongList />
+          <TrackList />
         </Section>
       }
     </>
