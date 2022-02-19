@@ -1,38 +1,38 @@
 {
-  "range": "'BEATLES DB'!A1:AW1182",
+  "range": "'BEATLES DB'!A1:AU1182",
   "majorDimension": "ROWS",
   "values": [
     [
-      "発売年",
-      "発売日",
-      "アイコン",
-      "アーティスト",
-      "発売国",
-      "レーベル",
-      "形態",
-      "収録作品",
-      "Disc",
-      "Side",
-      "No.",
-      "曲名",
-      "リードボーカル",
-      "演奏",
-      "John Lennon",
-      "Paul McCartney",
-      "George Harrison",
-      "Ringo Starr",
-      "演奏(その他)",
-      "作者",
-      "プロデューサー",
-      "エンジニア",
-      "アートワーク",
-      "ディレクター(映画)",
-      "ディレクター(MV)",
-      "備考",
-      "収録作品（今）",
-      "曲順（今）"
+      "id",
+      "year",
+      "date",
+      "category",
+      "artist",
+      "country",
+      "label",
+      "format",
+      "title",
+      "disc",
+      "side",
+      "number",
+      "track",
+      "vocal",
+      "player",
+      "john",
+      "paul",
+      "george",
+      "ringo",
+      "others",
+      "songwriter",
+      "producer",
+      "engineer",
+      "artwork",
+      "film",
+      "musicvideo",
+      "remarks"
     ],
     [
+      "1",
       "1961",
       "1961/10/23",
       "T&B",
@@ -58,11 +58,10 @@
       "",
       "",
       "",
-      "Polydorから発売されたトニーのシングル / The Beatles' Firstに収録",
-      "BF",
-      "4"
+      "Polydorから発売されたトニーのシングル / The Beatles' Firstに収録"
     ],
     [
+      "2",
       "1961",
       "1961/10/23",
       "T&B",
@@ -88,11 +87,10 @@
       "",
       "",
       "",
-      "Polydorから発売されたトニーのシングル / The Beatles' Firstに収録",
-      "BF",
-      "8"
+      "Polydorから発売されたトニーのシングル / The Beatles' Firstに収録"
     ],
     [
+      "3",
       "1962",
       "1962/10/05",
       "BE",
@@ -118,11 +116,10 @@
       "",
       "",
       "",
-      "1stシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "1"
+      "1stシングル / Past Masters Vol.1に収録"
     ],
     [
+      "4",
       "1962",
       "1962/10/05",
       "BE",
@@ -148,11 +145,10 @@
       "",
       "",
       "",
-      "1stシングル / Please Please Meに収録",
-      "AL(1)",
-      "9"
+      "1stシングル / Please Please Meに収録"
     ],
     [
+      "5",
       "1963",
       "1963/01/11",
       "BE",
@@ -178,11 +174,10 @@
       "",
       "",
       "",
-      "2ndシングル / Please Please Meに収録",
-      "AL(1)",
-      "7"
+      "2ndシングル / Please Please Meに収録"
     ],
     [
+      "6",
       "1963",
       "1963/01/11",
       "BE",
@@ -208,11 +203,10 @@
       "",
       "",
       "",
-      "2ndシングル / Please Please Meに収録",
-      "AL(1)",
-      "6"
+      "2ndシングル / Please Please Meに収録"
     ],
     [
+      "7",
       "1963",
       "1963/03/22",
       "BE",
@@ -238,11 +232,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "1"
+      "1stアルバム"
     ],
     [
+      "8",
       "1963",
       "1963/03/22",
       "BE",
@@ -268,11 +261,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "2"
+      "1stアルバム"
     ],
     [
+      "9",
       "1963",
       "1963/03/22",
       "BE",
@@ -298,11 +290,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "3"
+      "1stアルバム"
     ],
     [
+      "10",
       "1963",
       "1963/03/22",
       "BE",
@@ -328,11 +319,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "4"
+      "1stアルバム"
     ],
     [
+      "11",
       "1963",
       "1963/03/22",
       "BE",
@@ -358,11 +348,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "5"
+      "1stアルバム"
     ],
     [
+      "12",
       "1963",
       "1963/03/22",
       "BE",
@@ -388,11 +377,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "6"
+      "1stアルバム"
     ],
     [
+      "13",
       "1963",
       "1963/03/22",
       "BE",
@@ -418,11 +406,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "7"
+      "1stアルバム"
     ],
     [
+      "14",
       "1963",
       "1963/03/22",
       "BE",
@@ -448,11 +435,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "8"
+      "1stアルバム"
     ],
     [
+      "15",
       "1963",
       "1963/03/22",
       "BE",
@@ -478,11 +464,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "9"
+      "1stアルバム"
     ],
     [
+      "16",
       "1963",
       "1963/03/22",
       "BE",
@@ -508,11 +493,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "10"
+      "1stアルバム"
     ],
     [
+      "17",
       "1963",
       "1963/03/22",
       "BE",
@@ -538,11 +522,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "11"
+      "1stアルバム"
     ],
     [
+      "18",
       "1963",
       "1963/03/22",
       "BE",
@@ -568,11 +551,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "12"
+      "1stアルバム"
     ],
     [
+      "19",
       "1963",
       "1963/03/22",
       "BE",
@@ -598,11 +580,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム",
-      "AL(1)",
-      "13"
+      "1stアルバム"
     ],
     [
+      "20",
       "1963",
       "1963/03/22",
       "BE",
@@ -628,11 +609,10 @@
       "Angus McBean - photography",
       "",
       "",
-      "1stアルバム / パートは日本語版wikipediaより",
-      "AL(1)",
-      "14"
+      "1stアルバム / パートは日本語版wikipediaより"
     ],
     [
+      "21",
       "1963",
       "1963/04/12",
       "BE",
@@ -658,11 +638,10 @@
       "",
       "",
       "",
-      "3rdシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "2"
+      "3rdシングル / Past Masters Vol.1に収録"
     ],
     [
+      "22",
       "1963",
       "1963/04/12",
       "BE",
@@ -688,11 +667,10 @@
       "",
       "",
       "",
-      "3rdシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "3"
+      "3rdシングル / Past Masters Vol.1に収録"
     ],
     [
+      "23",
       "1963",
       "1963/08/23",
       "BE",
@@ -718,11 +696,10 @@
       "",
       "",
       "",
-      "4thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "4"
+      "4thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "24",
       "1963",
       "1963/08/23",
       "BE",
@@ -748,11 +725,10 @@
       "",
       "",
       "",
-      "4thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "5"
+      "4thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "25",
       "1963",
       "1963/11/22",
       "BE",
@@ -778,11 +754,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "1"
+      "2ndアルバム"
     ],
     [
+      "26",
       "1963",
       "1963/11/22",
       "BE",
@@ -808,11 +783,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "2"
+      "2ndアルバム"
     ],
     [
+      "27",
       "1963",
       "1963/11/22",
       "BE",
@@ -838,11 +812,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "3"
+      "2ndアルバム"
     ],
     [
+      "28",
       "1963",
       "1963/11/22",
       "BE",
@@ -868,11 +841,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "4"
+      "2ndアルバム"
     ],
     [
+      "29",
       "1963",
       "1963/11/22",
       "BE",
@@ -898,11 +870,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "5"
+      "2ndアルバム"
     ],
     [
+      "30",
       "1963",
       "1963/11/22",
       "BE",
@@ -928,11 +899,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "6"
+      "2ndアルバム"
     ],
     [
+      "31",
       "1963",
       "1963/11/22",
       "BE",
@@ -958,11 +928,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "7"
+      "2ndアルバム"
     ],
     [
+      "32",
       "1963",
       "1963/11/22",
       "BE",
@@ -988,11 +957,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "8"
+      "2ndアルバム"
     ],
     [
+      "33",
       "1963",
       "1963/11/22",
       "BE",
@@ -1018,11 +986,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "9"
+      "2ndアルバム"
     ],
     [
+      "34",
       "1963",
       "1963/11/22",
       "BE",
@@ -1048,11 +1015,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "10"
+      "2ndアルバム"
     ],
     [
+      "35",
       "1963",
       "1963/11/22",
       "BE",
@@ -1078,11 +1044,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "11"
+      "2ndアルバム"
     ],
     [
+      "36",
       "1963",
       "1963/11/22",
       "BE",
@@ -1108,11 +1073,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "12"
+      "2ndアルバム"
     ],
     [
+      "37",
       "1963",
       "1963/11/22",
       "BE",
@@ -1138,11 +1102,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "13"
+      "2ndアルバム"
     ],
     [
+      "38",
       "1963",
       "1963/11/22",
       "BE",
@@ -1168,11 +1131,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "2ndアルバム",
-      "AL(2)",
-      "14"
+      "2ndアルバム"
     ],
     [
+      "39",
       "1963",
       "1963/11/29",
       "BE",
@@ -1198,11 +1160,10 @@
       "",
       "",
       "",
-      "5thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "6"
+      "5thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "40",
       "1963",
       "1963/11/29",
       "BE",
@@ -1228,11 +1189,10 @@
       "",
       "",
       "",
-      "5thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "7"
+      "5thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "41",
       "1964",
       "1964/03/05",
       "BE",
@@ -1258,11 +1218,10 @@
       "",
       "",
       "",
-      "Odeonから発売されたシングル / Past Masters Vol.1に収録 / ドイツ語版I Want to Hold Your Hand",
-      "PM1",
-      "8"
+      "Odeonから発売されたシングル / Past Masters Vol.1に収録 / ドイツ語版I Want to Hold Your Hand"
     ],
     [
+      "42",
       "1964",
       "1964/03/05",
       "BE",
@@ -1288,11 +1247,10 @@
       "",
       "",
       "",
-      "Odeonから発売されたシングル / Past Masters Vol.1に収録 / ドイツ語版She Loves You",
-      "PM1",
-      "9"
+      "Odeonから発売されたシングル / Past Masters Vol.1に収録 / ドイツ語版She Loves You"
     ],
     [
+      "43",
       "1964",
       "1964/03/20",
       "BE",
@@ -1318,11 +1276,10 @@
       "",
       "",
       "",
-      "6thシングル / A Hard Day's Nightに収録",
-      "AL(3)",
-      "7"
+      "6thシングル / A Hard Day's Nightに収録"
     ],
     [
+      "44",
       "1964",
       "1964/03/20",
       "BE",
@@ -1348,11 +1305,10 @@
       "",
       "",
       "",
-      "6thシングル / A Hard Day's Nightに収録",
-      "AL(3)",
-      "12"
+      "6thシングル / A Hard Day's Nightに収録"
     ],
     [
+      "45",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1378,11 +1334,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "1"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "46",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1408,11 +1363,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "2"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "47",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1438,11 +1392,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "4"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "48",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1468,11 +1421,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "5"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "49",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1498,11 +1450,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "7"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "50",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1528,11 +1479,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "8"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "51",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1558,11 +1508,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "10"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "52",
       "1964",
       "1964/04/01",
       "T&B",
@@ -1588,11 +1537,10 @@
       "",
       "",
       "",
-      "ビートルズとトニーのコンピレーションアルバム",
-      "BF",
-      "11"
+      "ビートルズとトニーのコンピレーションアルバム"
     ],
     [
+      "53",
       "1964",
       "1964/06/19",
       "BE",
@@ -1618,11 +1566,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "5th EP / Past Masters Vol.1に収録",
-      "PM1",
-      "10"
+      "5th EP / Past Masters Vol.1に収録"
     ],
     [
+      "54",
       "1964",
       "1964/06/19",
       "BE",
@@ -1648,11 +1595,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "5th EP / Past Masters Vol.1に収録",
-      "PM1",
-      "11"
+      "5th EP / Past Masters Vol.1に収録"
     ],
     [
+      "55",
       "1964",
       "1964/06/19",
       "BE",
@@ -1678,11 +1624,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "5th EP / Past Masters Vol.1に収録",
-      "PM1",
-      "12"
+      "5th EP / Past Masters Vol.1に収録"
     ],
     [
+      "56",
       "1964",
       "1964/06/19",
       "BE",
@@ -1708,11 +1653,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "5th EP / Past Masters Vol.1に収録",
-      "PM1",
-      "13"
+      "5th EP / Past Masters Vol.1に収録"
     ],
     [
+      "57",
       "1964",
       "1964/07/10",
       "BE",
@@ -1738,11 +1682,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "7thシングル / A Hard Day's Nightに収録",
-      "AL(3)",
-      "1"
+      "7thシングル / A Hard Day's Nightに収録"
     ],
     [
+      "58",
       "1964",
       "1964/07/10",
       "BE",
@@ -1768,11 +1711,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "7thシングル / A Hard Day's Nightに収録",
-      "AL(3)",
-      "10"
+      "7thシングル / A Hard Day's Nightに収録"
     ],
     [
+      "59",
       "1964",
       "1964/07/10",
       "BE",
@@ -1798,11 +1740,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "1"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "60",
       "1964",
       "1964/07/10",
       "BE",
@@ -1828,11 +1769,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "2"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "61",
       "1964",
       "1964/07/10",
       "BE",
@@ -1858,11 +1798,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "3"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "62",
       "1964",
       "1964/07/10",
       "BE",
@@ -1888,11 +1827,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "4"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "63",
       "1964",
       "1964/07/10",
       "BE",
@@ -1918,11 +1856,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "5"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "64",
       "1964",
       "1964/07/10",
       "BE",
@@ -1948,11 +1885,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "6"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "65",
       "1964",
       "1964/07/10",
       "BE",
@@ -1978,11 +1914,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "7"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "66",
       "1964",
       "1964/07/10",
       "BE",
@@ -2008,11 +1943,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "8"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "67",
       "1964",
       "1964/07/10",
       "BE",
@@ -2038,11 +1972,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "9"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "68",
       "1964",
       "1964/07/10",
       "BE",
@@ -2068,11 +2001,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "10"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "69",
       "1964",
       "1964/07/10",
       "BE",
@@ -2098,11 +2030,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "11"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "70",
       "1964",
       "1964/07/10",
       "BE",
@@ -2128,11 +2059,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "12"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "71",
       "1964",
       "1964/07/10",
       "BE",
@@ -2158,11 +2088,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "3rdアルバム / 映画サントラ",
-      "AL(3)",
-      "13"
+      "3rdアルバム / 映画サントラ"
     ],
     [
+      "72",
       "1964",
       "1964/11/27",
       "BE",
@@ -2186,13 +2115,12 @@
       "George Martin",
       "Norman Smith",
       "",
-      "Joseph McGrath",
       "",
-      "8thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "14"
+      "Joseph McGrath",
+      "8thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "73",
       "1964",
       "1964/11/27",
       "BE",
@@ -2218,11 +2146,10 @@
       "",
       "",
       "",
-      "8thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "15"
+      "8thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "74",
       "1964",
       "1964/12/04",
       "BE",
@@ -2248,11 +2175,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "1"
+      "4thアルバム"
     ],
     [
+      "75",
       "1964",
       "1964/12/04",
       "BE",
@@ -2278,11 +2204,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "2"
+      "4thアルバム"
     ],
     [
+      "76",
       "1964",
       "1964/12/04",
       "BE",
@@ -2308,11 +2233,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "3"
+      "4thアルバム"
     ],
     [
+      "77",
       "1964",
       "1964/12/04",
       "BE",
@@ -2338,11 +2262,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム / パートは書籍「ビートルズと60年代」より",
-      "AL(4)",
-      "4"
+      "4thアルバム / パートは書籍「ビートルズと60年代」より"
     ],
     [
+      "78",
       "1964",
       "1964/12/04",
       "BE",
@@ -2368,11 +2291,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "5"
+      "4thアルバム"
     ],
     [
+      "79",
       "1964",
       "1964/12/04",
       "BE",
@@ -2398,11 +2320,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "6"
+      "4thアルバム"
     ],
     [
+      "80",
       "1964",
       "1964/12/04",
       "BE",
@@ -2428,11 +2349,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム / パートは日本語版wikipediaより",
-      "AL(4)",
-      "7"
+      "4thアルバム / パートは日本語版wikipediaより"
     ],
     [
+      "81",
       "1964",
       "1964/12/04",
       "BE",
@@ -2458,11 +2378,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "8"
+      "4thアルバム"
     ],
     [
+      "82",
       "1964",
       "1964/12/04",
       "BE",
@@ -2488,11 +2407,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "9"
+      "4thアルバム"
     ],
     [
+      "83",
       "1964",
       "1964/12/04",
       "BE",
@@ -2518,11 +2436,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "10"
+      "4thアルバム"
     ],
     [
+      "84",
       "1964",
       "1964/12/04",
       "BE",
@@ -2548,11 +2465,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "11"
+      "4thアルバム"
     ],
     [
+      "85",
       "1964",
       "1964/12/04",
       "BE",
@@ -2578,11 +2494,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "12"
+      "4thアルバム"
     ],
     [
+      "86",
       "1964",
       "1964/12/04",
       "BE",
@@ -2608,11 +2523,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "13"
+      "4thアルバム"
     ],
     [
+      "87",
       "1964",
       "1964/12/04",
       "BE",
@@ -2638,11 +2552,10 @@
       "Robert Freeman - photography",
       "",
       "",
-      "4thアルバム",
-      "AL(4)",
-      "14"
+      "4thアルバム"
     ],
     [
+      "88",
       "1965",
       "1965/04/09",
       "BE",
@@ -2668,11 +2581,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "Joseph McGrath",
-      "9thシングル / Help!に収録",
-      "AL(5)",
-      "7"
+      "9thシングル / Help!に収録"
     ],
     [
+      "89",
       "1965",
       "1965/04/09",
       "BE",
@@ -2698,11 +2610,10 @@
       "",
       "",
       "",
-      "9thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "17"
+      "9thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "90",
       "1965",
       "1965/07/23",
       "BE",
@@ -2728,11 +2639,10 @@
       "",
       "Richard Lester",
       "Joseph McGrath",
-      "10thシングル / Help!に収録",
-      "AL(5)",
-      "1"
+      "10thシングル / Help!に収録"
     ],
     [
+      "91",
       "1965",
       "1965/07/23",
       "BE",
@@ -2758,11 +2668,10 @@
       "",
       "",
       "",
-      "10thシングル / Past Masters Vol.1に収録",
-      "PM1",
-      "18"
+      "10thシングル / Past Masters Vol.1に収録"
     ],
     [
+      "92",
       "1965",
       "1965/08/06",
       "BE",
@@ -2788,11 +2697,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "Joseph McGrath",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "1"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "93",
       "1965",
       "1965/08/06",
       "BE",
@@ -2818,11 +2726,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "2"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "94",
       "1965",
       "1965/08/06",
       "BE",
@@ -2848,11 +2755,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "3"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "95",
       "1965",
       "1965/08/06",
       "BE",
@@ -2878,11 +2784,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "4"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "96",
       "1965",
       "1965/08/06",
       "BE",
@@ -2908,11 +2813,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "5"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "97",
       "1965",
       "1965/08/06",
       "BE",
@@ -2938,11 +2842,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "6"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "98",
       "1965",
       "1965/08/06",
       "BE",
@@ -2968,11 +2871,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "Joseph McGrath",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "7"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "99",
       "1965",
       "1965/08/06",
       "BE",
@@ -2998,11 +2900,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "8"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "100",
       "1965",
       "1965/08/06",
       "BE",
@@ -3028,11 +2929,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "9"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "101",
       "1965",
       "1965/08/06",
       "BE",
@@ -3058,11 +2958,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "10"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "102",
       "1965",
       "1965/08/06",
       "BE",
@@ -3088,11 +2987,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "11"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "103",
       "1965",
       "1965/08/06",
       "BE",
@@ -3118,11 +3016,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "12"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "104",
       "1965",
       "1965/08/06",
       "BE",
@@ -3148,11 +3045,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "13"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "105",
       "1965",
       "1965/08/06",
       "BE",
@@ -3178,11 +3074,10 @@
       "Robert Freeman - photography",
       "Richard Lester",
       "",
-      "5thアルバム / 映画サントラ",
-      "AL(5)",
-      "14"
+      "5thアルバム / 映画サントラ"
     ],
     [
+      "106",
       "1965",
       "1965/12/03",
       "BE",
@@ -3208,11 +3103,10 @@
       "",
       "",
       "Joseph McGrath",
-      "11thシングル  / 両A面 / Past Masters Vol.2に収録",
-      "PM2",
-      "2"
+      "11thシングル  / 両A面 / Past Masters Vol.2に収録"
     ],
     [
+      "107",
       "1965",
       "1965/12/03",
       "BE",
@@ -3238,11 +3132,10 @@
       "",
       "",
       "Joseph McGrath",
-      "11thシングル / 両A面 / Past Masters Vol.2に収録",
-      "PM2",
-      "1"
+      "11thシングル / 両A面 / Past Masters Vol.2に収録"
     ],
     [
+      "108",
       "1965",
       "1965/12/03",
       "BE",
@@ -3268,11 +3161,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "1"
+      "6thアルバム"
     ],
     [
+      "109",
       "1965",
       "1965/12/03",
       "BE",
@@ -3298,11 +3190,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "2"
+      "6thアルバム"
     ],
     [
+      "110",
       "1965",
       "1965/12/03",
       "BE",
@@ -3328,11 +3219,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "3"
+      "6thアルバム"
     ],
     [
+      "111",
       "1965",
       "1965/12/03",
       "BE",
@@ -3358,11 +3248,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "4"
+      "6thアルバム"
     ],
     [
+      "112",
       "1965",
       "1965/12/03",
       "BE",
@@ -3388,11 +3277,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "5"
+      "6thアルバム"
     ],
     [
+      "113",
       "1965",
       "1965/12/03",
       "BE",
@@ -3418,11 +3306,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "6"
+      "6thアルバム"
     ],
     [
+      "114",
       "1965",
       "1965/12/03",
       "BE",
@@ -3448,11 +3335,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "7"
+      "6thアルバム"
     ],
     [
+      "115",
       "1965",
       "1965/12/03",
       "BE",
@@ -3478,11 +3364,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "8"
+      "6thアルバム"
     ],
     [
+      "116",
       "1965",
       "1965/12/03",
       "BE",
@@ -3508,11 +3393,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "9"
+      "6thアルバム"
     ],
     [
+      "117",
       "1965",
       "1965/12/03",
       "BE",
@@ -3538,11 +3422,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "10"
+      "6thアルバム"
     ],
     [
+      "118",
       "1965",
       "1965/12/03",
       "BE",
@@ -3568,11 +3451,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "11"
+      "6thアルバム"
     ],
     [
+      "119",
       "1965",
       "1965/12/03",
       "BE",
@@ -3598,11 +3480,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "12"
+      "6thアルバム"
     ],
     [
+      "120",
       "1965",
       "1965/12/03",
       "BE",
@@ -3628,11 +3509,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "13"
+      "6thアルバム"
     ],
     [
+      "121",
       "1965",
       "1965/12/03",
       "BE",
@@ -3658,11 +3538,10 @@
       "Robert Freeman - photography /  Charles Front - lettering",
       "",
       "",
-      "6thアルバム",
-      "AL(6)",
-      "14"
+      "6thアルバム"
     ],
     [
+      "122",
       "1966",
       "1966/06/10",
       "BE",
@@ -3688,11 +3567,10 @@
       "",
       "",
       "Michael Lindsay-Hogg",
-      "12thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "3"
+      "12thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "123",
       "1966",
       "1966/06/10",
       "BE",
@@ -3718,11 +3596,10 @@
       "",
       "",
       "Michael Lindsay-Hogg",
-      "12thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "4"
+      "12thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "124",
       "1966",
       "1966/08/05",
       "BE",
@@ -3748,11 +3625,10 @@
       "",
       "George Dunning",
       "",
-      "13thシングル  / 両A面 / Revolverに収録 / 映画は1968年作成",
-      "AL(7)",
-      "6"
+      "13thシングル  / 両A面 / Revolverに収録 / 映画は1968年作成"
     ],
     [
+      "125",
       "1966",
       "1966/08/05",
       "BE",
@@ -3778,11 +3654,10 @@
       "",
       "",
       "",
-      "13thシングル / 両A面 / Revolverに収録",
-      "AL(7)",
-      "2"
+      "13thシングル / 両A面 / Revolverに収録"
     ],
     [
+      "126",
       "1966",
       "1966/08/05",
       "BE",
@@ -3808,11 +3683,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "1"
+      "7thアルバム"
     ],
     [
+      "127",
       "1966",
       "1966/08/05",
       "BE",
@@ -3838,11 +3712,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "2"
+      "7thアルバム"
     ],
     [
+      "128",
       "1966",
       "1966/08/05",
       "BE",
@@ -3868,11 +3741,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "3"
+      "7thアルバム"
     ],
     [
+      "129",
       "1966",
       "1966/08/05",
       "BE",
@@ -3898,11 +3770,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "4"
+      "7thアルバム"
     ],
     [
+      "130",
       "1966",
       "1966/08/05",
       "BE",
@@ -3928,11 +3799,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "5"
+      "7thアルバム"
     ],
     [
+      "131",
       "1966",
       "1966/08/05",
       "BE",
@@ -3958,11 +3828,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "George Dunning",
       "",
-      "7thアルバム / 映画は1968年",
-      "AL(7)",
-      "6"
+      "7thアルバム / 映画は1968年"
     ],
     [
+      "132",
       "1966",
       "1966/08/05",
       "BE",
@@ -3988,11 +3857,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "7"
+      "7thアルバム"
     ],
     [
+      "133",
       "1966",
       "1966/08/05",
       "BE",
@@ -4018,11 +3886,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "8"
+      "7thアルバム"
     ],
     [
+      "134",
       "1966",
       "1966/08/05",
       "BE",
@@ -4048,11 +3915,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "9"
+      "7thアルバム"
     ],
     [
+      "135",
       "1966",
       "1966/08/05",
       "BE",
@@ -4078,11 +3944,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "10"
+      "7thアルバム"
     ],
     [
+      "136",
       "1966",
       "1966/08/05",
       "BE",
@@ -4108,11 +3973,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "11"
+      "7thアルバム"
     ],
     [
+      "137",
       "1966",
       "1966/08/05",
       "BE",
@@ -4138,11 +4002,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "12"
+      "7thアルバム"
     ],
     [
+      "138",
       "1966",
       "1966/08/05",
       "BE",
@@ -4168,11 +4031,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "13"
+      "7thアルバム"
     ],
     [
+      "139",
       "1966",
       "1966/08/05",
       "BE",
@@ -4198,11 +4060,10 @@
       "Klaus Voormann - design, line drawing , collage / Robert Freeman - photography (collage) / Robert Whitaker - photograpy (back cover)",
       "",
       "",
-      "7thアルバム",
-      "AL(7)",
-      "14"
+      "7thアルバム"
     ],
     [
+      "140",
       "1966",
       "1966/12/10",
       "BE",
@@ -4228,11 +4089,10 @@
       "David Christian - painting / Robert Whitaker - photography (back cover)",
       "",
       "",
-      "ベストアルバム / Past Masters Vol.1に収録 / アメリカ編集版「Beatles VI」に先行収録されていた曲 / パートは日本語版wikipediaより",
-      "PM1",
-      "16"
+      "ベストアルバム / Past Masters Vol.1に収録 / アメリカ編集版「Beatles VI」に先行収録されていた曲 / パートは日本語版wikipediaより"
     ],
     [
+      "141",
       "1967",
       "1967/02/17",
       "BE",
@@ -4258,11 +4118,10 @@
       "",
       "",
       "Peter Goldmann",
-      "14thシングル / 両A面 / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "8"
+      "14thシングル / 両A面 / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "142",
       "1967",
       "1967/02/17",
       "BE",
@@ -4288,11 +4147,10 @@
       "",
       "",
       "Peter Goldmann",
-      "14thシングル / 両A面 / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "9"
+      "14thシングル / 両A面 / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "143",
       "1967",
       "1967/06/01",
       "BE",
@@ -4318,11 +4176,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "1"
+      "8thアルバム"
     ],
     [
+      "144",
       "1967",
       "1967/06/01",
       "BE",
@@ -4348,11 +4205,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "2"
+      "8thアルバム"
     ],
     [
+      "145",
       "1967",
       "1967/06/01",
       "BE",
@@ -4378,11 +4234,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "3"
+      "8thアルバム"
     ],
     [
+      "146",
       "1967",
       "1967/06/01",
       "BE",
@@ -4408,11 +4263,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "4"
+      "8thアルバム"
     ],
     [
+      "147",
       "1967",
       "1967/06/01",
       "BE",
@@ -4438,11 +4292,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "5"
+      "8thアルバム"
     ],
     [
+      "148",
       "1967",
       "1967/06/01",
       "BE",
@@ -4468,11 +4321,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "6"
+      "8thアルバム"
     ],
     [
+      "149",
       "1967",
       "1967/06/01",
       "BE",
@@ -4498,11 +4350,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "7"
+      "8thアルバム"
     ],
     [
+      "150",
       "1967",
       "1967/06/01",
       "BE",
@@ -4528,11 +4379,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "8"
+      "8thアルバム"
     ],
     [
+      "151",
       "1967",
       "1967/06/01",
       "BE",
@@ -4558,11 +4408,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "9"
+      "8thアルバム"
     ],
     [
+      "152",
       "1967",
       "1967/06/01",
       "BE",
@@ -4588,11 +4437,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "10"
+      "8thアルバム"
     ],
     [
+      "153",
       "1967",
       "1967/06/01",
       "BE",
@@ -4618,11 +4466,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "11"
+      "8thアルバム"
     ],
     [
+      "154",
       "1967",
       "1967/06/01",
       "BE",
@@ -4648,11 +4495,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "12"
+      "8thアルバム"
     ],
     [
+      "155",
       "1967",
       "1967/06/01",
       "BE",
@@ -4678,11 +4524,10 @@
       "Peter Blake, Jann Haworth - design / Robert Fraser - Art Direction / Michael Cooper - photography / the Fool - inner sleeve design",
       "",
       "",
-      "8thアルバム",
-      "AL(8)",
-      "13"
+      "8thアルバム"
     ],
     [
+      "156",
       "1967",
       "1967/07/07",
       "BE",
@@ -4708,11 +4553,10 @@
       "",
       "",
       "",
-      "15thシングル / Magical Mystery Tour(US盤)に収録 / OurWorldで衛星放送で生放映",
-      "MMT",
-      "11"
+      "15thシングル / Magical Mystery Tour(US盤)に収録 / OurWorldで衛星放送で生放映"
     ],
     [
+      "157",
       "1967",
       "1967/07/07",
       "BE",
@@ -4738,11 +4582,10 @@
       "",
       "",
       "",
-      "15thシングル / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "10"
+      "15thシングル / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "158",
       "1967",
       "1967/11/24",
       "BE",
@@ -4768,11 +4611,10 @@
       "",
       "",
       "Paul McCartney",
-      "16thシングル / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "7"
+      "16thシングル / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "159",
       "1967",
       "1967/11/24",
       "BE",
@@ -4798,11 +4640,10 @@
       "",
       "",
       "",
-      "16thシングル / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "6"
+      "16thシングル / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "160",
       "1967",
       "1967/12/08",
       "BE",
@@ -4828,11 +4669,10 @@
       "John Kelly - photography / Bob Gibson - colour story illustrations (comic strip style) / Tony Barrow - compile",
       "The Beatles / Bernard Knowles",
       "",
-      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "1"
+      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "161",
       "1967",
       "1967/12/08",
       "BE",
@@ -4858,11 +4698,10 @@
       "John Kelly - photography / Bob Gibson - colour story illustrations (comic strip style) / Tony Barrow - compile",
       "The Beatles / Bernard Knowles",
       "",
-      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "5"
+      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "162",
       "1967",
       "1967/12/08",
       "BE",
@@ -4888,11 +4727,10 @@
       "John Kelly - photography / Bob Gibson - colour story illustrations (comic strip style) / Tony Barrow - compile",
       "The Beatles / Bernard Knowles",
       "",
-      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "6"
+      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "163",
       "1967",
       "1967/12/08",
       "BE",
@@ -4918,11 +4756,10 @@
       "John Kelly - photography / Bob Gibson - colour story illustrations (comic strip style) / Tony Barrow - compile",
       "The Beatles / Bernard Knowles",
       "",
-      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "2"
+      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "164",
       "1967",
       "1967/12/08",
       "BE",
@@ -4948,11 +4785,10 @@
       "John Kelly - photography / Bob Gibson - colour story illustrations (comic strip style) / Tony Barrow - compile",
       "The Beatles / Bernard Knowles",
       "",
-      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "3"
+      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "165",
       "1967",
       "1967/12/08",
       "BE",
@@ -4978,11 +4814,10 @@
       "John Kelly - photography / Bob Gibson - colour story illustrations (comic strip style) / Tony Barrow - compile",
       "The Beatles / Bernard Knowles",
       "",
-      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録",
-      "MMT",
-      "4"
+      "13th EP / 2枚組EP / TV映画サントラ / Magical Mystery Tour(US盤)に収録"
     ],
     [
+      "166",
       "1968",
       "1968/03/15",
       "BE",
@@ -5008,11 +4843,10 @@
       "",
       "",
       "Tony Bramwell",
-      "17thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "5"
+      "17thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "167",
       "1968",
       "1968/03/15",
       "BE",
@@ -5038,11 +4872,10 @@
       "",
       "",
       "",
-      "17thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "6"
+      "17thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "168",
       "1968",
       "1968/08/30",
       "BE",
@@ -5068,11 +4901,10 @@
       "",
       "",
       "Michael Lindsay-Hogg",
-      "18thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "7"
+      "18thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "169",
       "1968",
       "1968/08/30",
       "BE",
@@ -5098,11 +4930,10 @@
       "",
       "",
       "Michael Lindsay-Hogg",
-      "18thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "8"
+      "18thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "170",
       "1968",
       "1968/11/01",
       "GH",
@@ -5128,11 +4959,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "1"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "171",
       "1968",
       "1968/11/01",
       "GH",
@@ -5158,11 +4988,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドン録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "2"
+      "ジョージ1stアルバム / ロンドン録音メンバーを記載(内訳は不明)"
     ],
     [
+      "172",
       "1968",
       "1968/11/01",
       "GH",
@@ -5188,11 +5017,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "3"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "173",
       "1968",
       "1968/11/01",
       "GH",
@@ -5218,11 +5046,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "4"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "174",
       "1968",
       "1968/11/01",
       "GH",
@@ -5248,11 +5075,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "5"
+      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)"
     ],
     [
+      "175",
       "1968",
       "1968/11/01",
       "GH",
@@ -5278,11 +5104,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "6"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "176",
       "1968",
       "1968/11/01",
       "GH",
@@ -5308,11 +5133,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "7"
+      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)"
     ],
     [
+      "177",
       "1968",
       "1968/11/01",
       "GH",
@@ -5338,11 +5162,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / リンゴ、クラプトン参加。手元のライナーには師タールはジョージとあり",
-      "AL(G1)",
-      "8"
+      "ジョージ1stアルバム / リンゴ、クラプトン参加。手元のライナーには師タールはジョージとあり"
     ],
     [
+      "178",
       "1968",
       "1968/11/01",
       "GH",
@@ -5368,11 +5191,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "9"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "179",
       "1968",
       "1968/11/01",
       "GH",
@@ -5398,11 +5220,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド音楽(内訳は不明)と西洋音楽(ハリスン、バーナム)との融合、ハーモニカはライリー",
-      "AL(G1)",
-      "10"
+      "ジョージ1stアルバム / インド音楽(内訳は不明)と西洋音楽(ハリスン、バーナム)との融合、ハーモニカはライリー"
     ],
     [
+      "180",
       "1968",
       "1968/11/01",
       "GH",
@@ -5428,11 +5249,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "11"
+      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)"
     ],
     [
+      "181",
       "1968",
       "1968/11/01",
       "GH",
@@ -5458,11 +5278,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドンメンバーを記載",
-      "AL(G1)",
-      "12"
+      "ジョージ1stアルバム / ロンドンメンバーを記載"
     ],
     [
+      "182",
       "1968",
       "1968/11/01",
       "GH",
@@ -5488,11 +5307,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "13"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "183",
       "1968",
       "1968/11/01",
       "GH",
@@ -5518,11 +5336,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドンメンバー(内訳は不明)とライリーのハーモニカ",
-      "AL(G1)",
-      "14"
+      "ジョージ1stアルバム / ロンドンメンバー(内訳は不明)とライリーのハーモニカ"
     ],
     [
+      "184",
       "1968",
       "1968/11/01",
       "GH",
@@ -5548,11 +5365,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "15"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "185",
       "1968",
       "1968/11/01",
       "GH",
@@ -5578,11 +5394,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドンメンバー(内訳は不明)とサリバンのベース",
-      "AL(G1)",
-      "16"
+      "ジョージ1stアルバム / ロンドンメンバー(内訳は不明)とサリバンのベース"
     ],
     [
+      "186",
       "1968",
       "1968/11/01",
       "GH",
@@ -5608,11 +5423,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "17"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "187",
       "1968",
       "1968/11/01",
       "GH",
@@ -5638,11 +5452,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "18"
+      "ジョージ1stアルバム / ロンドンメンバーを記載(内訳は不明)"
     ],
     [
+      "188",
       "1968",
       "1968/11/01",
       "GH",
@@ -5668,11 +5481,10 @@
       "Bob Gill - painting / John Kelly - design / Alan Aldridge - design / George Harrison - image select (back cover) / Astrid Kirchherr - photography (inner sleeve)",
       "",
       "",
-      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)",
-      "AL(G1)",
-      "19"
+      "ジョージ1stアルバム / インド録音メンバーを記載(内訳は不明)"
     ],
     [
+      "189",
       "1968",
       "1968/11/22",
       "BE",
@@ -5698,11 +5510,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "1"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "190",
       "1968",
       "1968/11/22",
       "BE",
@@ -5728,11 +5539,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "2"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "191",
       "1968",
       "1968/11/22",
       "BE",
@@ -5758,11 +5568,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "3"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "192",
       "1968",
       "1968/11/22",
       "BE",
@@ -5788,11 +5597,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "4"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "193",
       "1968",
       "1968/11/22",
       "BE",
@@ -5818,11 +5626,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "5"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "194",
       "1968",
       "1968/11/22",
       "BE",
@@ -5848,11 +5655,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "6"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "195",
       "1968",
       "1968/11/22",
       "BE",
@@ -5878,11 +5684,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "7"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "196",
       "1968",
       "1968/11/22",
       "BE",
@@ -5908,11 +5713,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "8"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "197",
       "1968",
       "1968/11/22",
       "BE",
@@ -5938,11 +5742,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "9"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "198",
       "1968",
       "1968/11/22",
       "BE",
@@ -5968,11 +5771,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "10"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "199",
       "1968",
       "1968/11/22",
       "BE",
@@ -5998,11 +5800,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "11"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "200",
       "1968",
       "1968/11/22",
       "BE",
@@ -6028,11 +5829,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "12"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "201",
       "1968",
       "1968/11/22",
       "BE",
@@ -6058,11 +5858,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "13"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "202",
       "1968",
       "1968/11/22",
       "BE",
@@ -6088,11 +5887,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "14"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "203",
       "1968",
       "1968/11/22",
       "BE",
@@ -6118,11 +5916,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "15"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "204",
       "1968",
       "1968/11/22",
       "BE",
@@ -6148,11 +5945,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "16"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "205",
       "1968",
       "1968/11/22",
       "BE",
@@ -6178,11 +5974,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-1",
-      "AL(9-1)",
-      "17"
+      "9thアルバム / 2枚組-1"
     ],
     [
+      "206",
       "1968",
       "1968/11/22",
       "BE",
@@ -6208,11 +6003,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "1"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "207",
       "1968",
       "1968/11/22",
       "BE",
@@ -6238,11 +6032,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "2"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "208",
       "1968",
       "1968/11/22",
       "BE",
@@ -6268,11 +6061,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "3"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "209",
       "1968",
       "1968/11/22",
       "BE",
@@ -6298,11 +6090,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "4"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "210",
       "1968",
       "1968/11/22",
       "BE",
@@ -6328,11 +6119,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "5"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "211",
       "1968",
       "1968/11/22",
       "BE",
@@ -6358,11 +6148,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "6"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "212",
       "1968",
       "1968/11/22",
       "BE",
@@ -6388,11 +6177,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "7"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "213",
       "1968",
       "1968/11/22",
       "BE",
@@ -6418,11 +6206,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "8"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "214",
       "1968",
       "1968/11/22",
       "BE",
@@ -6448,11 +6235,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "9"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "215",
       "1968",
       "1968/11/22",
       "BE",
@@ -6478,11 +6264,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "10"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "216",
       "1968",
       "1968/11/22",
       "BE",
@@ -6508,11 +6293,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "11"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "217",
       "1968",
       "1968/11/22",
       "BE",
@@ -6538,11 +6322,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "12"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "218",
       "1968",
       "1968/11/22",
       "BE",
@@ -6568,11 +6351,10 @@
       "Richard Hamilton - design, montage of photographs / Paul McCartney - design, montage of photographs / John Kelly - photography",
       "",
       "",
-      "9thアルバム / 2枚組-2",
-      "AL(9-2)",
-      "13"
+      "9thアルバム / 2枚組-2"
     ],
     [
+      "219",
       "1968",
       "1968/11/29",
       "J&Y",
@@ -6598,11 +6380,10 @@
       "Tony Bramwell - time-delay camera set up ",
       "",
       "",
-      "ジョン&ヨーコ1stアルバム",
-      "AL(JY1)",
-      "1"
+      "ジョン&ヨーコ1stアルバム"
     ],
     [
+      "220",
       "1968",
       "1968/11/29",
       "J&Y",
@@ -6628,11 +6409,10 @@
       "Tony Bramwell - time-delay camera set up ",
       "",
       "",
-      "ジョン&ヨーコ1stアルバム",
-      "AL(JY1)",
-      "2"
+      "ジョン&ヨーコ1stアルバム"
     ],
     [
+      "221",
       "1969",
       "1969/01/13",
       "BE",
@@ -6658,11 +6438,10 @@
       "Heinz Edelman - drawing",
       "",
       "",
-      "10thアルバム / アニメ映画サントラ",
-      "AL(7)",
-      "6"
+      "10thアルバム / アニメ映画サントラ"
     ],
     [
+      "222",
       "1969",
       "1969/01/13",
       "BE",
@@ -6688,11 +6467,10 @@
       "Heinz Edelman - drawing",
       "George Dunning",
       "",
-      "10thアルバム / アニメ映画サントラ",
-      "AL(10)",
-      "2"
+      "10thアルバム / アニメ映画サントラ"
     ],
     [
+      "223",
       "1969",
       "1969/01/13",
       "BE",
@@ -6718,11 +6496,10 @@
       "Heinz Edelman - drawing",
       "George Dunning",
       "",
-      "10thアルバム / アニメ映画サントラ",
-      "AL(10)",
-      "3"
+      "10thアルバム / アニメ映画サントラ"
     ],
     [
+      "224",
       "1969",
       "1969/01/13",
       "BE",
@@ -6748,11 +6525,10 @@
       "Heinz Edelman - drawing",
       "George Dunning",
       "",
-      "10thアルバム / アニメ映画サントラ",
-      "AL(10)",
-      "4"
+      "10thアルバム / アニメ映画サントラ"
     ],
     [
+      "225",
       "1969",
       "1969/01/13",
       "BE",
@@ -6778,11 +6554,10 @@
       "Heinz Edelman - drawing",
       "George Dunning",
       "",
-      "10thアルバム / アニメ映画サントラ",
-      "AL(10)",
-      "5"
+      "10thアルバム / アニメ映画サントラ"
     ],
     [
+      "226",
       "1969",
       "1969/01/13",
       "BE",
@@ -6808,11 +6583,10 @@
       "Heinz Edelman - drawing",
       "George Dunning",
       "",
-      "10thアルバム / アニメ映画サントラ / 衛星番組Our Worldで生放送された曲",
-      "MMT",
-      "11"
+      "10thアルバム / アニメ映画サントラ / 衛星番組Our Worldで生放送された曲"
     ],
     [
+      "227",
       "1969",
       "1969/04/11",
       "BE",
@@ -6838,11 +6612,10 @@
       "",
       "",
       "",
-      "19thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "9"
+      "19thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "228",
       "1969",
       "1969/04/11",
       "BE",
@@ -6868,11 +6641,10 @@
       "",
       "",
       "",
-      "19thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "10"
+      "19thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "229",
       "1969",
       "1969/05/09",
       "J&Y",
@@ -6898,11 +6670,10 @@
       "John Kosh - design / Susan Wood - photography",
       "",
       "",
-      "ジョン&ヨーコ2ndアルバム",
-      "AL(JY2)",
-      "1"
+      "ジョン&ヨーコ2ndアルバム"
     ],
     [
+      "230",
       "1969",
       "1969/05/09",
       "J&Y",
@@ -6928,11 +6699,10 @@
       "John Kosh - design / Susan Wood - photography",
       "",
       "",
-      "ジョン&ヨーコ2ndアルバム",
-      "AL(JY2)",
-      "2"
+      "ジョン&ヨーコ2ndアルバム"
     ],
     [
+      "231",
       "1969",
       "1969/05/09",
       "J&Y",
@@ -6958,11 +6728,10 @@
       "John Kosh - design / Susan Wood - photography",
       "",
       "",
-      "ジョン&ヨーコ2ndアルバム",
-      "AL(JY2)",
-      "3"
+      "ジョン&ヨーコ2ndアルバム"
     ],
     [
+      "232",
       "1969",
       "1969/05/09",
       "J&Y",
@@ -6988,11 +6757,10 @@
       "John Kosh - design / Susan Wood - photography",
       "",
       "",
-      "ジョン&ヨーコ2ndアルバム / 2分間の無音の曲",
-      "AL(JY2)",
-      "4"
+      "ジョン&ヨーコ2ndアルバム / 2分間の無音の曲"
     ],
     [
+      "233",
       "1969",
       "1969/05/09",
       "J&Y",
@@ -7018,11 +6786,10 @@
       "John Kosh - design / Susan Wood - photography",
       "",
       "",
-      "ジョン&ヨーコ2ndアルバム",
-      "AL(JY2)",
-      "5"
+      "ジョン&ヨーコ2ndアルバム"
     ],
     [
+      "234",
       "1969",
       "1969/05/09",
       "GH",
@@ -7048,11 +6815,10 @@
       "George Harrison - painting",
       "",
       "",
-      "ジョージ2ndアルバム",
-      "AL(G2)",
-      "1"
+      "ジョージ2ndアルバム"
     ],
     [
+      "235",
       "1969",
       "1969/05/09",
       "GH",
@@ -7078,11 +6844,10 @@
       "George Harrison - painting",
       "",
       "",
-      "ジョージ2ndアルバム",
-      "AL(G2)",
-      "2"
+      "ジョージ2ndアルバム"
     ],
     [
+      "236",
       "1969",
       "1969/05/30",
       "BE",
@@ -7108,11 +6873,10 @@
       "",
       "",
       "",
-      "20thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "11"
+      "20thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "237",
       "1969",
       "1969/05/30",
       "BE",
@@ -7138,11 +6902,10 @@
       "",
       "",
       "",
-      "20thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "12"
+      "20thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "238",
       "1969",
       "1969/07/04",
       "J&Y",
@@ -7171,6 +6934,7 @@
       "プラスティック・オノ・バンド1stシングル / ボーカルはジョン / Shaved Fishに収録"
     ],
     [
+      "239",
       "1969",
       "1969/07/04",
       "J&Y",
@@ -7199,6 +6963,7 @@
       "プラスティック・オノ・バンド1stシングル / ボーカルはヨーコ / Two Virginsボーナストラックに収録"
     ],
     [
+      "240",
       "1969",
       "1969/09/26",
       "BE",
@@ -7224,11 +6989,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "1"
+      "11thアルバム"
     ],
     [
+      "241",
       "1969",
       "1969/09/26",
       "BE",
@@ -7254,11 +7018,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "Neil Aspinall",
-      "11thアルバム",
-      "AL(11)",
-      "2"
+      "11thアルバム"
     ],
     [
+      "242",
       "1969",
       "1969/09/26",
       "BE",
@@ -7284,11 +7047,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "3"
+      "11thアルバム"
     ],
     [
+      "243",
       "1969",
       "1969/09/26",
       "BE",
@@ -7314,11 +7076,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "4"
+      "11thアルバム"
     ],
     [
+      "244",
       "1969",
       "1969/09/26",
       "BE",
@@ -7344,11 +7105,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "5"
+      "11thアルバム"
     ],
     [
+      "245",
       "1969",
       "1969/09/26",
       "BE",
@@ -7374,11 +7134,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "6"
+      "11thアルバム"
     ],
     [
+      "246",
       "1969",
       "1969/09/26",
       "BE",
@@ -7404,11 +7163,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "7"
+      "11thアルバム"
     ],
     [
+      "247",
       "1969",
       "1969/09/26",
       "BE",
@@ -7434,11 +7192,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "8"
+      "11thアルバム"
     ],
     [
+      "248",
       "1969",
       "1969/09/26",
       "BE",
@@ -7464,11 +7221,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "9"
+      "11thアルバム"
     ],
     [
+      "249",
       "1969",
       "1969/09/26",
       "BE",
@@ -7494,11 +7250,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "10"
+      "11thアルバム"
     ],
     [
+      "250",
       "1969",
       "1969/09/26",
       "BE",
@@ -7524,11 +7279,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "11"
+      "11thアルバム"
     ],
     [
+      "251",
       "1969",
       "1969/09/26",
       "BE",
@@ -7554,11 +7308,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "12"
+      "11thアルバム"
     ],
     [
+      "252",
       "1969",
       "1969/09/26",
       "BE",
@@ -7584,11 +7337,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "13"
+      "11thアルバム"
     ],
     [
+      "253",
       "1969",
       "1969/09/26",
       "BE",
@@ -7614,11 +7366,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "14"
+      "11thアルバム"
     ],
     [
+      "254",
       "1969",
       "1969/09/26",
       "BE",
@@ -7644,11 +7395,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "15"
+      "11thアルバム"
     ],
     [
+      "255",
       "1969",
       "1969/09/26",
       "BE",
@@ -7674,11 +7424,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "16"
+      "11thアルバム"
     ],
     [
+      "256",
       "1969",
       "1969/09/26",
       "BE",
@@ -7704,11 +7453,10 @@
       "John Kosh - design / Iain Macmillan - photography / Paul McCartney - idea sketch, image select / Tommy Nutter - suits design",
       "",
       "",
-      "11thアルバム",
-      "AL(11)",
-      "17"
+      "11thアルバム"
     ],
     [
+      "257",
       "1969",
       "1969/10/20",
       "J&Y",
@@ -7737,6 +7485,7 @@
       "プラスティック・オノ・バンド2ndシングル / ボーカルはジョン / Shaved Fishに収録"
     ],
     [
+      "258",
       "1969",
       "1969/10/20",
       "J&Y",
@@ -7765,6 +7514,7 @@
       "プラスティック・オノ・バンド2ndシングル / ボーカルはヨーコ / Flyに収録"
     ],
     [
+      "259",
       "1969",
       "1969/10/31",
       "BE",
@@ -7790,11 +7540,10 @@
       "",
       "",
       "Neil Aspinall",
-      "21thシングル  / 両A面 / Abbey Roadに収録",
-      "AL(11)",
-      "2"
+      "21thシングル  / 両A面 / Abbey Roadに収録"
     ],
     [
+      "260",
       "1969",
       "1969/10/31",
       "BE",
@@ -7820,11 +7569,10 @@
       "",
       "",
       "",
-      "21thシングル  / 両A面 / Abbey Roadに収録",
-      "AL(11)",
-      "1"
+      "21thシングル  / 両A面 / Abbey Roadに収録"
     ],
     [
+      "261",
       "1969",
       "1969/11/07",
       "J&Y",
@@ -7850,11 +7598,10 @@
       "John Kosh - design / John Lennon - drawing",
       "",
       "",
-      "ジョン&ヨーコ3rdアルバム",
-      "AL(JY3)",
-      "1"
+      "ジョン&ヨーコ3rdアルバム"
     ],
     [
+      "262",
       "1969",
       "1969/11/07",
       "J&Y",
@@ -7880,11 +7627,10 @@
       "John Kosh - design / John Lennon - drawing",
       "",
       "",
-      "ジョン&ヨーコ3rdアルバム",
-      "AL(JY3)",
-      "2"
+      "ジョン&ヨーコ3rdアルバム"
     ],
     [
+      "263",
       "1969",
       "1969/12/12",
       "BE",
@@ -7910,11 +7656,10 @@
       "",
       "",
       "",
-      "コンピレーションアルバム  / Past Masters Vol.2に収録",
-      "PM2",
-      "13"
+      "コンピレーションアルバム  / Past Masters Vol.2に収録"
     ],
     [
+      "264",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -7943,6 +7688,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "265",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -7971,6 +7717,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "266",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -7999,6 +7746,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "267",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -8027,6 +7775,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "268",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -8055,6 +7804,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "269",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -8083,6 +7833,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "270",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -8111,6 +7862,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "271",
       "1969",
       "1969/12/12",
       "J&Y",
@@ -8139,6 +7891,7 @@
       "プラスチック・オノ・バンドのライブアルバム / アートワークは英語版wikipediaの脚注リンク先より"
     ],
     [
+      "272",
       "1970",
       "1970/02/06",
       "J&Y",
@@ -8167,6 +7920,7 @@
       "プラスチック・オノ・バンド3rdシングル / Shaved Fishに収録 / ボーカルはジョン"
     ],
     [
+      "273",
       "1970",
       "1970/02/06",
       "J&Y",
@@ -8195,6 +7949,7 @@
       "プラスチック・オノ・バンド3rdシングル / Wedding Albumボーナストラック / ボーカルはヨーコ"
     ],
     [
+      "274",
       "1970",
       "1970/03/06",
       "BE",
@@ -8220,11 +7975,10 @@
       "",
       "",
       "",
-      "22thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "14"
+      "22thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "275",
       "1970",
       "1970/03/06",
       "BE",
@@ -8250,11 +8004,10 @@
       "",
       "",
       "",
-      "22thシングル / Past Masters Vol.2に収録",
-      "PM2",
-      "15"
+      "22thシングル / Past Masters Vol.2に収録"
     ],
     [
+      "276",
       "1970",
       "1970/03/27",
       "RS",
@@ -8280,11 +8033,10 @@
       "Richard Polak - photography",
       "",
       "Neil Aspinall",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "1"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "277",
       "1970",
       "1970/03/27",
       "RS",
@@ -8310,11 +8062,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "2"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "278",
       "1970",
       "1970/03/27",
       "RS",
@@ -8340,11 +8091,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "3"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "279",
       "1970",
       "1970/03/27",
       "RS",
@@ -8370,11 +8120,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "4"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "280",
       "1970",
       "1970/03/27",
       "RS",
@@ -8400,11 +8149,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "5"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "281",
       "1970",
       "1970/03/27",
       "RS",
@@ -8430,11 +8178,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "6"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "282",
       "1970",
       "1970/03/27",
       "RS",
@@ -8460,11 +8207,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "7"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "283",
       "1970",
       "1970/03/27",
       "RS",
@@ -8490,11 +8236,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "8"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "284",
       "1970",
       "1970/03/27",
       "RS",
@@ -8520,11 +8265,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "9"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "285",
       "1970",
       "1970/03/27",
       "RS",
@@ -8550,11 +8294,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "10"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "286",
       "1970",
       "1970/03/27",
       "RS",
@@ -8580,11 +8323,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "11"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "287",
       "1970",
       "1970/03/27",
       "RS",
@@ -8610,11 +8352,10 @@
       "Richard Polak - photography",
       "",
       "",
-      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋",
-      "AL(R1)",
-      "12"
+      "リンゴ1stアルバム / 作者は英語版wikipediaとライナーから抜粋"
     ],
     [
+      "288",
       "1970",
       "1970/04/17",
       "PM",
@@ -8640,11 +8381,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "1"
+      "ポール1stアルバム"
     ],
     [
+      "289",
       "1970",
       "1970/04/17",
       "PM",
@@ -8670,11 +8410,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "2"
+      "ポール1stアルバム"
     ],
     [
+      "290",
       "1970",
       "1970/04/17",
       "PM",
@@ -8700,11 +8439,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム / パートは耳で聴いて抜粋",
-      "AL(P1)",
-      "3"
+      "ポール1stアルバム / パートは耳で聴いて抜粋"
     ],
     [
+      "291",
       "1970",
       "1970/04/17",
       "PM",
@@ -8730,11 +8468,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "4"
+      "ポール1stアルバム"
     ],
     [
+      "292",
       "1970",
       "1970/04/17",
       "PM",
@@ -8760,11 +8497,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム / パートはライナーと耳で聴いて抜粋 / グラス音の後のピアノの小曲は「Suicide」というらしい（ライナーより）",
-      "AL(P1)",
-      "5"
+      "ポール1stアルバム / パートはライナーと耳で聴いて抜粋 / グラス音の後のピアノの小曲は「Suicide」というらしい（ライナーより）"
     ],
     [
+      "293",
       "1970",
       "1970/04/17",
       "PM",
@@ -8790,11 +8526,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "6"
+      "ポール1stアルバム"
     ],
     [
+      "294",
       "1970",
       "1970/04/17",
       "PM",
@@ -8820,11 +8555,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム / パートは耳で聴いて抜粋",
-      "AL(P1)",
-      "7"
+      "ポール1stアルバム / パートは耳で聴いて抜粋"
     ],
     [
+      "295",
       "1970",
       "1970/04/17",
       "PM",
@@ -8850,11 +8584,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム / パートは耳で聴いて抜粋",
-      "AL(P1)",
-      "8"
+      "ポール1stアルバム / パートは耳で聴いて抜粋"
     ],
     [
+      "296",
       "1970",
       "1970/04/17",
       "PM",
@@ -8880,11 +8613,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "9"
+      "ポール1stアルバム"
     ],
     [
+      "297",
       "1970",
       "1970/04/17",
       "PM",
@@ -8910,11 +8642,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "10"
+      "ポール1stアルバム"
     ],
     [
+      "298",
       "1970",
       "1970/04/17",
       "PM",
@@ -8940,11 +8671,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "11"
+      "ポール1stアルバム"
     ],
     [
+      "299",
       "1970",
       "1970/04/17",
       "PM",
@@ -8970,11 +8700,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "Charlie Jenkins",
-      "ポール1stアルバム",
-      "AL(P1)",
-      "12"
+      "ポール1stアルバム"
     ],
     [
+      "300",
       "1970",
       "1970/04/17",
       "PM",
@@ -9000,11 +8729,10 @@
       "Linda McCartney - photography / Gordon House, Roger Huggett - design (gatefold cover) / Paul McCartney - design concept (gatefold cover)",
       "",
       "",
-      "ポール1stアルバム / パートはライナーと耳で聴いて抜粋",
-      "AL(P1)",
-      "13"
+      "ポール1stアルバム / パートはライナーと耳で聴いて抜粋"
     ],
     [
+      "301",
       "1970",
       "1970/05/08",
       "BE",
@@ -9030,11 +8758,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "1"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "302",
       "1970",
       "1970/05/08",
       "BE",
@@ -9060,11 +8787,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ / ルーフトップコンサート音源",
-      "AL(12)",
-      "2"
+      "12thアルバム / 映画サントラ / ルーフトップコンサート音源"
     ],
     [
+      "303",
       "1970",
       "1970/05/08",
       "BE",
@@ -9090,11 +8816,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "3"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "304",
       "1970",
       "1970/05/08",
       "BE",
@@ -9120,11 +8845,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "4"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "305",
       "1970",
       "1970/05/08",
       "BE",
@@ -9150,11 +8874,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "5"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "306",
       "1970",
       "1970/05/08",
       "BE",
@@ -9180,11 +8903,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "6"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "307",
       "1970",
       "1970/05/08",
       "BE",
@@ -9210,11 +8932,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "7"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "308",
       "1970",
       "1970/05/08",
       "BE",
@@ -9240,11 +8961,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ / ルーフトップコンサート音源",
-      "AL(12)",
-      "8"
+      "12thアルバム / 映画サントラ / ルーフトップコンサート音源"
     ],
     [
+      "309",
       "1970",
       "1970/05/08",
       "BE",
@@ -9270,11 +8990,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ / ルーフトップコンサート音源",
-      "AL(12)",
-      "9"
+      "12thアルバム / 映画サントラ / ルーフトップコンサート音源"
     ],
     [
+      "310",
       "1970",
       "1970/05/08",
       "BE",
@@ -9300,11 +9019,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "10"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "311",
       "1970",
       "1970/05/08",
       "BE",
@@ -9330,11 +9048,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "11"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "312",
       "1970",
       "1970/05/08",
       "BE",
@@ -9360,11 +9077,10 @@
       "Ethan Russell - photography / John Kosh - design",
       "Michael Lindsay-Hogg",
       "",
-      "12thアルバム / 映画サントラ",
-      "AL(12)",
-      "12"
+      "12thアルバム / 映画サントラ"
     ],
     [
+      "313",
       "1970",
       "1970/09/25",
       "RS",
@@ -9390,11 +9106,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "1"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "314",
       "1970",
       "1970/09/25",
       "RS",
@@ -9420,11 +9135,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "2"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "315",
       "1970",
       "1970/09/25",
       "RS",
@@ -9450,11 +9164,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "3"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "316",
       "1970",
       "1970/09/25",
       "RS",
@@ -9480,11 +9193,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "4"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "317",
       "1970",
       "1970/09/25",
       "RS",
@@ -9510,11 +9222,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "5"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "318",
       "1970",
       "1970/09/25",
       "RS",
@@ -9540,11 +9251,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "6"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "319",
       "1970",
       "1970/09/25",
       "RS",
@@ -9570,11 +9280,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "7"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "320",
       "1970",
       "1970/09/25",
       "RS",
@@ -9600,11 +9309,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "8"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "321",
       "1970",
       "1970/09/25",
       "RS",
@@ -9630,11 +9338,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) & Jeannie Kendall / デザインはCDより",
-      "AL(R1)",
-      "9"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) & Jeannie Kendall / デザインはCDより"
     ],
     [
+      "322",
       "1970",
       "1970/09/25",
       "RS",
@@ -9660,11 +9367,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "10"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "323",
       "1970",
       "1970/09/25",
       "RS",
@@ -9690,11 +9396,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "11"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "324",
       "1970",
       "1970/09/25",
       "RS",
@@ -9720,11 +9425,10 @@
       "Marshall Fallwell, Jr. - photography / John Kosh - design",
       "",
       "",
-      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより",
-      "AL(R1)",
-      "12"
+      "リンゴ2ndアルバム / パートはナッシュビル録音メンバー(内訳不明) / デザインはCDより"
     ],
     [
+      "325",
       "1970",
       "1970/10/05",
       "RS",
@@ -9753,6 +9457,7 @@
       "リンゴ1stシングル / パートはナッシュビル録音メンバー(内訳不明)"
     ],
     [
+      "326",
       "1970",
       "1970/10/05",
       "RS",
@@ -9781,6 +9486,7 @@
       "リンゴ1stシングル / パートはナッシュビル録音メンバー(内訳不明)"
     ],
     [
+      "327",
       "1970",
       "1970/11/23",
       "GH",
@@ -9809,6 +9515,7 @@
       "ジョージ1stシングル(US)"
     ],
     [
+      "328",
       "1970",
       "1970/11/23",
       "GH",
@@ -9837,6 +9544,7 @@
       "ジョージ1stシングル(US) / アルバムには2バージョンありシングルは7分のVersion 1"
     ],
     [
+      "329",
       "1970",
       "1970/11/27",
       "GH",
@@ -9865,6 +9573,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "330",
       "1970",
       "1970/11/27",
       "GH",
@@ -9893,6 +9602,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "331",
       "1970",
       "1970/11/27",
       "GH",
@@ -9921,6 +9631,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "332",
       "1970",
       "1970/11/27",
       "GH",
@@ -9949,6 +9660,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "333",
       "1970",
       "1970/11/27",
       "GH",
@@ -9977,6 +9689,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "334",
       "1970",
       "1970/11/27",
       "GH",
@@ -10005,6 +9718,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "335",
       "1970",
       "1970/11/27",
       "GH",
@@ -10033,6 +9747,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "336",
       "1970",
       "1970/11/27",
       "GH",
@@ -10061,6 +9776,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "337",
       "1970",
       "1970/11/27",
       "GH",
@@ -10089,6 +9805,7 @@
       "ジョージ3rdアルバム/ 3枚組-1"
     ],
     [
+      "338",
       "1970",
       "1970/11/27",
       "GH",
@@ -10117,6 +9834,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "339",
       "1970",
       "1970/11/27",
       "GH",
@@ -10145,6 +9863,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "340",
       "1970",
       "1970/11/27",
       "GH",
@@ -10173,6 +9892,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "341",
       "1970",
       "1970/11/27",
       "GH",
@@ -10201,6 +9921,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "342",
       "1970",
       "1970/11/27",
       "GH",
@@ -10229,6 +9950,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "343",
       "1970",
       "1970/11/27",
       "GH",
@@ -10257,6 +9979,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "344",
       "1970",
       "1970/11/27",
       "GH",
@@ -10285,6 +10008,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "345",
       "1970",
       "1970/11/27",
       "GH",
@@ -10313,6 +10037,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "346",
       "1970",
       "1970/11/27",
       "GH",
@@ -10341,6 +10066,7 @@
       "ジョージ3rdアルバム/ 3枚組-2"
     ],
     [
+      "347",
       "1970",
       "1970/11/27",
       "GH",
@@ -10369,6 +10095,7 @@
       "ジョージ3rdアルバム/ 3枚組-3 / パートは英語版wikipediaより抜粋"
     ],
     [
+      "348",
       "1970",
       "1970/11/27",
       "GH",
@@ -10397,6 +10124,7 @@
       "ジョージ3rdアルバム/ 3枚組-3 / パートは英語版wikipediaより抜粋"
     ],
     [
+      "349",
       "1970",
       "1970/11/27",
       "GH",
@@ -10425,6 +10153,7 @@
       "ジョージ3rdアルバム/ 3枚組-3 / パートは英語版wikipediaより抜粋"
     ],
     [
+      "350",
       "1970",
       "1970/11/27",
       "GH",
@@ -10453,6 +10182,7 @@
       "ジョージ3rdアルバム/ 3枚組-3 / パートは英語版wikipediaより抜粋"
     ],
     [
+      "351",
       "1970",
       "1970/11/27",
       "GH",
@@ -10481,6 +10211,7 @@
       "ジョージ3rdアルバム/ 3枚組-3 / パートは英語版wikipediaより抜粋"
     ],
     [
+      "352",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10509,6 +10240,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "353",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10537,6 +10269,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "354",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10565,6 +10298,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "355",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10593,6 +10327,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "356",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10621,6 +10356,7 @@
       "ジョン1st / パートは英語版wikipediaより抜粋 /エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "357",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10649,6 +10385,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "358",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10677,6 +10414,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "359",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10705,6 +10443,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "360",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10733,6 +10472,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "361",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10761,6 +10501,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "362",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10789,6 +10530,7 @@
       "ジョン1st / エンジニアはヨーコ1stより/ デザインはCDより"
     ],
     [
+      "363",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10817,6 +10559,7 @@
       "ヨーコ1st / デザインはCDより"
     ],
     [
+      "364",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10845,6 +10588,7 @@
       "ヨーコ1st / デザインはCDより"
     ],
     [
+      "365",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10873,6 +10617,7 @@
       "ヨーコ1st / デザインはCDより"
     ],
     [
+      "366",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10901,6 +10646,7 @@
       "ヨーコ1st / デザインはCDより"
     ],
     [
+      "367",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10929,6 +10675,7 @@
       "ヨーコ1st / デザインはCDより"
     ],
     [
+      "368",
       "1970",
       "1970/12/11",
       "J&Y",
@@ -10957,6 +10704,7 @@
       "ヨーコ1st / デザインはCDより"
     ],
     [
+      "369",
       "1970",
       "1970/12/28",
       "J&Y",
@@ -10985,6 +10733,7 @@
       "ジョン1stシングル / A面写真はジョン1stと同じ / B面はヨーコ1st"
     ],
     [
+      "370",
       "1970",
       "1970/12/28",
       "J&Y",

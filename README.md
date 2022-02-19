@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 動的APIで曲単位のデータを取得 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- データのキー名を半角英数に変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

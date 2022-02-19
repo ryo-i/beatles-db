@@ -94,21 +94,21 @@ function Inner() {
 
   const setKeyNo = (data) => {
     for (let i = 0; i < data.length; i++) {
-      if (data[i] === '発売年') {
+      if (data[i] === 'year') {
         setSellYear(i);
-      } else if (data[i] === '発売日') {
+      } else if (data[i] === 'date') {
         setSellDay(i);
-      } else if (data[i] === 'アイコン') {
+      } else if (data[i] === 'category') {
         setIcon(i);
-      } else if (data[i] === 'アーティスト') {
+      } else if (data[i] === 'artist') {
         setArtist(i);
-      } else if (data[i] === '形態') {
+      } else if (data[i] === 'format') {
         setFormat(i);
-      } else if (data[i] === '収録作品') {
+      } else if (data[i] === 'title') {
         setTitle(i);
-      } else if (data[i] === 'No.') {
+      } else if (data[i] === 'number') {
         setNum(i);
-      } else if (data[i] === '曲名') {
+      } else if (data[i] === 'track') {
         setTrack(i);
       }
     }
