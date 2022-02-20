@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext }  from 'react';
+import { useRouter } from 'next/router';
 import { Context } from '../pages/index';
 import styled from 'styled-components';
 
@@ -85,24 +86,42 @@ function InnerIndex() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [tracksData, setTracksData] = useState([]);
   const {search, setSearch} = useContext(Context);
+  const [pageParam, setPageParam] = useState('');
 
   useEffect(() => {
     setSearch('すべて');
   });
 
-  // url
-  const url = 'api/beatles';
+
+  // Get Query Param
+  const router = useRouter();
+  const getPageParam = (pageQuery) => {
+    if (isNaN(pageQuery)) {
+      setPageParam('');
+      return;
+    }
+    setPageParam('?page=' + pageQuery);
+  };
 
 
-  //  Get Tracks Data
   useEffect(() => {
+    const pageQuery = Number(router.query.page);
+    console.log('pageQuery', pageQuery);
+    getPageParam(pageQuery);
+    console.log('pageParam', pageParam);
+  });
+
+
+  useEffect(() => {
+    // const url = 'api/beatles' + pageParam; test
+    const url = 'api/beatles';
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
         setIsLoaded(true);
         const data = resJson;
-        // console.log('data', data);
+        console.log('data', data);
         setTracksData(data);
       } catch(error) {
         setIsLoaded(true);
@@ -111,6 +130,7 @@ function InnerIndex() {
       }
     };
     getTracksData(url);
+  // }, [pageParam]); // test
   }, []);
 
 

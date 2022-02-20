@@ -37,6 +37,16 @@ const setKeyNumber = (data) => {
 setKeyNumber(beatlesData.values[0]);
 
 
+// Page segmentation
+const trackLength = beatlesData.values.length;
+const pageUnit = 50;
+const pageLength = trackLength / pageUnit;
+const trackRemainder = trackLength % pageUnit;
+console.log('trackLength', trackLength);
+console.log('pageLength', pageLength);
+console.log('trackRemainder', trackRemainder);
+
+
 // Beatles Obj Data
 const beatlesObjData = [];
 for (var i = 1; i < beatlesData.values.length; i++) {
@@ -51,11 +61,11 @@ for (var i = 1; i < beatlesData.values.length; i++) {
   thisObj['track'] = beatlesData.values[i][track];
   beatlesObjData.push(thisObj);
 }
-// console.log('beatlesObjData', beatlesObjData);
 
 
 // Response
 export default (req, res) => {
-  // console.log(req.query);
+  console.log('req.query', req.query);
+  console.log('req.body', req.body);
   res.status(200).json(beatlesObjData);
 }
