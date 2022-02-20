@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>楽曲単位のデータを画面に表示 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>トップと楽曲情報をリンクで往来できるようにした <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

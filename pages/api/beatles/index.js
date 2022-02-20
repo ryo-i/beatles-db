@@ -2,6 +2,7 @@ import beatlesData from '../data/beatles.json';
 
 
 // KeyNumbers
+let id = 0;
 let year = 0;
 let category = 0;
 let artist = 0;
@@ -14,7 +15,9 @@ let track = 0;
 // Set Key Numbers
 const setKeyNumber = (data) => {
   for (let i = 0; i < data.length; i++) {
-    if (data[i] === 'year') {
+    if (data[i] === 'id') {
+      id = i;
+    } else if (data[i] === 'year') {
       year = i;
     } else if (data[i] === 'category') {
       category = i;
@@ -38,6 +41,7 @@ setKeyNumber(beatlesData.values[0]);
 const beatlesObjData = [];
 for (var i = 1; i < beatlesData.values.length; i++) {
   const thisObj = {};
+  thisObj['id'] = beatlesData.values[i][id];
   thisObj['year'] = beatlesData.values[i][year];
   thisObj['category'] = beatlesData.values[i][category];
   thisObj['artist'] = beatlesData.values[i][artist];

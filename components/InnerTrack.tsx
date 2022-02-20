@@ -18,11 +18,14 @@ const Section = styled.section`
       margin: 0;
     }
     dt {
-      width: 30%;
+      width: 20%;
       padding-right: 1em;
+      ::after {
+        content: "："
+      }
     }
     dd {
-      width: 70%;
+      width: 80%;
     }
   }
 `;
@@ -143,7 +146,7 @@ function InnerTrack() {
     <>
       {
         <Section>
-          <h2>{trackName}</h2>
+          <h2>曲名：{trackName}</h2>
           <TrackInfo />
         </Section>
       }

@@ -5,6 +5,9 @@ import styled from 'styled-components';
 
 // CSS in JS
 const Section = styled.section`
+  h2 {
+    color: #333;
+  }
   ul {
     padding: 0;
     li {
@@ -29,7 +32,7 @@ const Section = styled.section`
       dl {
         margin: 0;
         flex: 1;
-        dt {
+        dt a {
           margin: 0 0 10px;
           display: flex;
           align-items: center;
@@ -42,6 +45,8 @@ const Section = styled.section`
             line-height: 18px;
             text-align: center;
             border-radius: 3px;
+            color: #000;
+            text-decoration: none;
           }
           .song {
             font-size: 18px;
@@ -123,8 +128,10 @@ function InnerIndex() {
                 <figure><p className="icon">{data.category}</p></figure>
                 <dl>
                   <dt>
-                    <p className="num">{data.number}</p>
-                    <p className="song">{data.track}</p>
+                    <a href={"track/" + data.id}>
+                      <p className="num">{data.number}</p>
+                      <p className="song">{data.track}</p>
+                    </a>
                   </dt>
                   <dd>
                     <p className="title-area"><span className="format">{data.format}</span><span className="title">{data.title}</span> ({data.year})</p>
