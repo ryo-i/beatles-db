@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext }  from 'react';
-import { Context } from '../pages/track/[no]';
+import { Context } from '../pages/track/[number]';
 import styled from 'styled-components';
 
 
@@ -89,21 +89,17 @@ function InnerTrack() {
   });
 
 
-  // const url = 'api/beatles/123'; // test(track)
-
-
   //  Get Tracks Data
   useEffect(() => {
-    // url
-    const url = 'api/beatles/' + trackNumber;
+    const url: string = '../api/beatles/' + trackNumber;
 
-    async function getTracksData (url) {
+    async function getTracksData (url: string) {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
         setIsLoaded(true);
         const data = resJson;
-        // console.log('data', data);
+        console.log('data', data);
         setTracksData(data);
       } catch(error) {
         setIsLoaded(true);

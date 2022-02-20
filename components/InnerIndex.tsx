@@ -87,7 +87,6 @@ function InnerIndex() {
 
   // url
   const url = 'api/beatles';
-  // const url = 'api/beatles/123'; // test(track)
 
 
   //  Get Tracks Data

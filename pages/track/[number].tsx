@@ -21,7 +21,7 @@ const Track = () => {
     const [trackName, setTrackName] = useState('');
 
     const router = useRouter();
-    const thisQuery = router.query.no;
+    const thisQuery = router.query.number;
 
     useEffect(() => {
         if (thisQuery) {
