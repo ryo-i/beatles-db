@@ -1,7 +1,7 @@
 import React, { useState, createContext }  from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
-import Inner from '../components/Inner';
+import InnerIndex from '../components/InnerIndex';
 import Footer from '../components/Footer';
 import Data from '../data/data.json';
 
@@ -12,7 +12,7 @@ const pageTitle = 'ビートルズ楽曲一覧';
 const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
 
-export const Context = React.createContext({} as {
+export const Context = createContext({} as {
   search: string
   setSearch: React.Dispatch<React.SetStateAction<string>>
 });
@@ -34,7 +34,7 @@ function Home() {
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
         <Context.Provider value={{search, setSearch}} >
-          <Inner />
+          <InnerIndex />
         </Context.Provider>
       </main>
       <Footer />

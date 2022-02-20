@@ -1,19 +1,42 @@
+import React, { useEffect, useState, createContext }  from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Header from '../../components/Header';
+import InnerTrack from '../../components/InnerTrack';
 import Footer from '../../components/Footer';
 import Data from '../../data/data.json';
 
 
+export const Context = createContext({} as {
+    trackNumber: string
+    setTrackNumber: React.Dispatch<React.SetStateAction<string>>
+    trackName: string
+    setTrackName: React.Dispatch<React.SetStateAction<string>>
+});
+
+
 // Component
 const Track = () => {
-  const router = useRouter();
-  const { no } = router.query;
+    const [trackNumber, setTrackNumber] = useState('');
+    const [trackName, setTrackName] = useState('');
 
-  const headerTitle = Data.header.title;
-  const pageTitle = no;
-  const pageText = no + 'の詳細情報';
-  const headTitle = pageTitle + ' | ' + headerTitle;
+    const router = useRouter();
+    const thisQuery = router.query.no;
+
+    useEffect(() => {
+        if (thisQuery) {
+            const thisNumber: string = String(thisQuery);
+            console.log('thisQuery', thisQuery);
+            console.log('thisNumber', thisNumber);
+            setTrackNumber(thisNumber);
+        }
+    }, [thisQuery]);
+
+
+    const headerTitle = Data.header.title;
+    const pageTitle = trackName;
+    const pageText = trackName + 'の詳細情報';
+    const headTitle = pageTitle + ' | ' + headerTitle;
 
     return (
         <>
@@ -28,10 +51,9 @@ const Track = () => {
         <main>
             <h1>{ pageTitle }</h1>
             <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-            <section>
-                <h2>「{no}」について</h2>
-                <p>説明です。説明です。説明ですったら説明です。</p>
-            </section>
+            <Context.Provider value={{trackNumber, setTrackNumber, trackName, setTrackName}} >
+                <InnerTrack />
+            </Context.Provider>
         </main>
         <Footer />
         </>

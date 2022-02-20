@@ -74,7 +74,7 @@ const Section = styled.section`
 
 
 // Component
-function Inner() {
+function InnerIndex() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -153,4 +153,4 @@ function Inner() {
   );
 }
 
-export default Inner;
+export default InnerIndex;
