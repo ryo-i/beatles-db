@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>APIから楽曲単位のデータを取得 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>楽曲単位のデータを連想配列で返す <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

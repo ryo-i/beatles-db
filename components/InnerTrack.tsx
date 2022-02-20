@@ -124,7 +124,7 @@ function InnerTrack() {
     } else {
       return (
         <ul>
-            {tracksData.map((data, index) =>
+            {/* tracksData.map((data, index) =>
               <li key={index}>
                 <figure><p className="icon">{data.category}</p></figure>
                 <dl>
@@ -138,7 +138,7 @@ function InnerTrack() {
                   </dd>
                 </dl>
               </li>
-            )}
+            )*/}
           </ul>
       );
     }
