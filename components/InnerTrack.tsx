@@ -5,69 +5,24 @@ import styled from 'styled-components';
 
 // CSS in JS
 const Section = styled.section`
-  ul {
-    padding: 0;
-    li {
-      display: flex;
-      align-items: center;
-      border-bottom: #ccc 1px solid;
-      padding: 14px 0;
-      dd, figure, p {
-        margin: 0;
-        line-height: 1.5;
-      }
-      .icon {
-        background: #A63744;
-        color: #fff;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        border-radius: 50%;
-        margin: 0 16px 0 0;
-      }
-      dl {
-        margin: 0;
-        flex: 1;
-        dt {
-          margin: 0 0 10px;
-          display: flex;
-          align-items: center;
-          .num {
-            margin: 0 8px 0 0;
-            font-size: 10px;
-            background: #ddd;
-            width: 18px;
-            height: 18px;
-            line-height: 18px;
-            text-align: center;
-            border-radius: 3px;
-          }
-          .song {
-            font-size: 18px;
-            line-height: 1.25;
-            flex: 1;
-          }
-        }
-        dd {
-          font-size: 12px;
-          color: #333;
-          .title-area {
-            margin: 0 0 5px;
-          }
-          .title {
-            font-weight: bold;
-          }
-          .format {
-            background: #999;
-            color: #fff;
-            margin: 0 8px 0 0;
-            padding : 3px;
-            font-size: 10px;
-            border-radius: 3px;
-          }
-        }
-      }
+  h2 {
+    margin-bottom: 1.5em;
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 0;
+    border-bottom : 1px solid #ccc;
+    dt, dd {
+      padding: 0.5em 0;
+      margin: 0;
+    }
+    dt {
+      width: 30%;
+      padding-right: 1em;
+    }
+    dd {
+      width: 70%;
     }
   }
 `;
@@ -78,16 +33,9 @@ function InnerTrack() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [tracksData, setTracksData] = useState([]);
   const {trackNumber, setTrackNumber} = useContext(Context);
   const {trackName, setTrackName} = useContext(Context);
-
-
-  useEffect(() => {
-    setTrackName('テスト');
-    // console.log('trackName', trackName);
-  });
-
+  const [trackData, setTrackData] = useState<{[key: string]: string}>({});
 
   //  Get Tracks Data
   useEffect(() => {
@@ -99,8 +47,10 @@ function InnerTrack() {
         const resJson = await res.json();
         setIsLoaded(true);
         const data = resJson;
-        console.log('data', data);
-        setTracksData(data);
+        // console.log('data', data);
+        // console.log('data.track', data.track);
+        setTrackData(data);
+        setTrackName(data.track);
       } catch(error) {
         setIsLoaded(true);
         setError(error);
@@ -115,31 +65,74 @@ function InnerTrack() {
   }, [trackNumber]);
 
 
-  // Track List
-  const TrackList = () => {
+  // Track Info
+  const TrackInfo = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
     } else {
       return (
-        <ul>
-            {/* tracksData.map((data, index) =>
-              <li key={index}>
-                <figure><p className="icon">{data.category}</p></figure>
-                <dl>
-                  <dt>
-                    <p className="num">{data.number}</p>
-                    <p className="song">{data.track}</p>
-                  </dt>
-                  <dd>
-                    <p className="title-area"><span className="format">{data.format}</span><span className="title">{data.title}</span> ({data.year})</p>
-                    <p className="artist">{data.artist}</p>
-                  </dd>
-                </dl>
-              </li>
-            )*/}
-          </ul>
+        <>
+          <dl>
+            <dt>アーティスト名</dt>
+            <dd>{trackData.artist}</dd>
+            <dt>カテゴリ</dt>
+            <dd>{trackData.category}</dd>
+          </dl>
+          <dl>
+            <dt>収録作品</dt>
+            <dd>{trackData.title}</dd>
+            <dt>発売年</dt>
+            <dd>{trackData.year}</dd>
+            <dt>発売日</dt>
+            <dd>{trackData.date}</dd>
+            <dt>販売国</dt>
+            <dd>{trackData.country}</dd>
+            <dt>レーベル</dt>
+            <dd>{trackData.label}</dd>
+            <dt>形態</dt>
+            <dd>{trackData.format}</dd>
+            <dt>枚数</dt>
+            <dd>{trackData.disc}</dd>
+            <dt>面</dt>
+            <dd>{trackData.side}</dd>
+            <dt>曲順</dt>
+            <dd>{trackData.number}</dd>
+          </dl>
+          <dl>
+            <dt>作者</dt>
+            <dd>{trackData.songwriter}</dd>
+            <dt>リードボーカル</dt>
+            <dd>{trackData.vocal}</dd>
+            <dt>演奏</dt>
+            <dd>
+              <ul>
+                <li>John Lennon: {trackData.john}</li>
+                <li>Paul McCartney: {trackData.paul}</li>
+                <li>George Harrison: {trackData.george}</li>
+                <li>Ringo Starr: {trackData.ringo}</li>
+                <li>others: {trackData.others}</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>プロデューサー</dt>
+            <dd>{trackData.producer}</dd>
+            <dt>エンジニア</dt>
+            <dd>{trackData.engineer}</dd>
+            <dt>アートワーク</dt>
+            <dd>{trackData.artwork}</dd>
+            <dt>ディレクター（映画）</dt>
+            <dd>{trackData.film}</dd>
+            <dt>ディレクター（MV）</dt>
+            <dd>{trackData.musicvideo}</dd>
+          </dl>
+          <dl>
+            <dt>備考</dt>
+            <dd>{trackData.remarks}</dd>
+          </dl>
+        </>
       );
     }
   };
@@ -150,8 +143,8 @@ function InnerTrack() {
     <>
       {
         <Section>
-          <h2>「{trackName}」の楽曲一覧</h2>
-          <TrackList />
+          <h2>{trackName}</h2>
+          <TrackInfo />
         </Section>
       }
     </>

@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲単位のデータを連想配列で返す [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 楽曲単位のデータを画面に表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

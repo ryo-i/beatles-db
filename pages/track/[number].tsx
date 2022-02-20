@@ -35,7 +35,7 @@ const Track = () => {
 
     const headerTitle = Data.header.title;
     const pageTitle = trackName;
-    const pageText = trackName + 'の詳細情報';
+    const pageText = trackName + 'の楽曲情報';
     const headTitle = pageTitle + ' | ' + headerTitle;
 
     return (
@@ -49,8 +49,7 @@ const Track = () => {
 
         <Header />
         <main>
-            <h1>{ pageTitle }</h1>
-            <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
+            <h1>楽曲情報</h1>
             <Context.Provider value={{trackNumber, setTrackNumber, trackName, setTrackName}} >
                 <InnerTrack />
             </Context.Provider>
