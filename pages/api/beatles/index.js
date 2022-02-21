@@ -4,7 +4,7 @@ import beatlesData from '../data/beatles.json';
 // KeyNumbers
 let id = 0;
 let year = 0;
-let category = 0;
+let icon = 0;
 let artist = 0;
 let format = 0;
 let title = 0;
@@ -19,8 +19,8 @@ const setKeyNumber = (data) => {
       id = i;
     } else if (data[i] === 'year') {
       year = i;
-    } else if (data[i] === 'category') {
-      category = i;
+    } else if (data[i] === 'icon') {
+      icon = i;
     } else if (data[i] === 'artist') {
       artist = i;
     } else if (data[i] === 'format') {
@@ -53,7 +53,7 @@ for (var i = 1; i < beatlesData.values.length; i++) {
   const thisObj = {};
   thisObj['id'] = beatlesData.values[i][id];
   thisObj['year'] = beatlesData.values[i][year];
-  thisObj['category'] = beatlesData.values[i][category];
+  thisObj['icon'] = beatlesData.values[i][icon];
   thisObj['artist'] = beatlesData.values[i][artist];
   thisObj['format'] = beatlesData.values[i][format];
   thisObj['title'] = beatlesData.values[i][title];

@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲情報が読み込みエラーになっていたので修復 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- カテゴリデータを追加、アイコンと使い分け [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

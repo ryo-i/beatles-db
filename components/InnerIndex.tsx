@@ -145,7 +145,7 @@ function InnerIndex() {
         <ul>
             {tracksData.map((data, index) =>
               <li key={index}>
-                <figure><p className="icon">{data.category}</p></figure>
+                <figure><p className="icon">{data.icon}</p></figure>
                 <dl>
                   <dt>
                     <a href={"track/" + data.id}>
