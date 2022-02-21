@@ -2,35 +2,37 @@ import beatlesData from '../data/beatles.json';
 
 
 // KeyNumbers
-let id = 0;
-let year = 0;
-let icon = 0;
-let artist = 0;
-let format = 0;
-let title = 0;
-let number = 0;
-let track = 0;
+const keyNumbers = {
+  id: 0,
+  year: 0,
+  icon: 0,
+  artist: 0,
+  format: 0,
+  title: 0,
+  number: 0,
+  track: 0
+};
 
 
 // Set Key Numbers
 const setKeyNumber = (data) => {
   for (let i = 0; i < data.length; i++) {
     if (data[i] === 'id') {
-      id = i;
+      keyNumbers.id = i;
     } else if (data[i] === 'year') {
-      year = i;
+      keyNumbers.year = i;
     } else if (data[i] === 'icon') {
-      icon = i;
+      keyNumbers.icon = i;
     } else if (data[i] === 'artist') {
-      artist = i;
+      keyNumbers.artist = i;
     } else if (data[i] === 'format') {
-      format = i;
+      keyNumbers.format = i;
     } else if (data[i] === 'title') {
-      title = i;
+      keyNumbers.title = i;
     } else if (data[i] === 'number') {
-      number = i;
+      keyNumbers.number = i;
     } else if (data[i] === 'track') {
-      track = i;
+      keyNumbers.track = i;
     }
   }
 }
@@ -51,14 +53,14 @@ console.log('trackRemainder', trackRemainder);
 const beatlesObjData = [];
 for (var i = 1; i < beatlesData.values.length; i++) {
   const thisObj = {};
-  thisObj['id'] = beatlesData.values[i][id];
-  thisObj['year'] = beatlesData.values[i][year];
-  thisObj['icon'] = beatlesData.values[i][icon];
-  thisObj['artist'] = beatlesData.values[i][artist];
-  thisObj['format'] = beatlesData.values[i][format];
-  thisObj['title'] = beatlesData.values[i][title];
-  thisObj['number'] = beatlesData.values[i][number];
-  thisObj['track'] = beatlesData.values[i][track];
+  thisObj['id'] = beatlesData.values[i][keyNumbers.id];
+  thisObj['year'] = beatlesData.values[i][keyNumbers.year];
+  thisObj['icon'] = beatlesData.values[i][keyNumbers.icon];
+  thisObj['artist'] = beatlesData.values[i][keyNumbers.artist];
+  thisObj['format'] = beatlesData.values[i][keyNumbers.format];
+  thisObj['title'] = beatlesData.values[i][keyNumbers.title];
+  thisObj['number'] = beatlesData.values[i][keyNumbers.number];
+  thisObj['track'] = beatlesData.values[i][keyNumbers.track];
   beatlesObjData.push(thisObj);
 }
 
