@@ -5,11 +5,11 @@ import beatlesData from '../data/beatles.json';
 const getTrackObjData = (track) => {
   const keyArray = beatlesData.values[0];
   const valArray = beatlesData.values[track];
-  const thisObj = [];
+  const thisObj = {};
 
   if (keyArray.length === valArray.length) {
     for (var i = 0; i < keyArray.length; i++) {
-      thisObj.map([[keyArray[i]] = valArray[i]]);
+      thisObj[keyArray[i]] = valArray[i];
     }
   }
   return thisObj;
@@ -23,6 +23,6 @@ export default (req, res) => {
   } = req;
 
   const trackObjData = getTrackObjData(track);
-  // console.log('trackData', trackData);
+  // console.log('trackObjData', trackObjData);
   res.status(200).json(trackObjData);
 }
