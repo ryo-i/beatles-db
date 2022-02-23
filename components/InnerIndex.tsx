@@ -9,13 +9,13 @@ const Section = styled.section`
   h2 {
     color: #333;
   }
-  ul {
-    padding: 0;
+  .trackList {
+    padding: 10px 0;
     li {
       display: flex;
       align-items: center;
-      border-bottom: #ccc 1px solid;
-      padding: 14px 0;
+      border-top: #eee 2px solid;
+      padding: 20px 0;
       dd, figure, p {
         margin: 0;
         line-height: 1.5;
@@ -76,12 +76,20 @@ const Section = styled.section`
         }
       }
     }
+    li:last-child {
+      border-bottom: 2px solid #ccc;
+    }
+    .trackTop {
+      border-top: 2px solid #ccc;
+    }
   }
   .pageInfo {
     font-size: 12px;
   }
   .pagination {
     display: flex;
+    list-style: none;
+    padding: 0;
     li {
       border: none;
       margin: 0 10px 0 0;
@@ -204,9 +212,9 @@ function InnerIndex() {
     } else {
       return (
         <>
-          <ul>
+          <ul className="trackList">
             {tracksData.map((data, index) =>
-              <li key={index}>
+              <li key={index} className={data.number === '1' ? 'trackTop' : ''}>
                 <figure><p className="icon">{data.icon}</p></figure>
                 <dl>
                   <dt>
