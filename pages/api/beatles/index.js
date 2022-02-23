@@ -49,25 +49,41 @@ console.log('pageLength', pageLength);
 console.log('trackRemainder', trackRemainder);
 
 
-// Beatles Obj Data
-const beatlesObjData = [];
-for (var i = 1; i < beatlesData.values.length; i++) {
-  const thisObj = {};
-  thisObj['id'] = beatlesData.values[i][keyNumbers.id];
-  thisObj['year'] = beatlesData.values[i][keyNumbers.year];
-  thisObj['icon'] = beatlesData.values[i][keyNumbers.icon];
-  thisObj['artist'] = beatlesData.values[i][keyNumbers.artist];
-  thisObj['format'] = beatlesData.values[i][keyNumbers.format];
-  thisObj['title'] = beatlesData.values[i][keyNumbers.title];
-  thisObj['number'] = beatlesData.values[i][keyNumbers.number];
-  thisObj['track'] = beatlesData.values[i][keyNumbers.track];
-  beatlesObjData.push(thisObj);
+// getDataLength
+const getDataLength = (pageParam) => {
+  if (!pageParam || isNaN(pageParam || pageParam === 1)) {
+    return 1;
+  } else {
+    return ((pageParam - 1) * 50) + 1;
+  }
 }
+
+
+// Beatles Obj Data
+const getBeatlesData = (dataLength) => {
+  const beatlesObjData = [];
+  for (var i = dataLength; i < dataLength + 50; i++) {
+    const thisObj = {};
+    thisObj['id'] = beatlesData.values[i][keyNumbers.id];
+    thisObj['year'] = beatlesData.values[i][keyNumbers.year];
+    thisObj['icon'] = beatlesData.values[i][keyNumbers.icon];
+    thisObj['artist'] = beatlesData.values[i][keyNumbers.artist];
+    thisObj['format'] = beatlesData.values[i][keyNumbers.format];
+    thisObj['title'] = beatlesData.values[i][keyNumbers.title];
+    thisObj['number'] = beatlesData.values[i][keyNumbers.number];
+    thisObj['track'] = beatlesData.values[i][keyNumbers.track];
+    beatlesObjData.push(thisObj);
+  }
+  return beatlesObjData;
+};
 
 
 // Response
 export default (req, res) => {
-  console.log('req.query', req.query);
-  console.log('req.body', req.body);
-  res.status(200).json(beatlesObjData);
+  const pageParam = req.query.page
+  console.log('pageParam', pageParam);
+  const dataLength = getDataLength(pageParam);
+  console.log('dataLength', dataLength);
+  const beatlesData = getBeatlesData(dataLength);
+  res.status(200).json(beatlesData);
 }

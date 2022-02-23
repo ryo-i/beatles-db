@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- APIにqueryパラメータ取得したあとにGET通信 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 「?page=x」でデータを50件ずつ返す [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
