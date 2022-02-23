@@ -85,6 +85,7 @@ function InnerIndex() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
   const {search, setSearch} = useContext(Context);
   const [pageParam, setPageParam] = useState(null);
@@ -121,7 +122,8 @@ function InnerIndex() {
         setIsLoaded(true);
         const data = resJson;
         console.log('data', data);
-        setTracksData(data);
+        setTracksData(data.trackList);
+        setPageInfo(data.pageInfo);
       } catch(error) {
         setIsLoaded(true);
         setError(error);
@@ -143,7 +145,9 @@ function InnerIndex() {
       return <p>読み込み中...</p>;
     } else {
       return (
-        <ul>
+        <>
+          <p>{pageInfo['trackLength']}件（{pageInfo['thisPage']}ページ / {pageInfo['pageLength']}ページ）</p>
+          <ul>
             {tracksData.map((data, index) =>
               <li key={index}>
                 <figure><p className="icon">{data.icon}</p></figure>
@@ -162,6 +166,7 @@ function InnerIndex() {
               </li>
             )}
           </ul>
+        </>
       );
     }
   };

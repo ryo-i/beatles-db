@@ -39,15 +39,22 @@ const setKeyNumber = (data) => {
 setKeyNumber(beatlesData.values[0]);
 
 
-// Page segmentation
-const trackLength = beatlesData.values.length -1;
-const pageUnit = 50;
-const pageLength = trackLength / pageUnit;
-const trackRemainder = trackLength % pageUnit;
-console.log('trackLength', trackLength);
-console.log('pageLength', pageLength);
-console.log('trackRemainder', trackRemainder);
+// Get Page Segmentation
+const getPageSegmentation = (pageParam) => {
+  let thisPage = Number(pageParam);
+  if (!pageParam || isNaN(pageParam)) {
+    thisPage = 1;
+    console.log('thisPage', thisPage);
+  }
 
+  const pageSegmentation = {};
+  pageSegmentation['trackLength'] = beatlesData.values.length -1;
+  pageSegmentation['pageUnit'] = 50;
+  pageSegmentation['pageLength'] = Math.ceil(pageSegmentation.trackLength / pageSegmentation.pageUnit);
+  pageSegmentation['thisPage'] = thisPage;
+  pageSegmentation['trackRemainder'] = pageSegmentation.trackLength % pageSegmentation.pageUnit;
+  return pageSegmentation;
+};
 
 // getDataLength
 const getDataLength = (pageParam) => {
@@ -59,10 +66,15 @@ const getDataLength = (pageParam) => {
 }
 
 
-// Beatles Obj Data
-const getBeatlesData = (dataLength) => {
-  const beatlesObjData = [];
-  for (var i = dataLength; i < dataLength + 50; i++) {
+// Get Tracks Array
+const getTracksArray = (dataLength, pageInfo) => {
+  let addLength = 50;
+  if ((dataLength + addLength) > pageInfo.trackLength) {
+    addLength = pageInfo.trackRemainder;
+  }
+
+  const tracksArray = [];
+  for (var i = dataLength; i < dataLength + addLength; i++) {
     const thisObj = {};
     thisObj['id'] = beatlesData.values[i][keyNumbers.id];
     thisObj['year'] = beatlesData.values[i][keyNumbers.year];
@@ -72,18 +84,22 @@ const getBeatlesData = (dataLength) => {
     thisObj['title'] = beatlesData.values[i][keyNumbers.title];
     thisObj['number'] = beatlesData.values[i][keyNumbers.number];
     thisObj['track'] = beatlesData.values[i][keyNumbers.track];
-    beatlesObjData.push(thisObj);
+    tracksArray.push(thisObj);
   }
-  return beatlesObjData;
+  return tracksArray;
 };
 
 
 // Response
 export default (req, res) => {
   const pageParam = req.query.page
-  console.log('pageParam', pageParam);
   const dataLength = getDataLength(pageParam);
-  console.log('dataLength', dataLength);
-  const beatlesData = getBeatlesData(dataLength);
-  res.status(200).json(beatlesData);
+  const pageInfo = getPageSegmentation(pageParam);
+  const tracksArray = getTracksArray(dataLength, pageInfo);
+
+  const tracksData = {};
+  tracksData['pageInfo'] = pageInfo;
+  tracksData['trackList'] = tracksArray;
+  // console.log('tracksData', tracksData);
+  res.status(200).json(tracksData);
 }
