@@ -79,7 +79,7 @@ const Section = styled.section`
     li:last-child {
       border-bottom: 2px solid #ccc;
     }
-    .trackTop {
+    li:first-child, .trackTop {
       border-top: 2px solid #ccc;
     }
   }
@@ -175,16 +175,17 @@ function InnerIndex() {
   // Pagination
   const Pagination = () => {
   let pagination = [];
-  for (let i = 1; i < pageInfo['pageLength']; i++) {
+  for (let i = 0; i < pageInfo['pageLength']; i++) {
+    const pageNum = i +1;
     const checkCurrent = () => {
-      if (i === pageInfo['thisPage']) {
+      if (pageNum === pageInfo['thisPage']) {
         return 'currentPage';
       } else {
         return '';
       }
     };
     const thisPage = checkCurrent();
-    pagination.push(<li><a href={"/?page=" + i} className={thisPage}>{i}</a></li>);
+    pagination.push(<li><a href={"/?page=" + pageNum} className={thisPage}>{pageNum}</a></li>);
   }
 
   if (error) {
