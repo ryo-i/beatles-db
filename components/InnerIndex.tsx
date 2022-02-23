@@ -37,6 +37,7 @@ const Section = styled.section`
           margin: 0 0 10px;
           display: flex;
           align-items: center;
+          text-decoration: none;
           .num {
             margin: 0 8px 0 0;
             font-size: 10px;
@@ -47,12 +48,12 @@ const Section = styled.section`
             text-align: center;
             border-radius: 3px;
             color: #000;
-            text-decoration: none;
           }
           .song {
             font-size: 18px;
             line-height: 1.25;
             flex: 1;
+            text-decoration: underline;
           }
         }
         dd {
@@ -64,10 +65,10 @@ const Section = styled.section`
           .title {
             font-weight: bold;
           }
-          .format {
-            background: #999;
+          .year, .format {
+            background: #888;
             color: #fff;
-            margin: 0 8px 0 0;
+            margin: 0 5px 0 0;
             padding : 3px;
             font-size: 10px;
             border-radius: 3px;
@@ -86,35 +87,33 @@ function InnerIndex() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [tracksData, setTracksData] = useState([]);
   const {search, setSearch} = useContext(Context);
-  const [pageParam, setPageParam] = useState('');
+  const [pageParam, setPageParam] = useState(null);
 
   useEffect(() => {
     setSearch('すべて');
-  });
-
+  }, []);
 
   // Get Query Param
   const router = useRouter();
-  const getPageParam = (pageQuery) => {
-    if (isNaN(pageQuery)) {
-      setPageParam('');
-      return;
-    }
-    setPageParam('?page=' + pageQuery);
-  };
-
+  const pageQuery = router.query.page;
 
   useEffect(() => {
-    const pageQuery = Number(router.query.page);
+    // Set Query Param
     console.log('pageQuery', pageQuery);
-    getPageParam(pageQuery);
-    console.log('pageParam', pageParam);
-  });
+    if (!router.isReady) {
+      console.log('not isReady');
+      return;
+    } else if (pageQuery) {
+      const thisNumber: string = String(pageQuery);
+      console.log('thisNumber', thisNumber);
+      setPageParam('?page=' + thisNumber);
+    } else {
+      setPageParam('');
+    }
 
 
-  useEffect(() => {
-    // const url = 'api/beatles' + pageParam; test
-    const url = 'api/beatles';
+    // fetch
+    const url = 'api/beatles' + pageParam;
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
@@ -129,9 +128,11 @@ function InnerIndex() {
         console.log('err', error);
       }
     };
-    getTracksData(url);
-  // }, [pageParam]); // test
-  }, []);
+
+    if (router.isReady && pageParam !== null) {
+      getTracksData(url);
+    }
+  }, [pageParam, router]);
 
 
   // Track List
@@ -154,7 +155,7 @@ function InnerIndex() {
                     </a>
                   </dt>
                   <dd>
-                    <p className="title-area"><span className="format">{data.format}</span><span className="title">{data.title}</span> ({data.year})</p>
+                    <p className="title-area"><span className="year">{data.year}</span><span className="format">{data.format}</span><span className="title">{data.title}</span></p>
                     <p className="artist">{data.artist}</p>
                   </dd>
                 </dl>

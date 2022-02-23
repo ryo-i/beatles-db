@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>キー番号を変数から連想配列に <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>APIにqueryパラメータ取得したあとにGET通信 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

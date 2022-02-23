@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- キー番号を変数から連想配列に [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- APIにqueryパラメータ取得したあとにGET通信 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

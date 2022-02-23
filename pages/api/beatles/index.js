@@ -40,7 +40,7 @@ setKeyNumber(beatlesData.values[0]);
 
 
 // Page segmentation
-const trackLength = beatlesData.values.length;
+const trackLength = beatlesData.values.length -1;
 const pageUnit = 50;
 const pageLength = trackLength / pageUnit;
 const trackRemainder = trackLength % pageUnit;
