@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 全体の件数と何ページ目かを表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- ページネーションを設置 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

@@ -77,6 +77,33 @@ const Section = styled.section`
       }
     }
   }
+  .pageInfo {
+    font-size: 12px;
+  }
+  .pagination {
+    display: flex;
+    li {
+      border: none;
+      margin: 0 10px 0 0;
+      padding: 0;
+      a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        background: #eee;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        font-size: 12px;
+        border-radius: 3px;
+      }
+      .currentPage {
+        color: #fff;
+        background: #A63744;
+      }
+    }
+  }
 `;
 
 
@@ -137,6 +164,37 @@ function InnerIndex() {
   }, [pageParam, router]);
 
 
+  // Pagination
+  const Pagination = () => {
+  let pagination = [];
+  for (let i = 1; i < pageInfo['pageLength']; i++) {
+    const checkCurrent = () => {
+      if (i === pageInfo['thisPage']) {
+        return 'currentPage';
+      } else {
+        return '';
+      }
+    };
+    const thisPage = checkCurrent();
+    pagination.push(<li><a href={"/?page=" + i} className={thisPage}>{i}</a></li>);
+  }
+
+  if (error) {
+    return <p>エラー: {error.message}</p>;
+  } else if (!isLoaded) {
+    return <p>読み込み中...</p>;
+  } else {
+    return (
+      <>
+        <ul className="pagination">
+          {pagination}
+        </ul>
+      </>
+    );
+  }
+   };
+
+
   // Track List
   const TrackList = () => {
     if (error) {
@@ -146,7 +204,6 @@ function InnerIndex() {
     } else {
       return (
         <>
-          <p>{pageInfo['trackLength']}件（{pageInfo['thisPage']}ページ / {pageInfo['pageLength']}ページ）</p>
           <ul>
             {tracksData.map((data, index) =>
               <li key={index}>
@@ -178,7 +235,10 @@ function InnerIndex() {
       {
         <Section>
           <h2>「{search}」の楽曲一覧</h2>
+          <p className="pageInfo">{pageInfo['trackLength']}件（{pageInfo['thisPage']}ページ / {pageInfo['pageLength']}ページ）</p>
+          <Pagination />
           <TrackList />
+          <Pagination />
         </Section>
       }
     </>
