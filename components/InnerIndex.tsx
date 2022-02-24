@@ -79,8 +79,8 @@ const Section = styled.section`
     li:last-child {
       border-bottom: 2px solid #ccc;
     }
-    li:first-child, .trackTop {
-      border-top: 2px solid #ccc;
+    li:first-child, .topTrack {
+      border-top: 2px solid #999;
     }
   }
   .pageInfo {
@@ -129,9 +129,11 @@ function InnerIndex() {
     setSearch('すべて');
   }, []);
 
+
   // Get Query Param
   const router = useRouter();
   const pageQuery = router.query.page;
+
 
   useEffect(() => {
     // Set Query Param
@@ -174,34 +176,45 @@ function InnerIndex() {
 
   // Pagination
   const Pagination = () => {
-  let pagination = [];
-  for (let i = 0; i < pageInfo['pageLength']; i++) {
-    const pageNum = i +1;
-    const checkCurrent = () => {
-      if (pageNum === pageInfo['thisPage']) {
-        return 'currentPage';
-      } else {
-        return '';
-      }
-    };
-    const thisPage = checkCurrent();
-    pagination.push(<li><a href={"/?page=" + pageNum} className={thisPage}>{pageNum}</a></li>);
-  }
+    let pagination = [];
+    for (let i = 0; i < pageInfo['pageLength']; i++) {
+      const pageNum = i +1;
+      const checkCurrent = () => {
+        if (pageNum === pageInfo['thisPage']) {
+          return 'currentPage';
+        } else {
+          return '';
+        }
+      };
+      const thisPage = checkCurrent();
+      pagination.push({
+        pageNum: pageNum,
+        thisPage: thisPage
+      });
+    }
 
-  if (error) {
-    return <p>エラー: {error.message}</p>;
-  } else if (!isLoaded) {
-    return <p>読み込み中...</p>;
-  } else {
     return (
-      <>
-        <ul className="pagination">
-          {pagination}
-        </ul>
-      </>
+      <ul className="pagination">
+        {pagination.map((data, index) =>
+          <li key={index}><a href={"/?page=" + data.pageNum} className={data.thisPage}>{data.pageNum}</a></li>
+        )}
+      </ul>
     );
+  };
+
+
+  // Get Top Track
+  const getTopTrack = (thisOrder, index) => {
+    const beforeIndex =  index - 1;
+    const beforeOrder = beforeIndex >= 0 ? tracksData[index - 1].order : null;
+    // console.log('beforeOrder', beforeIndex, beforeOrder);
+    // console.log('thisOrder', index, thisOrder);
+    if (thisOrder !== beforeOrder) {
+      return 'topTrack';
+    } else {
+      return '';
+    }
   }
-   };
 
 
   // Track List
@@ -215,7 +228,7 @@ function InnerIndex() {
         <>
           <ul className="trackList">
             {tracksData.map((data, index) =>
-              <li key={index} className={data.number === '1' ? 'trackTop' : ''}>
+              <li key={index} className={getTopTrack(data.order, index)} data-order={data.order}>
                 <figure><p className="icon">{data.icon}</p></figure>
                 <dl>
                   <dt>

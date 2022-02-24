@@ -29,6 +29,8 @@ const setKeyNumber = (data) => {
       keyNumbers.format = i;
     } else if (data[i] === 'title') {
       keyNumbers.title = i;
+    } else if (data[i] === 'order') {
+      keyNumbers.order = i;
     } else if (data[i] === 'number') {
       keyNumbers.number = i;
     } else if (data[i] === 'track') {
@@ -82,6 +84,7 @@ const getTracksArray = (dataLength, pageInfo) => {
     thisObj['artist'] = beatlesData.values[i][keyNumbers.artist];
     thisObj['format'] = beatlesData.values[i][keyNumbers.format];
     thisObj['title'] = beatlesData.values[i][keyNumbers.title];
+    thisObj['order'] = beatlesData.values[i][keyNumbers.order];
     thisObj['number'] = beatlesData.values[i][keyNumbers.number];
     thisObj['track'] = beatlesData.values[i][keyNumbers.track];
     tracksArray.push(thisObj);
