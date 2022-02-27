@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ページネーションの表記を変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- トップページをベースに動的なページを作成 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

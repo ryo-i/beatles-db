@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { useRouter } from 'next/router';
-import { Context } from '../pages/index';
+import { Context } from '../pages/[category]/index';
 import styled from 'styled-components';
 
 
@@ -125,9 +125,6 @@ function InnerIndex() {
   const {search, setSearch} = useContext(Context);
   const [pageParam, setPageParam] = useState(null);
 
-  useEffect(() => {
-    setSearch('すべて');
-  }, []);
 
 
   // Get Query Param
@@ -196,7 +193,7 @@ function InnerIndex() {
     return (
       <ul className="pagination">
         {pagination.map((data, index) =>
-          <li key={index}><a href={'/?page=' + data.pageNum} className={data.thisPage}>{data.pageNum}</a></li>
+          <li key={index}><a href={'/' + search + '?page=' + data.pageNum} className={data.thisPage}>{data.pageNum}</a></li>
         )}
       </ul>
     );
