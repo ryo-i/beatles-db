@@ -36,7 +36,7 @@ const Nav = styled.nav`
 // Component
 const Track = () => {
     const [trackNumber, setTrackNumber] = useState('');
-    const [trackName, setTrackName] = useState('');
+    const [trackName, setTrackName] = useState('楽曲情報');
 
     const router = useRouter();
     const thisQuery = router.query.number;
@@ -53,16 +53,15 @@ const Track = () => {
 
     const headerTitle = Data.header.title;
     const pageTitle = trackName;
-    const pageText = trackName + 'の楽曲情報';
     const headTitle = pageTitle + ' | ' + headerTitle;
 
     return (
         <>
         <Head>
             <title>{ headTitle }</title>
-            <meta name="description" content={ pageText } />
+            <meta name="description" content={ pageTitle } />
             <meta property="og:title" content={ headTitle } />
-            <meta property="og:description" content={ pageText } />
+            <meta property="og:description" content={ pageTitle } />
         </Head>
 
         <Header />

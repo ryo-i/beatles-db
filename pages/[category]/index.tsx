@@ -14,7 +14,7 @@ export const Context = createContext({} as {
 
 
 function Home() {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('楽曲一覧');
 
   const router = useRouter();
   const thisQuery = router.query.category;
@@ -28,19 +28,19 @@ function Home() {
     }
   }, [thisQuery]);
 
+
   const headerTitle = Data.header.title;
   const headerText = Data.header.text;
-  const pageText = search + 'の楽曲情報';
-  const headTitle = pageText + ' | ' + headerTitle;
+  const headTitle = search + ' | ' + headerTitle;
 
 
   return (
     <>
       <Head>
-        <title>{ headerTitle }</title>
-        <meta name="description" content={ pageText } />
-        <meta property="og:title" content={ headerTitle } />
-        <meta property="og:description" content={ pageText } />
+        <title>{ headTitle }</title>
+        <meta name="description" content={ search } />
+        <meta property="og:title" content={ headTitle } />
+        <meta property="og:description" content={ search } />
       </Head>
       <Header />
       <main>

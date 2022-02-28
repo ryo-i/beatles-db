@@ -111,11 +111,11 @@ function InnerTrack() {
             <dt>演奏</dt>
             <dd>
               <ul>
-                <li>John Lennon: {trackData.john}</li>
-                <li>Paul McCartney: {trackData.paul}</li>
-                <li>George Harrison: {trackData.george}</li>
-                <li>Ringo Starr: {trackData.ringo}</li>
-                <li>others: {trackData.others}</li>
+                <li>John Lennon : {trackData.john}</li>
+                <li>Paul McCartney : {trackData.paul}</li>
+                <li>George Harrison : {trackData.george}</li>
+                <li>Ringo Starr : {trackData.ringo}</li>
+                <li>{trackData.others}</li>
               </ul>
             </dd>
           </dl>
