@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>OGPが動的に変更できないため汎用的な初期値を入れる <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>SSGでのパス取得、API通信検証中 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

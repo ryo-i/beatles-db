@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- OGPが動的に変更できないため汎用的な初期値を入れる [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- SSGでのパス取得、API通信検証中 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

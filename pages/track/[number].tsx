@@ -34,7 +34,7 @@ const Nav = styled.nav`
 
 
 // Component
-const Track = () => {
+const Track = ({ trackInfo }) => {
     const [trackNumber, setTrackNumber] = useState('');
     const [trackName, setTrackName] = useState('楽曲情報');
 
@@ -74,7 +74,7 @@ const Track = () => {
                     <li>{pageTitle}</li>
                 </ul>
             </Nav>
-
+            <p>{ trackInfo }</p>
             <Context.Provider value={{trackNumber, setTrackNumber, trackName, setTrackName}} >
                 <InnerTrack />
             </Context.Provider>
@@ -85,3 +85,33 @@ const Track = () => {
 }
 
 export default Track;
+
+
+/*
+// この関数はビルド時に呼ばれる
+export async function getStaticPaths() {
+    // 記事を取得する外部APIのエンドポイントをコール
+    const res = await fetch('https://beatles-db.vercel.app/api/beatles');
+    const track = await res.json();
+
+    // 記事にもとづいてプリレンダするパスを取得
+    const paths = track.trackList.map(post => `/track/${post}`);
+
+    // 設定したパスのみ、ビルド時にプリレンダ
+    // { fallback: false } は、他のルートが404になるという意味
+    return { paths, fallback: false };
+}
+
+// この関数もビルド時に呼ばれる
+export async function getStaticProps({ params }) {
+    // `params`は`id`の記事内容を含む
+    // ルートが/posts/1とすると、params.idは1となる
+    const res = await fetch(`/track/${params}`);
+    const trackInfo = await res.json();
+
+    console.log('trackInfo', trackInfo);
+
+    // propsを通じてpostをページに渡す
+    return { props: { trackInfo } };
+}
+*/

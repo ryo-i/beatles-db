@@ -9,6 +9,7 @@ const keyNumbers = {
   artist: 0,
   format: 0,
   title: 0,
+  order: 0,
   number: 0,
   track: 0
 };
@@ -52,9 +53,9 @@ const getPageSegmentation = (pageParam) => {
   const pageSegmentation = {};
   pageSegmentation['trackLength'] = beatlesData.values.length -1;
   pageSegmentation['pageUnit'] = 50;
-  pageSegmentation['pageLength'] = Math.ceil(pageSegmentation.trackLength / pageSegmentation.pageUnit);
+  pageSegmentation['pageLength'] = Math.ceil(pageSegmentation['trackLength'] / pageSegmentation['pageUnit']);
   pageSegmentation['thisPage'] = thisPage;
-  pageSegmentation['trackRemainder'] = pageSegmentation.trackLength % pageSegmentation.pageUnit;
+  pageSegmentation['trackRemainder'] = pageSegmentation['trackLength'] % pageSegmentation['pageUnit'];
   return pageSegmentation;
 };
 
