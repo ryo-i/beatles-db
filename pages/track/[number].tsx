@@ -1,5 +1,4 @@
-import React, { useEffect, useState, createContext }  from 'react';
-import { useRouter } from 'next/router';
+import React, { useState, createContext }  from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import Header from '../../components/Header';
@@ -38,19 +37,6 @@ const Track = ({ trackInfo }) => {
     const [trackNumber, setTrackNumber] = useState(trackInfo.id);
     const [trackName, setTrackName] = useState(trackInfo.track);
 
-    const router = useRouter();
-    const thisQuery = router.query.number;
-
-    useEffect(() => {
-        if (thisQuery) {
-            const thisNumber: string = String(thisQuery);
-            console.log('thisQuery', thisQuery);
-            console.log('thisNumber', thisNumber);
-            setTrackNumber(thisNumber);
-        }
-    }, [thisQuery]);
-
-
     const headerTitle = Data.header.title;
     const pageTitle = trackName;
     const headTitle = pageTitle + ' | ' + headerTitle;
@@ -85,9 +71,9 @@ const Track = ({ trackInfo }) => {
 }
 
 
-// getPath
+// Get Path
 export async function getStaticPaths() {
-    const res = await fetch(`https://beatles-db.vercel.app/api/beatles`);
+    const res = await fetch(`https://beatles-db.vercel.app/api/beatles/tracklist`);
     const track = await res.json();
     // console.log('track', track);
     const paths = track.trackList.map((track) => `/track/${track.id}`);
@@ -95,13 +81,13 @@ export async function getStaticPaths() {
 }
 
 
-// getTrackInfo
+// Get TrackInfo
 export async function getStaticProps({ params }) {
     const number = params.number;
     const res = await fetch(`https://beatles-db.vercel.app/api/beatles/${number}`);
     const trackInfo = await res.json();
-    console.log('number', number);
-    console.log('trackInfo', trackInfo);
+    // console.log('number', number);
+    // console.log('trackInfo', trackInfo);
     return { props: { trackInfo } };
   }
 

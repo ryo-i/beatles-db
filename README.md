@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- SGでパス取得し→API取得→情報をOGPに設定 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 全曲取得用のtracklist API作成→エンドポイント差し替え [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
