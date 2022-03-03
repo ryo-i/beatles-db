@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>全曲取得用のtracklist API作成→エンドポイント差し替え <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>エンドポイントを再度変更 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
