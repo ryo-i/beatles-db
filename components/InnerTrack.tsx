@@ -28,6 +28,18 @@ const Section = styled.section`
       width: 80%;
     }
   }
+  .prevNextNav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+    .non {
+      color: #aaa;
+    }
+  }
 `;
 
 
@@ -39,6 +51,8 @@ function InnerTrack() {
   const {trackNumber, setTrackNumber} = useContext(Context);
   const {trackName, setTrackName} = useContext(Context);
   const [trackData, setTrackData] = useState<{[key: string]: string}>({});
+  const [allTracksLength, setAllTracksLength] = useState(0);
+
 
   //  Get Tracks Data
   useEffect(() => {
@@ -66,6 +80,56 @@ function InnerTrack() {
       getTracksData(url);
     }
   }, [trackNumber]);
+
+
+  // Get All Tracks Length
+  useEffect(() => {
+    const url: string = '../api/beatles/tracklength';
+
+    async function getAllTracksLength (url: string) {
+      /* try {
+        const res = await fetch(url);
+        const resJson = await res.json();
+        setIsLoaded(true);
+        const data = resJson;
+        const allTracksLength = data.trackInfo.allTrackLength;
+        console.log('data', data);
+        console.log('allTracksLength', allTracksLength);
+        setAllTracksLength(allTracksLength);
+      } catch(error) {
+        console.log('err', error);
+      } */
+    };
+
+    getAllTracksLength(url);
+  }, []);
+
+
+  // PrevNextNav
+  function PrevNextNav() {
+    if (Number(trackNumber) <= 1) {
+      return (
+        <ul>
+          <li className="non">◀︎ 前の曲</li>
+          <li><a href={"/track/" + (Number(trackNumber) + 1)}>次の曲</a> ▶︎</li>
+        </ul>
+      );
+    } else if (Number(trackNumber) >= allTracksLength) {
+      return (
+        <ul>
+          <li>◀︎ <a href={"/track/" + (Number(trackNumber) - 1)}>前の曲</a></li>
+          <li className="non">次の曲 ▶︎</li>
+        </ul>
+      );
+    }
+
+    return (
+      <ul>
+        <li>◀︎ <a href={"/track/" + (Number(trackNumber) - 1)}>前の曲</a></li>
+        <li><a href={"/track/" + (Number(trackNumber) + 1)}>次の曲</a> ▶︎</li>
+      </ul>
+    );
+  }
 
 
   // Track Info
@@ -135,6 +199,9 @@ function InnerTrack() {
             <dt>備考</dt>
             <dd>{trackData.remarks}</dd>
           </dl>
+          <nav className="prevNextNav">
+              <PrevNextNav />
+          </nav>
         </>
       );
     }

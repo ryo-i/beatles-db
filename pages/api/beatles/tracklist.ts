@@ -24,11 +24,11 @@ const setKeyNumber = (data) => {
 setKeyNumber(beatlesData.values[0]);
 
 
-// Get Page Segmentation
-const getPageSegmentation = () => {
-  const pageSegmentation = {};
-  pageSegmentation['trackLength'] = beatlesData.values.length -1;
-  return pageSegmentation;
+// Get Page Info
+const getPageInfo = () => {
+  const pageInfo= {};
+  pageInfo['trackLength'] = beatlesData.values.length -1;
+  return pageInfo;
 };
 
 
@@ -48,7 +48,7 @@ const getTracksArray = () => {
 
 // Response
 export default (req, res) => {
-  const pageInfo = getPageSegmentation();
+  const pageInfo = getPageInfo();
   const tracksArray = getTracksArray();
 
   const tracksData = {};

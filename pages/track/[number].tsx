@@ -40,7 +40,7 @@ const Track = ({ trackInfo }) => {
     const headerTitle = Data.header.title;
     const pageTitle = trackName;
     const headTitle = pageTitle + ' | ' + headerTitle;
-    const pageText = trackInfo.artist + '「' + trackName + '」の楽曲情報です。';
+    const pageText = trackInfo.artist + 'の楽曲「' + trackName + '」の詳細情報です。';
 
     return (
         <>
