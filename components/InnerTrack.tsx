@@ -87,7 +87,7 @@ function InnerTrack() {
     const url: string = '../api/beatles/tracklength';
 
     async function getAllTracksLength (url: string) {
-      /* try {
+      try {
         const res = await fetch(url);
         const resJson = await res.json();
         setIsLoaded(true);
@@ -98,7 +98,7 @@ function InnerTrack() {
         setAllTracksLength(allTracksLength);
       } catch(error) {
         console.log('err', error);
-      } */
+      }
     };
 
     getAllTracksLength(url);
