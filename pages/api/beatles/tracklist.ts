@@ -4,6 +4,7 @@ import beatlesData from '../data/beatles.json';
 // KeyNumbers
 const keyNumbers = {
   id: 0,
+  artist: 0,
   track: 0
 };
 
@@ -13,6 +14,8 @@ const setKeyNumber = (data) => {
   for (let i = 0; i < data.length; i++) {
     if (data[i] === 'id') {
       keyNumbers.id = i;
+    } else if (data[i] === 'artist') {
+      keyNumbers.artist = i;
     } else if (data[i] === 'track') {
       keyNumbers.track = i;
     }
@@ -35,6 +38,7 @@ const getTracksArray = () => {
   for (var i = 1; i < beatlesData.values.length; i++) {
     const thisObj = {};
     thisObj['id'] = beatlesData.values[i][keyNumbers.id];
+    thisObj['artist'] = beatlesData.values[i][keyNumbers.artist];
     thisObj['track'] = beatlesData.values[i][keyNumbers.track];
     tracksArray.push(thisObj);
   }
