@@ -89,6 +89,6 @@ export async function getStaticProps({ params }) {
     // console.log('number', number);
     // console.log('trackInfo', trackInfo);
     return { props: { trackInfo } };
-  }
+}
 
 export default Track;

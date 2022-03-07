@@ -122,7 +122,7 @@ function InnerIndex() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
-  const {search, setSearch} = useContext(Context);
+  const {category, setCategory} = useContext(Context);
   const [pageParam, setPageParam] = useState(null);
 
 
@@ -193,7 +193,7 @@ function InnerIndex() {
     return (
       <ul className="pagination">
         {pagination.map((data, index) =>
-          <li key={index}><a href={'/' + search + '?page=' + data.pageNum} className={data.thisPage}>{data.pageNum}</a></li>
+          <li key={index}><a href={'/' + category + '?page=' + data.pageNum} className={data.thisPage}>{data.pageNum}</a></li>
         )}
       </ul>
     );
@@ -253,7 +253,7 @@ function InnerIndex() {
     <>
       {
         <Section>
-          <h2>「{search}」の楽曲一覧</h2>
+          <h2>「{category}」の楽曲一覧</h2>
           <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
           <Pagination />
           <TrackList />

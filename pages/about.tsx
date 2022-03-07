@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>楽曲情報の収録作品を下に移動 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>パス名からカテゴリ名を取得→title、discription、OGPに設定 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

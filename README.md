@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲情報の収録作品を下に移動 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- パス名からカテゴリ名を取得→title、discription、OGPに設定 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
