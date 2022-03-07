@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { useRouter } from 'next/router';
-import { Context } from '../pages/[category]/index';
+import { Context } from '../pages/category/[category]';
 import styled from 'styled-components';
 
 
@@ -147,8 +147,8 @@ function InnerIndex() {
     }
 
 
-    // fetch（次はここ）
-    const url = 'api/beatles' + pageParam;
+    // fetch
+    const url = '../api/beatles' + pageParam;
     async function getTracksData (url) {
       try {
         const res = await fetch(url);

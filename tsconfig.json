@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/api/beatles/[track].ts"  ],
+  ],
   "exclude": [
     "node_modules"
   ]
