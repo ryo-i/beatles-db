@@ -147,7 +147,7 @@ function InnerIndex() {
     }
 
 
-    // fetch
+    // fetch（次はここ）
     const url = 'api/beatles' + pageParam;
     async function getTracksData (url) {
       try {
