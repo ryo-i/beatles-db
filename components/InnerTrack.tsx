@@ -148,26 +148,6 @@ function InnerTrack() {
             <dd>{trackData.category}</dd>
           </dl>
           <dl>
-            <dt>収録作品</dt>
-            <dd>{trackData.title}</dd>
-            <dt>発売年</dt>
-            <dd>{trackData.year}</dd>
-            <dt>発売日</dt>
-            <dd>{trackData.date}</dd>
-            <dt>販売国</dt>
-            <dd>{trackData.country}</dd>
-            <dt>レーベル</dt>
-            <dd>{trackData.label}</dd>
-            <dt>形態</dt>
-            <dd>{trackData.format}</dd>
-            <dt>枚数</dt>
-            <dd>{trackData.disc}</dd>
-            <dt>面</dt>
-            <dd>{trackData.side}</dd>
-            <dt>曲順</dt>
-            <dd>{trackData.number}</dd>
-          </dl>
-          <dl>
             <dt>作者</dt>
             <dd>{trackData.songwriter}</dd>
             <dt>リードボーカル</dt>
@@ -194,6 +174,26 @@ function InnerTrack() {
             <dd>{trackData.film}</dd>
             <dt>ディレクター（MV）</dt>
             <dd>{trackData.musicvideo}</dd>
+          </dl>
+          <dl>
+            <dt>収録作品</dt>
+            <dd>{trackData.title}</dd>
+            <dt>発売年</dt>
+            <dd>{trackData.year}</dd>
+            <dt>発売日</dt>
+            <dd>{trackData.date}</dd>
+            <dt>販売国</dt>
+            <dd>{trackData.country}</dd>
+            <dt>レーベル</dt>
+            <dd>{trackData.label}</dd>
+            <dt>形態</dt>
+            <dd>{trackData.format}</dd>
+            <dt>枚数</dt>
+            <dd>{trackData.disc}</dd>
+            <dt>面</dt>
+            <dd>{trackData.side}</dd>
+            <dt>曲順</dt>
+            <dd>{trackData.number}</dd>
           </dl>
           <dl>
             <dt>備考</dt>
