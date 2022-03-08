@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext }  from 'react';
 import { useRouter } from 'next/router';
 import { Context } from '../pages/category/[category]';
 import styled from 'styled-components';
+import CategoryNav from './CategoryNav';
 
 
 // CSS in JS
@@ -229,7 +230,7 @@ function InnerIndex() {
                 <figure><p className="icon">{data.icon}</p></figure>
                 <dl>
                   <dt>
-                    <a href={"track/" + data.id}>
+                    <a href={"../track/" + data.id}>
                       <p className="num">{data.number}</p>
                       <p className="song">{data.track}</p>
                     </a>
@@ -251,15 +252,14 @@ function InnerIndex() {
   // JSX
   return (
     <>
-      {
-        <Section>
-          <h2>「{category}」の楽曲一覧</h2>
-          <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
-          <Pagination />
-          <TrackList />
-          <Pagination />
-        </Section>
-      }
+      <CategoryNav />
+      <Section>
+        <h2>「{category}」の楽曲一覧</h2>
+        <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
+        <Pagination />
+        <TrackList />
+        <Pagination />
+      </Section>
     </>
   );
 }

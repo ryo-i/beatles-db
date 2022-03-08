@@ -19,20 +19,24 @@ function Home({ categoryInfo }) {
   const headerTitle = Data.header.title;
   const headerText = Data.header.text;
   const headTitle = category + 'の楽曲一覧 | ' + headerTitle;
+  const headDescription = category + 'の楽曲一覧です。'
+  const pageTitle = 'ビートルズ楽曲一覧';
+  const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
+
 
 
   return (
     <>
       <Head>
         <title>{ headTitle }</title>
-        <meta name="description" content={ category } />
+        <meta name="description" content={ headDescription } />
         <meta property="og:title" content={ headTitle } />
-        <meta property="og:description" content={ category } />
+        <meta property="og:description" content={ headDescription } />
       </Head>
       <Header />
       <main>
-        <h1>{ headerTitle }</h1>
-        <p dangerouslySetInnerHTML={{ __html: headerText }}></p>
+        <h1>{ pageTitle }</h1>
+        <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
         <Context.Provider value={{category, setCategory}} >
           <InnerCategory />
         </Context.Provider>
@@ -47,7 +51,6 @@ function Home({ categoryInfo }) {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { category: 'all' } },
       { params: { category: 'beatles' } },
       { params: { category: 'john-yoko' } },
       { params: { category: 'paul' } },
@@ -67,10 +70,7 @@ const thisCaterogyInfo = (category) => {
     name: ''
   };
 
-  if (category === 'all') {
-    categoryInfo.path = 'all';
-    categoryInfo.name = 'すべて';
-  } else if (category === 'beatles') {
+  if (category === 'beatles') {
     categoryInfo.path = 'beatles';
     categoryInfo.name = 'Beatles';
   } else if (category === 'john-yoko') {
@@ -85,9 +85,9 @@ const thisCaterogyInfo = (category) => {
   } else if (category === 'ringo') {
     categoryInfo.path = 'ringo';
     categoryInfo.name = 'Ringo Starr';
-  } else if (category === 'tonny-beatles') {
+  } else if (category === 'tony-beatles') {
     categoryInfo.path = 'tony-beatles';
-    categoryInfo.name = 'Tony  & Beatles';
+    categoryInfo.name = 'Tony & Beatles';
   }
   return categoryInfo;
 }
