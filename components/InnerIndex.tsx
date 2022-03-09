@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { useRouter } from 'next/router';
 import { Context } from '../pages/index';
+import Link from 'next/link';
 import styled from 'styled-components';
 import CategoryNav from './CategoryNav';
 
@@ -197,7 +198,7 @@ function InnerIndex() {
     return (
       <ul className="pagination">
         {pagination.map((data, index) =>
-          <li key={index}><a href={'/?page=' + data.pageNum} className={data.thisPage}>{data.pageNum}</a></li>
+          <li key={index}><Link href={'/?page=' + data.pageNum}><a className={data.thisPage}>{data.pageNum}</a></Link></li>
         )}
       </ul>
     );
@@ -233,10 +234,12 @@ function InnerIndex() {
                 <figure><p className="icon">{data.icon}</p></figure>
                 <dl>
                   <dt>
-                    <a href={"track/" + data.id}>
-                      <p className="num">{data.number}</p>
-                      <p className="song">{data.track}</p>
-                    </a>
+                    <Link href={"track/" + data.id}>
+                      <a>
+                        <p className="num">{data.number}</p>
+                        <p className="song">{data.track}</p>
+                      </a>
+                    </Link>
                   </dt>
                   <dd>
                     <p className="title-area"><span className="year">{data.year}</span><span className="format">{data.format}</span><span className="title">{data.title}</span></p>

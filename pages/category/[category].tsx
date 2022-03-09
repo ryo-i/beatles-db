@@ -7,19 +7,22 @@ import Data from '../../data/data.json';
 
 
 export const Context = createContext({} as {
-  category: string
-  setCategory: React.Dispatch<React.SetStateAction<string>>
+  categoryName: string
+  setCategoryName: React.Dispatch<React.SetStateAction<string>>
+  categoryPath: string
+  setCategoryPath: React.Dispatch<React.SetStateAction<string>>
 });
 
 
 function Home({ categoryInfo }) {
-  const [category, setCategory] = useState(categoryInfo.name);
-  console.log('categoryInfo', categoryInfo.name);
+  const [categoryName, setCategoryName] = useState(categoryInfo.name);
+  const [categoryPath, setCategoryPath] = useState(categoryInfo.path);
+  console.log('categoryName', categoryName);
+  console.log('categoryPath', categoryPath);
 
   const headerTitle = Data.header.title;
-  const headerText = Data.header.text;
-  const headTitle = category + 'の楽曲一覧 | ' + headerTitle;
-  const headDescription = category + 'の楽曲一覧です。'
+  const headTitle = categoryName + 'の楽曲一覧 | ' + headerTitle;
+  const headDescription = categoryName + 'の楽曲一覧です。'
   const pageTitle = 'ビートルズ楽曲一覧';
   const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
@@ -37,7 +40,7 @@ function Home({ categoryInfo }) {
       <main>
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-        <Context.Provider value={{category, setCategory}} >
+        <Context.Provider value={{categoryName, setCategoryName, categoryPath, setCategoryPath}} >
           <InnerCategory />
         </Context.Provider>
       </main>

@@ -41,13 +41,13 @@ function CategoryNav() {
   return (
     <Nav className="cagterogyNav">
       <ul className="categoryTab">
-        <li className={!categoryName ? 'current' : ''}><a href="/">All</a></li>
-        <li className={categoryName === 'beatles' ? 'current' : ''}><a href="/category/beatles">Beatles</a></li>
-        <li className={categoryName === 'john-yoko' ? 'current' : ''}><a href="/category/john-yoko">John & Yoko</a></li>
-        <li className={categoryName === 'paul' ? 'current' : ''}><a href="/category/paul">Paul McCartney</a></li>
-        <li className={categoryName === 'george' ? 'current' : ''}><a href="/category/george">George Harrison</a></li>
-        <li className={categoryName === 'ringo' ? 'current' : ''}><a href="/category/ringo">Ringo Starr</a></li>
-        <li className={categoryName === 'tony-beatles' ? 'current' : ''}><a href="/category/tony-beatles">Tony & Beatles</a></li>
+        <li className={!categoryName ? 'current' : ''}><Link href="/"><a>All</a></Link></li>
+        <li className={categoryName === 'beatles' ? 'current' : ''}><Link href="/category/beatles"><a>Beatles</a></Link></li>
+        <li className={categoryName === 'john-yoko' ? 'current' : ''}><Link href="/category/john-yoko"><a>John & Yoko</a></Link></li>
+        <li className={categoryName === 'paul' ? 'current' : ''}><Link href="/category/paul"><a>Paul McCartney</a></Link></li>
+        <li className={categoryName === 'george' ? 'current' : ''}><Link href="/category/george"><a>George Harrison</a></Link></li>
+        <li className={categoryName === 'ringo' ? 'current' : ''}><Link href="/category/ringo"><a>Ringo Starr</a></Link></li>
+        <li className={categoryName === 'tony-beatles' ? 'current' : ''}><Link href="/category/tony-beatles"><a>Tony & Beatles</a></Link></li>
       </ul>
     </Nav>
   );
