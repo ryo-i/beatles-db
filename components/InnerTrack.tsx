@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { Context } from '../pages/track/[number]';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 
@@ -49,6 +50,8 @@ function InnerTrack() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const {trackNumber, setTrackNumber} = useContext(Context);
+  const [prevNumber, setPrevNumber] = useState(0);
+  const [nextNumber, setNextNumber] = useState(0);
   const {trackName, setTrackName} = useContext(Context);
   const [trackData, setTrackData] = useState<{[key: string]: string}>({});
   const [allTracksLength, setAllTracksLength] = useState(0);
@@ -78,6 +81,8 @@ function InnerTrack() {
     if (trackNumber) {
       console.log('trackNumber', trackNumber);
       getTracksData(url);
+      setNextNumber(Number(trackNumber) + 1);
+      setPrevNumber(Number(trackNumber) - 1);
     }
   }, [trackNumber]);
 
@@ -111,13 +116,13 @@ function InnerTrack() {
       return (
         <ul>
           <li className="non">◀︎ 前の曲</li>
-          <li><a href={"/track/" + (Number(trackNumber) + 1)}>次の曲</a> ▶︎</li>
+          <li><Link href="/track/[nextNumber]" as={`/track/${nextNumber}`}><a>次の曲</a></Link> ▶︎</li>
         </ul>
       );
     } else if (Number(trackNumber) >= allTracksLength) {
       return (
         <ul>
-          <li>◀︎ <a href={"/track/" + (Number(trackNumber) - 1)}>前の曲</a></li>
+          <li>◀︎ <Link href="/track/[prevNumber]" as={`/track/${prevNumber}`}><a>前の曲</a></Link></li>
           <li className="non">次の曲 ▶︎</li>
         </ul>
       );
@@ -125,8 +130,8 @@ function InnerTrack() {
 
     return (
       <ul>
-        <li>◀︎ <a href={"/track/" + (Number(trackNumber) - 1)}>前の曲</a></li>
-        <li><a href={"/track/" + (Number(trackNumber) + 1)}>次の曲</a> ▶︎</li>
+        <li>◀︎ <Link href="/track/[prevNumber]" as={`/track/${prevNumber}`}><a>前の曲</a></Link></li>
+        <li><Link href="/track/[nextNumber]" as={`/track/${nextNumber}`}><a>次の曲</a></Link> ▶︎</li>
       </ul>
     );
   }
