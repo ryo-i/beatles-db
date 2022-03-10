@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- トップページ、カテゴリページのaタグもLinkに（カテゴリに課題あり） [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- カテゴリ切り替えでhead情報を動的に変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

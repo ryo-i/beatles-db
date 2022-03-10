@@ -1,4 +1,4 @@
-import React, { useState, createContext }  from 'react';
+import React, { useState, createContext, useEffect }  from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import InnerCategory from '../../components/InnerCategory';
@@ -17,24 +17,30 @@ export const Context = createContext({} as {
 function Home({ categoryInfo }) {
   const [categoryName, setCategoryName] = useState(categoryInfo.name);
   const [categoryPath, setCategoryPath] = useState(categoryInfo.path);
-  console.log('categoryName', categoryName);
-  console.log('categoryPath', categoryPath);
 
   const headerTitle = Data.header.title;
   const headTitle = categoryName + 'の楽曲一覧 | ' + headerTitle;
-  const headDescription = categoryName + 'の楽曲一覧です。'
+  const headText = categoryName + 'の楽曲一覧です。'
   const pageTitle = 'ビートルズ楽曲一覧';
   const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
+
+  // Set Category Info
+  useEffect(() => {
+    setCategoryName(categoryInfo.name);
+    setCategoryPath(categoryInfo.path);
+    // console.log('categoryName', categoryName);
+    // console.log('categoryPath', categoryPath);
+  }, [categoryInfo]);
 
 
   return (
     <>
       <Head>
         <title>{ headTitle }</title>
-        <meta name="description" content={ headDescription } />
+        <meta name="description" content={ headText } />
         <meta property="og:title" content={ headTitle } />
-        <meta property="og:description" content={ headDescription } />
+        <meta property="og:description" content={ headText } />
       </Head>
       <Header />
       <main>
@@ -92,6 +98,7 @@ const thisCaterogyInfo = (category) => {
     categoryInfo.path = 'tony-beatles';
     categoryInfo.name = 'Tony & Beatles';
   }
+
   return categoryInfo;
 }
 
@@ -100,9 +107,8 @@ const thisCaterogyInfo = (category) => {
 export async function getStaticProps({ params }) {
   const category = params.category;
   const categoryInfo = thisCaterogyInfo(category);
-
   // console.log('category', category);
-  console.log('categoryInfo', categoryInfo);
+  // console.log('categoryInfo', categoryInfo);
   return { props: { categoryInfo } };
 }
 

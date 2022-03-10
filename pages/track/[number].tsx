@@ -75,8 +75,9 @@ const Track = ({ trackInfo }) => {
 export async function getStaticPaths() {
     const res = await fetch(`https://beatles-db.vercel.app/api/beatles/tracklist`);
     const track = await res.json();
-    // console.log('track', track);
     const paths = track.trackList.map((track) => `/track/${track.id}`);
+    // console.log('track', track);
+    // console.log('paths', paths);
     return { paths, fallback: false };
 }
 
