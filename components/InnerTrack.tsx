@@ -59,7 +59,7 @@ function InnerTrack() {
 
   //  Get Tracks Data
   useEffect(() => {
-    const url: string = '../api/beatles/' + trackNumber;
+    const url: string = '../api/beatles/track/' + trackNumber;
 
     async function getTracksData (url: string) {
       try {

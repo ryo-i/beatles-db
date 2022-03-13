@@ -151,7 +151,11 @@ function InnerIndex() {
 
 
     // fetch
-    const url = '../api/beatles' + pageParam;
+    // const url = '../api/beatles' + pageParam;
+    const url: string = '../api/beatles/category/' + categoryPath + pageParam;
+    console.log('cateUrl', url);
+    console.log('categoryName', categoryName);
+    console.log('categoryPath', categoryPath);
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
@@ -171,7 +175,7 @@ function InnerIndex() {
     if (router.isReady && pageParam !== null) {
       getTracksData(url);
     }
-  }, [pageParam, router]);
+  }, [pageParam, router, categoryPath]);
 
 
   // Pagination

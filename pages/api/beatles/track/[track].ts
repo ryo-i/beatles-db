@@ -1,4 +1,4 @@
-import beatlesData from '../data/beatles.json';
+import beatlesData from '../../data/beatles.json';
 
 
 // Get Track Obj Data

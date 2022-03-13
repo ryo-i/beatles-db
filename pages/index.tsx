@@ -13,13 +13,13 @@ const pageText = 'アーティスト名、アルバム名、人名などで絞�
 
 
 export const Context = createContext({} as {
-  search: string
-  setSearch: React.Dispatch<React.SetStateAction<string>>
+  categoryName: string
+  setCategoryName: React.Dispatch<React.SetStateAction<string>>
 });
 
 
 function Home() {
-  const [search, setSearch] = useState('');
+  const [categoryName, setCategoryName] = useState('すべて');
 
   return (
     <>
@@ -33,7 +33,7 @@ function Home() {
       <main>
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-        <Context.Provider value={{search, setSearch}} >
+        <Context.Provider value={{categoryName, setCategoryName}} >
           <InnerIndex />
         </Context.Provider>
       </main>

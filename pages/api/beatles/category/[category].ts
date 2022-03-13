@@ -1,5 +1,4 @@
-import beatlesData from '../data/beatles.json';
-
+import beatlesData from '../../data/beatles.json';
 
 // KeyNumbers
 const keyNumbers = {
@@ -42,16 +41,45 @@ const setKeyNumber = (data) => {
 setKeyNumber(beatlesData.values[0]);
 
 
+// Get Category Name
+const getCategoryName = (categoryPath) => {
+  let categoryName = ''
+  if (categoryPath === 'beatles') {
+    categoryName = 'Beatles';
+  } else if (categoryPath === 'john-yoko') {
+    categoryName = 'John & Yoko';
+  } else if (categoryPath === 'paul') {
+    categoryName = 'Paul McCartney';
+  } else if (categoryPath === 'george') {
+    categoryName = 'George Harrison';
+  } else if (categoryPath === 'ringo') {
+    categoryName = 'Ringo Starr';
+  } else if (categoryPath === 'tony-beatles') {
+    categoryName = 'Tony & Beatles';
+  }
+  return categoryName;
+};
+
+
+// Get Category Data
+const getCategoryData = (categoryName => {
+  const result = beatlesData.values.filter((item, index) => {
+    if (item[4] == categoryName) return index;
+  });
+  return result;
+});
+
+
 // Get Page Segmentation
-const getPageSegmentation = (pageParam) => {
+const getPageSegmentation = (pageParam, categoryData) => {
   let thisPage = Number(pageParam);
   if (!pageParam || isNaN(pageParam)) {
     thisPage = 1;
-    console.log('thisPage', thisPage);
+    // console.log('thisPage', thisPage);
   }
 
   const pageSegmentation = {};
-  pageSegmentation['trackLength'] = beatlesData.values.length -1;
+  pageSegmentation['trackLength'] = categoryData.length -1;
   pageSegmentation['pageUnit'] = 50;
   pageSegmentation['pageLength'] = Math.ceil(pageSegmentation['trackLength'] / pageSegmentation['pageUnit']);
   pageSegmentation['thisPage'] = thisPage;
@@ -70,24 +98,24 @@ const getDataLength = (pageParam) => {
 
 
 // Get Tracks Array
-const getTracksArray = (dataLength, pageInfo) => {
+const getTracksArray = (dataLength, pageInfo, categoryData) => {
   let addLength = 50;
   if ((dataLength + addLength) > pageInfo.trackLength) {
     addLength = pageInfo.trackRemainder;
   }
 
   const tracksArray = [];
-  for (var i = dataLength; i < dataLength + addLength; i++) {
+  for (var i = dataLength -1; i < dataLength + addLength; i++) {
     const thisObj = {};
-    thisObj['id'] = beatlesData.values[i][keyNumbers.id];
-    thisObj['year'] = beatlesData.values[i][keyNumbers.year];
-    thisObj['icon'] = beatlesData.values[i][keyNumbers.icon];
-    thisObj['artist'] = beatlesData.values[i][keyNumbers.artist];
-    thisObj['format'] = beatlesData.values[i][keyNumbers.format];
-    thisObj['title'] = beatlesData.values[i][keyNumbers.title];
-    thisObj['order'] = beatlesData.values[i][keyNumbers.order];
-    thisObj['number'] = beatlesData.values[i][keyNumbers.number];
-    thisObj['track'] = beatlesData.values[i][keyNumbers.track];
+    thisObj['id'] = categoryData[i][keyNumbers.id];
+    thisObj['year'] = categoryData[i][keyNumbers.year];
+    thisObj['icon'] = categoryData[i][keyNumbers.icon];
+    thisObj['artist'] = categoryData[i][keyNumbers.artist];
+    thisObj['format'] = categoryData[i][keyNumbers.format];
+    thisObj['title'] = categoryData[i][keyNumbers.title];
+    thisObj['order'] = categoryData[i][keyNumbers.order];
+    thisObj['number'] = categoryData[i][keyNumbers.number];
+    thisObj['track'] = categoryData[i][keyNumbers.track];
     tracksArray.push(thisObj);
   }
   return tracksArray;
@@ -96,10 +124,17 @@ const getTracksArray = (dataLength, pageInfo) => {
 
 // Response
 export default (req, res) => {
+  const categoryPath = req.query.category;
+  const categoryName = getCategoryName(categoryPath);
+  const categoryData = getCategoryData(categoryName);
+  // console.log('categoryPath', categoryPath);
+  // console.log('categoryName', categoryName);
+  // console.log('categoryData', categoryData);
+
   const pageParam = req.query.page
   const dataLength = getDataLength(pageParam);
-  const pageInfo = getPageSegmentation(pageParam);
-  const tracksArray = getTracksArray(dataLength, pageInfo);
+  const pageInfo = getPageSegmentation(pageParam, categoryData);
+  const tracksArray = getTracksArray(dataLength, pageInfo, categoryData);
 
   const tracksData = {};
   tracksData['pageInfo'] = pageInfo;

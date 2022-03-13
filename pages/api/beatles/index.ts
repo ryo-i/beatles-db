@@ -47,7 +47,7 @@ const getPageSegmentation = (pageParam) => {
   let thisPage = Number(pageParam);
   if (!pageParam || isNaN(pageParam)) {
     thisPage = 1;
-    console.log('thisPage', thisPage);
+    // console.log('thisPage', thisPage);
   }
 
   const pageSegmentation = {};

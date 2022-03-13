@@ -124,12 +124,8 @@ function InnerIndex() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
-  const {search, setSearch} = useContext(Context);
+  const {categoryName, setCategoryName} = useContext(Context);
   const [pageParam, setPageParam] = useState(null);
-
-  useEffect(() => {
-    setSearch('すべて');
-  }, []);
 
 
   // Get Query Param
@@ -260,7 +256,7 @@ function InnerIndex() {
     <>
       <CategoryNav />
       <Section>
-        <h2>「{search}」の楽曲一覧</h2>
+        <h2>「{categoryName}」の楽曲一覧</h2>
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
         <TrackList />
