@@ -15,23 +15,6 @@ export const Context = createContext({} as {
 });
 
 
-// Style
-const Nav = styled.nav`
-  ul {
-    padding: 0;
-    display: flex;
-    list-style: none;
-    font-size: 12px;
-    li {
-        margin-right: 0.5em;
-        :not(:last-child)::after {
-            content: " >"
-        }
-    }
-  }
-`;
-
-
 // Component
 const Track = ({ trackInfo }) => {
     const [trackNumber, setTrackNumber] = useState(trackInfo.id);
@@ -54,13 +37,6 @@ const Track = ({ trackInfo }) => {
         <Header />
         <main>
             <h1>楽曲情報</h1>
-            <Nav>
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li>楽曲情報</li>
-                    <li>{pageTitle}</li>
-                </ul>
-            </Nav>
             <Context.Provider value={{trackNumber, setTrackNumber, trackName, setTrackName}} >
                 <InnerTrack />
             </Context.Provider>

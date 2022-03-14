@@ -43,6 +43,20 @@ const Section = styled.section`
   }
 `;
 
+const Nav = styled.nav`
+  ul {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    font-size: 12px;
+    li {
+        margin-right: 0.5em;
+        :not(:last-child)::after {
+            content: " >"
+        }
+    }
+  }
+`;
 
 // Component
 function InnerTrack() {
@@ -216,12 +230,17 @@ function InnerTrack() {
   // JSX
   return (
     <>
-      {
+        <Nav>
+          <ul>
+            <li><Link href="/"><a>ホーム</a></Link></li>
+            <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
+            <li>{trackName}</li>
+          </ul>
+        </Nav>
         <Section>
           <h2>曲名：{trackName}</h2>
           <TrackInfo />
         </Section>
-      }
     </>
   );
 }
