@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- カテゴリの絞り込み表示を実装 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- デプロイエラーの修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
