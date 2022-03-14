@@ -1,5 +1,7 @@
 import beatlesData from '../../data/beatles.json';
 
+console.log('test');
+
 // KeyNumbers
 const keyNumbers = {
   id: 0,
