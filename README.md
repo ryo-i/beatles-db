@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- カテゴリAPIのパス名を修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- カテゴリAPIの通信回数を減らす、パンくずスタイル修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

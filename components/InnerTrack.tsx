@@ -50,10 +50,17 @@ const Nav = styled.nav`
     list-style: none;
     font-size: 12px;
     li {
-        margin-right: 0.5em;
-        :not(:last-child)::after {
-            content: " >"
+      line-height: 1.5;
+      :not(:last-child) {
+        margin-right: 1.5em;
+        position: relative;
+        ::after {
+          content: ">";
+          position: absolute;
+          top: 0;
+          right: -1em;
         }
+      }
     }
   }
 `;
@@ -232,7 +239,7 @@ function InnerTrack() {
     <>
         <Nav>
           <ul>
-            <li><Link href="/"><a>ホーム</a></Link></li>
+            <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
             <li>{trackName}</li>
           </ul>
