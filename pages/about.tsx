@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>カテゴリAPIの通信回数を減らす、パンくずスタイル修正 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>トップとカテゴリのAPIの共通部分をモジュール化 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>データの見直し、手直し中 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
