@@ -4,6 +4,7 @@ import { Context } from '../pages/category/[category]';
 import Link from 'next/link';
 import CategoryNav from './CategoryNav';
 import Section from './Section';
+import { getPagination } from '../modules/trackList/getPagination';
 
 
 // Component
@@ -40,11 +41,7 @@ function InnerIndex() {
 
 
     // fetch
-    // const url = '../api/beatles' + pageParam;
     const url: string = '../api/beatles/category/' + categoryPath + pageParam;
-    console.log('cateUrl', url);
-    console.log('categoryName', categoryName);
-    console.log('categoryPath', categoryPath);
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
@@ -69,22 +66,7 @@ function InnerIndex() {
 
   // Pagination
   const Pagination = () => {
-    let pagination = [];
-    for (let i = 0; i < pageInfo['pageLength']; i++) {
-      const pageNum = i +1;
-      const checkCurrent = () => {
-        if (pageNum === pageInfo['thisPage']) {
-          return 'currentPage';
-        } else {
-          return '';
-        }
-      };
-      const thisPage = checkCurrent();
-      pagination.push({
-        pageNum: pageNum,
-        thisPage: thisPage
-      });
-    }
+    const pagination = getPagination(pageInfo);
 
     return (
       <ul className="pagination">

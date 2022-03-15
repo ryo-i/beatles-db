@@ -4,6 +4,7 @@ import { Context } from '../pages/index';
 import Link from 'next/link';
 import CategoryNav from './CategoryNav';
 import Section from './Section';
+import { getPagination } from '../modules/trackList/getPagination';
 
 
 // Component
@@ -63,22 +64,7 @@ function InnerIndex() {
 
   // Pagination
   const Pagination = () => {
-    let pagination = [];
-    for (let i = 0; i < pageInfo['pageLength']; i++) {
-      const pageNum = i +1;
-      const checkCurrent = () => {
-        if (pageNum === pageInfo['thisPage']) {
-          return 'currentPage';
-        } else {
-          return '';
-        }
-      };
-      const thisPage = checkCurrent();
-      pagination.push({
-        pageNum: pageNum,
-        thisPage: thisPage
-      });
-    }
+    const pagination = getPagination(pageInfo);
 
     return (
       <ul className="pagination">
