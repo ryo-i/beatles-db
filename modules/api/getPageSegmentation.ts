@@ -15,4 +15,4 @@ const getPageSegmentation = (pageParam, data) => {
     return pageSegmentation;
   };
 
-  export { getPageSegmentation };
+export { getPageSegmentation };

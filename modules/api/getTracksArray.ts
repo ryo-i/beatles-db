@@ -11,6 +11,7 @@ const getTracksArray = (dataLength, pageInfo, data, keyNumbers, startNum) => {
       thisObj['id'] = data[i][keyNumbers.id];
       thisObj['year'] = data[i][keyNumbers.year];
       thisObj['icon'] = data[i][keyNumbers.icon];
+      thisObj['path'] = data[i][keyNumbers.path];
       thisObj['artist'] = data[i][keyNumbers.artist];
       thisObj['format'] = data[i][keyNumbers.format];
       thisObj['title'] = data[i][keyNumbers.title];

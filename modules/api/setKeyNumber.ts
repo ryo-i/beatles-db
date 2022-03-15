@@ -7,6 +7,8 @@ const setKeyNumber = (data, keyNumbers) => {
         keyNumbers.year = i;
       } else if (data[i] === 'icon') {
         keyNumbers.icon = i;
+      } else if (data[i] === 'path') {
+        keyNumbers.path = i;
       } else if (data[i] === 'artist') {
         keyNumbers.artist = i;
       } else if (data[i] === 'format') {
