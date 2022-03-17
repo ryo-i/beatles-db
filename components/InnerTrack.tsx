@@ -172,6 +172,8 @@ function InnerTrack() {
             <dd>{trackData.artist}</dd>
             <dt>カテゴリ</dt>
             <dd>{trackData.category}</dd>
+            <dt>オリジナル</dt>
+            <dd>{trackData.original}</dd>
           </dl>
           <dl>
             <dt>作者</dt>
