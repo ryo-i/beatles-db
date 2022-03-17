@@ -5,6 +5,7 @@ import Link from 'next/link';
 import CategoryNav from './CategoryNav';
 import Section from './Section';
 import { getPagination } from '../modules/trackList/getPagination';
+import { getTopTrack } from '../modules/trackList/getTopTrack';
 
 
 // Component
@@ -17,7 +18,6 @@ function InnerIndex() {
   const {categoryName, setCategoryName} = useContext(Context);
   const {categoryPath, setCategoryPath} = useContext(Context);
   const [pageParam, setPageParam] = useState(null);
-
 
 
   // Get Query Param
@@ -78,20 +78,6 @@ function InnerIndex() {
   };
 
 
-  // Get Top Track
-  const getTopTrack = (thisOrder, index) => {
-    const beforeIndex =  index - 1;
-    const beforeOrder = beforeIndex >= 0 ? tracksData[index - 1].order : null;
-    // console.log('beforeOrder', beforeIndex, beforeOrder);
-    // console.log('thisOrder', index, thisOrder);
-    if (thisOrder !== beforeOrder) {
-      return 'topTrack';
-    } else {
-      return '';
-    }
-  }
-
-
   // Track List
   const TrackList = () => {
     if (error) {
@@ -103,7 +89,7 @@ function InnerIndex() {
         <>
           <ul className="trackList">
             {tracksData.map((data, index) =>
-              <li key={index} className={getTopTrack(data.order, index)} data-order={data.order}>
+              <li key={index} className={getTopTrack(data.order, index, tracksData)} data-order={data.order}>
                 <figure>
                   <p className="icon">
                     <Link href={"../category/" + data.path}>

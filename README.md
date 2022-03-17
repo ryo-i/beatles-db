@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- カテゴリのページネーションが無効になったのを修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- getTopTrackをモジュール化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 微修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
