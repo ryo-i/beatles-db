@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - ページネーションをモジュール化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- データの見直し、手直し中 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- original列を追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 
