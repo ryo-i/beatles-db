@@ -21,7 +21,7 @@ function Home({ categoryInfo }) {
   const headerTitle = Data.header.title;
   const headTitle = categoryName + 'の楽曲一覧 | ' + headerTitle;
   const headText = categoryName + 'の楽曲一覧です。'
-  const pageTitle = 'ビートルズ楽曲一覧';
+  const pageTitle = '楽曲一覧';
   const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
 

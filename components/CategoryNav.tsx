@@ -10,6 +10,7 @@ const Nav = styled.nav`
     list-style: none;
     padding: 0;
     overflow: scroll;
+    border-bottom: 1px solid #ddd;
     li a {
       text-decoration: none;
       display: block;
