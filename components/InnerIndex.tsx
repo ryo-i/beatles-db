@@ -6,6 +6,7 @@ import CategoryNav from './CategoryNav';
 import Section from './Section';
 import { getPagination } from '../modules/trackList/getPagination';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
+import { getQueryParam } from '../modules/trackList/getQueryParam';
 
 
 // Component
@@ -25,20 +26,12 @@ function InnerIndex() {
 
 
   useEffect(() => {
-    // Set Query Param
-    console.log('pageQuery', pageQuery);
-    if (!router.isReady) {
-      console.log('not isReady');
-      return;
-    } else if (pageQuery) {
-      const thisNumber: string = String(pageQuery);
-      console.log('thisNumber', thisNumber);
-      setPageParam('?page=' + thisNumber);
-    } else {
-      setPageParam('');
-    }
+    const getPageParam = getQueryParam(pageQuery, router);
+    setPageParam(getPageParam);
+  }, [pageQuery]);
 
 
+  useEffect(() => {
     // fetch
     const url = 'api/beatles' + pageParam;
     async function getTracksData (url) {
@@ -60,7 +53,7 @@ function InnerIndex() {
     if (router.isReady && pageParam !== null) {
       getTracksData(url);
     }
-  }, [pageParam, router]);
+  }, [pageParam]);
 
 
   // Pagination
