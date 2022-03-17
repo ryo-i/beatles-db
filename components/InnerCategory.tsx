@@ -61,7 +61,7 @@ function InnerIndex() {
     if (router.isReady && pageParam !== null) {
       getTracksData(url);
     }
-  }, [pageParam, categoryPath]);
+  }, [pageParam, pageQuery, categoryPath]);
 
 
   // Pagination
