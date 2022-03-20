@@ -1,5 +1,5 @@
-// Set Key Numbers
-const setKeyNumber = (data, keyNumbers) => {
+// Get Key Numbers
+const getKeyNumber = (data, keyNumbers) => {
     for (let i = 0; i < data.length; i++) {
       if (data[i] === 'id') {
         keyNumbers.id = i;
@@ -25,4 +25,4 @@ const setKeyNumber = (data, keyNumbers) => {
     }
   }
 
-  export { setKeyNumber };
+  export { getKeyNumber };

@@ -1,12 +1,12 @@
 import beatlesData from '../data/beatles.json';
 import { keyNumbers } from '../../../modules/api/keyNumbers';
-import { setKeyNumber }from '../../../modules/api/setKeyNumber';
+import { getKeyNumber }from '../../../modules/api/getKeyNumber';
 import { getPageSegmentation }from '../../../modules/api/getPageSegmentation';
 import { getDataLength }from '../../../modules/api/getDataLength';
 import { getTracksArray }from '../../../modules/api/getTracksArray';
 
 
-setKeyNumber(beatlesData.values[0], keyNumbers);
+getKeyNumber(beatlesData.values[0], keyNumbers);
 
 
 // Response

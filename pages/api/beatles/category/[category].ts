@@ -1,27 +1,19 @@
 import beatlesData from '../../data/beatles.json';
 import { keyNumbers }from '../../../../modules/api/keyNumbers';
-import { setKeyNumber }from '../../../../modules/api/setKeyNumber';
+import { getKeyNumber }from '../../../../modules/api/getKeyNumber';
+import { getCategoryData }from '../../../../modules/api/getCategoryData';
 import { getPageSegmentation }from '../../../../modules/api/getPageSegmentation';
 import { getDataLength }from '../../../../modules/api/getDataLength';
 import { getTracksArray }from '../../../../modules/api/getTracksArray';
 
 
-setKeyNumber(beatlesData.values[0], keyNumbers);
-
-
-// Get Category Data
-const getCategoryData = (categoryPath => {
-  const result = beatlesData.values.filter((item, index) => {
-    if (item[5] == categoryPath) return index;
-  });
-  return result;
-});
+getKeyNumber(beatlesData.values[0], keyNumbers);
 
 
 // Response
 export default (req, res) => {
   const categoryPath = req.query.category;
-  const categoryData = getCategoryData(categoryPath);
+  const categoryData = getCategoryData(beatlesData, keyNumbers, categoryPath);
   // console.log('categoryPath', categoryPath);
   // console.log('categoryData', categoryData);
 
