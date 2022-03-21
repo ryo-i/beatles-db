@@ -22,13 +22,14 @@ function InnerIndex() {
 
   // Get Query Param
   const router = useRouter();
+  const queryParam = router.query;
   const pageQuery = router.query.page;
 
 
   useEffect(() => {
-    const getPageParam = getQueryParam(pageQuery, router);
+    const getPageParam = getQueryParam(queryParam);
     setPageParam(getPageParam);
-  }, [pageQuery]);
+  }, [queryParam]);
 
 
   useEffect(() => {

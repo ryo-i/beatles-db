@@ -1,12 +1,9 @@
 // Get Query Param
-const getQueryParam = (pageQuery, router) => {
-    console.log('pageQuery', pageQuery);
+const getQueryParam = (queryParam) => {
+    console.log('queryParam', queryParam);
 
-    if (!router.isReady) {
-        console.log('not isReady');
-        return '';
-    } else if (pageQuery) {
-        const thisNumber: string = String(pageQuery);
+    if (queryParam.page) {
+        const thisNumber: string = String(queryParam.page);
         console.log('thisNumber', thisNumber);
         return '?page=' + thisNumber;
     } else {

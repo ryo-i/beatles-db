@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- getCategoryDataをモジュール化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- getQueryParamモジュールを汎用的に改造中 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 微修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
