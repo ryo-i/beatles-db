@@ -18,24 +18,24 @@ function InnerIndex() {
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
   const {categoryPath, setCategoryPath} = useContext(Context);
-  const [pageParam, setPageParam] = useState(null);
+  const [queryText, setQeuryText] = useState('');
 
 
   // Get Query Param
   const router = useRouter();
   const queryParam = router.query;
-  const pageQuery = router.query.page;
 
 
   useEffect(() => {
-    const getPageParam = getQueryParam(queryParam);
-    setPageParam(getPageParam);
+    const getQueryText = getQueryParam(queryParam);
+    setQeuryText(getQueryText);
+    console.log('queryText', queryText);
   }, [queryParam]);
 
 
   useEffect(() => {
     // fetch
-    const url: string = '../api/beatles/category/' + categoryPath + pageParam;
+    const url: string = '../api/beatles/category/' + categoryPath + queryText;
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
@@ -52,10 +52,10 @@ function InnerIndex() {
       }
     };
 
-    if (router.isReady && pageParam !== null) {
+    if (router.isReady && queryText !== null) {
       getTracksData(url);
     }
-  }, [pageParam, categoryPath]);
+  }, [categoryPath, queryText]);
 
 
   // Pagination

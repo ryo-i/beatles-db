@@ -12,9 +12,6 @@ getKeyNumber(beatlesData.values[0], keyNumbers);
 
 // Response
 export default (req, res) => {
-  const aaa = req.query;
-  console.log('aaa', aaa);
-
   const categoryPath = req.query.category;
   const categoryData = getFilterData(beatlesData.values, keyNumbers, 'path', categoryPath);
   console.log('categoryPath', categoryPath);

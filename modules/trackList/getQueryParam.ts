@@ -1,11 +1,16 @@
 // Get Query Param
 const getQueryParam = (queryParam) => {
-    console.log('queryParam', queryParam);
+    if (queryParam) {
+        let queryParamArray: string[] = [];
+        let queryparamText: string = '';
 
-    if (queryParam.page) {
-        const thisNumber: string = String(queryParam.page);
-        console.log('thisNumber', thisNumber);
-        return '?page=' + thisNumber;
+        for (const property in queryParam) {
+            const thisParam: string = String(`${property}=${queryParam[property]}`);
+            queryParamArray.push(thisParam);
+        }
+
+        queryparamText = queryParamArray.join('&');
+        return '?' + queryparamText;
     } else {
         return '';
     }
