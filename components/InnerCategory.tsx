@@ -30,12 +30,9 @@ function InnerIndex() {
     const getQueryText = getQueryParam(queryParam);
     setQeuryText(getQueryText);
     console.log('queryText', queryText);
-  }, [queryParam]);
 
-
-  useEffect(() => {
     // fetch
-    const url: string = '../api/beatles' + queryText;
+    const url: string = '../api/beatles' + getQueryText;
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
@@ -55,7 +52,7 @@ function InnerIndex() {
     if (router.isReady && queryText !== null) {
       getTracksData(url);
     }
-  }, [categoryPath, queryText]);
+  }, [queryParam]);
 
 
   // Pagination

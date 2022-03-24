@@ -18,7 +18,7 @@ export default (req, res) => {
 
   if (query.category) {
     const categoryPath = query.category;
-    resultData = getFilterData(resultData, keyNumbers, 'category', categoryPath);
+    resultData = getFilterData(resultData, keyNumbers, 'path', categoryPath);
     startNum = -1;
     console.log('categoryPath', categoryPath);
   }
