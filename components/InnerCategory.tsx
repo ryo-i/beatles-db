@@ -35,7 +35,7 @@ function InnerIndex() {
 
   useEffect(() => {
     // fetch
-    const url: string = '../api/beatles/category/' + categoryPath + queryText;
+    const url: string = '../api/beatles' + queryText;
     async function getTracksData (url) {
       try {
         const res = await fetch(url);

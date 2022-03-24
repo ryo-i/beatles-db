@@ -12,20 +12,27 @@ getKeyNumber(beatlesData.values[0], keyNumbers);
 
 // Response
 export default (req, res) => {
-  let allData = beatlesData.values;
+  let resultData = beatlesData.values;
   const query = req.query;
   let startNum = 0;
 
+  if (query.category) {
+    const categoryPath = query.category;
+    resultData = getFilterData(resultData, keyNumbers, 'category', categoryPath);
+    startNum = -1;
+    console.log('categoryPath', categoryPath);
+  }
+
   if (query.year) {
     const yearPath = query.year;
-    allData = getFilterData(allData, keyNumbers, 'year', yearPath);
+    resultData = getFilterData(resultData, keyNumbers, 'year', yearPath);
     startNum = -1;
     console.log('yearPath', yearPath);
   }
 
   if (query.format) {
     const formatPath = query.format;
-    allData = getFilterData(allData, keyNumbers, 'format', formatPath);
+    resultData = getFilterData(resultData, keyNumbers, 'format', formatPath);
     startNum = -1;
     console.log('formatPath', formatPath);
   }
@@ -33,8 +40,8 @@ export default (req, res) => {
 
   const pageParam = req.query.page
   const dataLength = getDataLength(pageParam);
-  const pageInfo = getPageSegmentation(pageParam, allData);
-  const tracksArray = getTracksArray(dataLength, pageInfo, allData, keyNumbers, startNum);
+  const pageInfo = getPageSegmentation(pageParam, resultData);
+  const tracksArray = getTracksArray(dataLength, pageInfo, resultData, keyNumbers, startNum);
 
   const tracksData = {};
   tracksData['pageInfo'] = pageInfo;
