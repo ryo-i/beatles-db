@@ -17,7 +17,6 @@ function InnerIndex() {
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
-  const [queryText, setQeuryText] = useState('');
 
 
   // Get Query Param
@@ -26,8 +25,8 @@ function InnerIndex() {
 
 
   useEffect(() => {
-    const getQueryText = getQueryParam(queryParam);
-    setQeuryText(getQueryText);
+    const queryText = getQueryParam(queryParam);
+    console.log('queryParam', queryParam);
     console.log('queryText', queryText);
 
     // fetch
@@ -61,7 +60,11 @@ function InnerIndex() {
     return (
       <ul className="pagination">
         {pagination.map((data, index) =>
-          <li key={index}><Link href={'/?page=' + data.pageNum}><a className={data.thisPage}>{data.pageNum}</a></Link></li>
+          <li key={index}>
+            <Link href={'/?page=' + data.pageNum}>
+              <a className={data.thisPage}>{data.pageNum}</a>
+            </Link>
+          </li>
         )}
       </ul>
     );
@@ -97,7 +100,18 @@ function InnerIndex() {
                     </Link>
                   </dt>
                   <dd>
-                    <p className="title-area"><span className="year">{data.year}</span><span className="format">{data.format}</span><span className="title">{data.title}</span></p>
+                    <p className="title-area">
+                      <span className="year">
+                        <Link href={"/?year=" + data.year}>
+                          <a>{data.year}</a>
+                        </Link>
+                      </span>
+                      <span className="format">
+                        <Link href={"/?format=" + data.format}>
+                          <a>{data.format}</a>
+                        </Link>
+                      </span>
+                      <span className="title">{data.title}</span></p>
                     <p className="artist">{data.artist}</p>
                   </dd>
                 </dl>

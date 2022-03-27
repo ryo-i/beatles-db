@@ -18,7 +18,6 @@ function InnerIndex() {
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
   const {categoryPath, setCategoryPath} = useContext(Context);
-  const [queryText, setQeuryText] = useState('');
 
 
   // Get Query Param
@@ -27,12 +26,12 @@ function InnerIndex() {
 
 
   useEffect(() => {
-    const getQueryText = getQueryParam(queryParam);
-    setQeuryText(getQueryText);
+    const queryText = getQueryParam(queryParam);
+    console.log('queryParam', queryParam);
     console.log('queryText', queryText);
 
     // fetch
-    const url: string = '../api/beatles' + getQueryText;
+    const url: string = '../api/beatles' + queryText;
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
@@ -62,7 +61,11 @@ function InnerIndex() {
     return (
       <ul className="pagination">
         {pagination.map((data, index) =>
-          <li key={index}><Link href={'/category/' + categoryPath + '?page=' + data.pageNum}><a  className={data.thisPage}>{data.pageNum}</a></Link></li>
+          <li key={index}>
+            <Link href={'/category/' + categoryPath + '?page=' + data.pageNum}>
+              <a  className={data.thisPage}>{data.pageNum}</a>
+            </Link>
+          </li>
         )}
       </ul>
     );
@@ -98,7 +101,19 @@ function InnerIndex() {
                     </Link>
                   </dt>
                   <dd>
-                    <p className="title-area"><span className="year">{data.year}</span><span className="format">{data.format}</span><span className="title">{data.title}</span></p>
+                    <p className="title-area">
+                      <span className="year">
+                        <Link href={"../category/" + data.path + "?year=" + data.year}>
+                          <a>{data.year}</a>
+                        </Link>
+                      </span>
+                      <span className="format">
+                        <Link href={"../category/" + data.path + "?format=" + data.format}>
+                          <a>{data.format}</a>
+                        </Link>
+                      </span>
+                      <span className="title">{data.title}</span>
+                    </p>
                     <p className="artist">{data.artist}</p>
                   </dd>
                 </dl>

@@ -63,13 +63,15 @@ const Section = styled.section`
           .title {
             font-weight: bold;
           }
-          .year, .format {
+          .year a,
+          .format a {
             background: #888;
             color: #fff;
             margin: 0 5px 0 0;
             padding : 3px;
             font-size: 10px;
             border-radius: 3px;
+            text-decoration: none;
           }
         }
       }
