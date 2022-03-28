@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 発売年と形態の絞り込みリンクを追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- 微修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 
