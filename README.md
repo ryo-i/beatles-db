@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 発売年と形態の絞り込みリンクを追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- トップとカテゴリの件数を揃える(1件少ない状態) [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

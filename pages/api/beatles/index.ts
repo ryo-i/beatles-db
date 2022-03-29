@@ -14,26 +14,26 @@ getKeyNumber(beatlesData.values[0], keyNumbers);
 export default (req, res) => {
   let resultData = beatlesData.values;
   const query = req.query;
-  let startNum = 0;
+  let startNum = -1;
 
   if (query.category) {
     const categoryPath = query.category;
     resultData = getFilterData(resultData, keyNumbers, 'path', categoryPath);
-    startNum = -1;
     console.log('categoryPath', categoryPath);
+  } else {
+    resultData.shift();
+    console.log('no catgory');
   }
 
   if (query.year) {
     const yearPath = query.year;
     resultData = getFilterData(resultData, keyNumbers, 'year', yearPath);
-    startNum = -1;
     console.log('yearPath', yearPath);
   }
 
   if (query.format) {
     const formatPath = query.format;
     resultData = getFilterData(resultData, keyNumbers, 'format', formatPath);
-    startNum = -1;
     console.log('formatPath', formatPath);
   }
 
