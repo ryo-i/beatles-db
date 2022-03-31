@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- トップとカテゴリの件数を揃える(1件少ない状態) [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- Allの件数がクリックでだんだん減る事象を修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

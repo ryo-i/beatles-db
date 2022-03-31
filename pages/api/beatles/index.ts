@@ -2,6 +2,7 @@ import beatlesData from '../data/beatles.json';
 import { keyNumbers } from '../../../modules/api/keyNumbers';
 import { getKeyNumber }from '../../../modules/api/getKeyNumber';
 import { getFilterData }from '../../../modules/api/getFilterData';
+import { getNoCategoryData }from '../../../modules/api/getNoCategoryData';
 import { getPageSegmentation }from '../../../modules/api/getPageSegmentation';
 import { getDataLength }from '../../../modules/api/getDataLength';
 import { getTracksArray }from '../../../modules/api/getTracksArray';
@@ -14,15 +15,15 @@ getKeyNumber(beatlesData.values[0], keyNumbers);
 export default (req, res) => {
   let resultData = beatlesData.values;
   const query = req.query;
-  let startNum = -1;
 
   if (query.category) {
     const categoryPath = query.category;
     resultData = getFilterData(resultData, keyNumbers, 'path', categoryPath);
     console.log('categoryPath', categoryPath);
   } else {
-    resultData.shift();
+    resultData = getNoCategoryData(resultData, keyNumbers);
     console.log('no catgory');
+    console.log('resultData.length', resultData.length);
   }
 
   if (query.year) {
@@ -38,10 +39,10 @@ export default (req, res) => {
   }
 
 
-  const pageParam = req.query.page
+  const pageParam = req.query.page;
   const dataLength = getDataLength(pageParam);
   const pageInfo = getPageSegmentation(pageParam, resultData);
-  const tracksArray = getTracksArray(dataLength, pageInfo, resultData, keyNumbers, startNum);
+  const tracksArray = getTracksArray(dataLength, pageInfo, resultData, keyNumbers);
 
   const tracksData = {};
   tracksData['pageInfo'] = pageInfo;

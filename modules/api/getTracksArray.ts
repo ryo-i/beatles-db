@@ -1,12 +1,16 @@
 // Get Tracks Array
-const getTracksArray = (dataLength, pageInfo, data, keyNumbers, startNum) => {
+const getTracksArray = (dataLength, pageInfo, data, keyNumbers) => {
+    console.log('dataLength', dataLength);
+    console.log('pageInfo', pageInfo);
+    console.log('keyNumbers', keyNumbers);
+
     let addLength = 50;
     if ((dataLength + addLength) > pageInfo.trackLength) {
       addLength = pageInfo.trackRemainder;
     }
 
     const tracksArray = [];
-    for (var i = dataLength + startNum; i < dataLength + addLength; i++) {
+    for (var i = dataLength -1; i < dataLength + addLength; i++) {
       const thisObj = {};
       thisObj['id'] = data[i][keyNumbers.id];
       thisObj['year'] = data[i][keyNumbers.year];
