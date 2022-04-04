@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- Allの件数がクリックでだんだん減る事象を修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- ページ読み込みエラーを修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
