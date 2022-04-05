@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>ページ読み込みエラーを修正 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>ページネーションのリンクにパラメータ追加(重複あり)  <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

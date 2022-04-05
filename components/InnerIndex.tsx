@@ -5,6 +5,7 @@ import Link from 'next/link';
 import CategoryNav from './CategoryNav';
 import Section from './Section';
 import { getPagination } from '../modules/trackList/getPagination';
+import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
 import { getQueryParam } from '../modules/trackList/getQueryParam';
 
@@ -56,12 +57,14 @@ function InnerIndex() {
   // Pagination
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
+    const queryText = getQueryParam(queryParam);
+    const pageKey = getPageKey(queryText);
 
     return (
       <ul className="pagination">
         {pagination.map((data, index) =>
           <li key={index}>
-            <Link href={'/?page=' + data.pageNum}>
+            <Link href={'/' + queryText + pageKey + data.pageNum}>
               <a className={data.thisPage}>{data.pageNum}</a>
             </Link>
           </li>

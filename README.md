@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ページ読み込みエラーを修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- ページネーションのリンクにパラメータ追加(重複あり) [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
