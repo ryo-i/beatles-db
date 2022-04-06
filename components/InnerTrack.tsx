@@ -171,7 +171,11 @@ function InnerTrack() {
             <dt>アーティスト名</dt>
             <dd>{trackData.artist}</dd>
             <dt>カテゴリ</dt>
-            <dd>{trackData.category}</dd>
+            <dd>
+              <Link href={"../category/" + trackData.path}>
+                <a>{trackData.category}</a>
+              </Link>
+            </dd>
             <dt>オリジナル</dt>
             <dd>{trackData.original}</dd>
           </dl>
@@ -207,7 +211,11 @@ function InnerTrack() {
             <dt>収録作品</dt>
             <dd>{trackData.title}</dd>
             <dt>発売年</dt>
-            <dd>{trackData.year}</dd>
+            <dd>
+              <Link href={"../?year=" + trackData.year}>
+                <a>{trackData.year}</a>
+              </Link>
+            </dd>
             <dt>発売日</dt>
             <dd>{trackData.date}</dd>
             <dt>販売国</dt>
@@ -215,7 +223,11 @@ function InnerTrack() {
             <dt>レーベル</dt>
             <dd>{trackData.label}</dd>
             <dt>形態</dt>
-            <dd>{trackData.format}</dd>
+            <dd>
+              <Link href={"../?format=" + trackData.format}>
+                <a>{trackData.format}</a>
+              </Link>
+            </dd>
             <dt>枚数</dt>
             <dd>{trackData.disc}</dd>
             <dt>面</dt>

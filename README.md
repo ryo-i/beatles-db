@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- ページネーションのリンクにパラメータ追加(重複あり) [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 楽曲情報にカテゴリ、発売年、形態のリンク追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
