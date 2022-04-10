@@ -8,6 +8,7 @@ import { getPagination } from '../modules/trackList/getPagination';
 import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
 import { getQueryParam } from '../modules/trackList/getQueryParam';
+import { deleteParam } from '../modules/trackList/deleteParam';
 
 
 // Component
@@ -58,7 +59,8 @@ function InnerIndex() {
   // Pagination
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
-    const queryText = getQueryParam(queryParam);
+    const thisPageParam = deleteParam(queryParam);
+    const queryText = getQueryParam(thisPageParam);
     const pageKey = getPageKey(queryText);
 
     return (
