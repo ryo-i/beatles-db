@@ -34,6 +34,7 @@ function InnerIndex() {
 
     // fetch
     const url: string = '../api/beatles' + queryText;
+    console.log('url', url);
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
@@ -62,6 +63,8 @@ function InnerIndex() {
     const thisPageParam = deleteParam(queryParam);
     const queryText = getQueryParam(thisPageParam);
     const pageKey = getPageKey(queryText);
+    console.log('thisPageParam', thisPageParam);
+    console.log('queryParam', queryParam);
 
     return (
       <ul className="pagination">

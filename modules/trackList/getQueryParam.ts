@@ -1,6 +1,8 @@
 // Get Query Param
 const getQueryParam = (queryParam) => {
-    if (queryParam) {
+    if (!Object.keys(queryParam).length) {
+        return '';
+    } else {
         let queryParamArray: string[] = [];
         let queryparamText: string = '';
 
@@ -11,8 +13,6 @@ const getQueryParam = (queryParam) => {
 
         queryparamText = queryParamArray.join('&');
         return '?' + queryparamText;
-    } else {
-        return '';
     }
 };
 
