@@ -25,11 +25,16 @@ function InnerIndex() {
   // Get Query Param
   const router = useRouter();
   const queryParam = router.query;
+  const { category, page, year, format } = router.query;
 
 
   useEffect(() => {
-    const queryText = getQueryParam(queryParam);
     console.log('queryParam', queryParam);
+    console.log('category', category);
+    console.log('page', page);
+    console.log('year', year);
+    console.log('format', format);
+    const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
 
     // fetch
@@ -54,7 +59,7 @@ function InnerIndex() {
     if (router.isReady && queryText !== null) {
       getTracksData(url);
     }
-  }, [queryParam]);
+  }, [router]);
 
 
   // Pagination

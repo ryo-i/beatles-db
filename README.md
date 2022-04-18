@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- APIのパラメータの空判定を変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- categoryページのqueryを個別に取得 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
