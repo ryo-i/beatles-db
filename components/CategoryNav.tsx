@@ -32,11 +32,10 @@ function CategoryNav() {
   const [categoryName, setCaterogyName] = useState(null);
 
   const router = useRouter();
+  const { category } = router.query;
 
   useEffect(() => {
-    const { category } = router.query;
     setCaterogyName(category);
-    console.log('categoryName', categoryName);
   }, [router]);
 
   return (

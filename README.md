@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- categoryページ絞り込み復活、発売年・形態の絞り込みも適用 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- categoryタブのカレントスタイルを適用 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
