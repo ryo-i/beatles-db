@@ -25,12 +25,15 @@ function InnerIndex() {
   // Get Query Param
   const router = useRouter();
   const queryParam = router.query;
-  const { category } = router.query;
+  const { category, page } = router.query;
 
 
   useEffect(() => {
     if (category) {
       queryParam.category = category;
+    }
+    if (page) {
+      queryParam.page = page;
     }
     console.log('queryParam', queryParam);
     const queryText = getQueryParam(queryParam);

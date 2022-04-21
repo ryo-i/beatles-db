@@ -24,11 +24,14 @@ function InnerIndex() {
   // Get Query Param
   const router = useRouter();
   const queryParam = router.query;
-
+  const { page } = router.query;
 
   useEffect(() => {
-    const queryText = getQueryParam(queryParam);
+    if (page) {
+      queryParam.page = page;
+    }
     console.log('queryParam', queryParam);
+    const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
 
     // fetch
