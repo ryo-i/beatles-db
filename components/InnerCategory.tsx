@@ -20,6 +20,8 @@ function InnerIndex() {
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
   const {categoryPath, setCategoryPath} = useContext(Context);
+  const [year, setYear] = useState(null);
+  const [format, setFormat] = useState(null);
 
 
   // Get Query Param
@@ -38,6 +40,17 @@ function InnerIndex() {
     console.log('queryParam', queryParam);
     const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
+
+    if (queryParam.year) {
+      setFormat('');
+      setYear(queryParam.year);
+    } else if (queryParam.format) {
+      setFormat(queryParam.format);
+      setYear('');
+    } else {
+      setFormat('');
+      setYear('');
+    }
 
     // fetch
     const url: string = '../api/beatles' + queryText;
@@ -70,8 +83,6 @@ function InnerIndex() {
     const thisPageParam = deleteParam(queryParam);
     const queryText = getQueryParam(thisPageParam);
     const pageKey = getPageKey(queryText);
-    console.log('thisPageParam', thisPageParam);
-    console.log('queryParam', queryParam);
 
     return (
       <ul className="pagination">
@@ -147,6 +158,10 @@ function InnerIndex() {
       <CategoryNav />
       <Section>
         <h2>「{categoryName}」の楽曲一覧</h2>
+        <ul className="filterResult">
+          <li>発売年: {year}</li>
+          <li>形態: {format}</li>
+        </ul>
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
         <TrackList />

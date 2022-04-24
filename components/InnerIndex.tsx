@@ -19,7 +19,8 @@ function InnerIndex() {
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
-
+  const [year, setYear] = useState(null);
+  const [format, setFormat] = useState(null);
 
   // Get Query Param
   const router = useRouter();
@@ -33,6 +34,17 @@ function InnerIndex() {
     console.log('queryParam', queryParam);
     const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
+
+    if (queryParam.year) {
+      setFormat('');
+      setYear(queryParam.year);
+    } else if (queryParam.format) {
+      setFormat(queryParam.format);
+      setYear('');
+    } else {
+      setFormat('');
+      setYear('');
+    }
 
     // fetch
     const url = 'api/beatles' + queryText;
@@ -55,7 +67,7 @@ function InnerIndex() {
     if (router.isReady && queryText !== null) {
       getTracksData(url);
     }
-  }, [queryParam]);
+  }, [router]);
 
 
   // Pagination
@@ -138,6 +150,10 @@ function InnerIndex() {
       <CategoryNav />
       <Section>
         <h2>「{categoryName}」の楽曲一覧</h2>
+        <ul className="filterResult">
+          <li>発売年: {year}</li>
+          <li>形態: {format}</li>
+        </ul>
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
         <TrackList />
