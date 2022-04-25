@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 発売年、形態の値を表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 絞り込み条件をひとまず連想配列のまま表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

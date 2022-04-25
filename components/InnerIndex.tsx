@@ -8,6 +8,7 @@ import { getPagination } from '../modules/trackList/getPagination';
 import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
 import { getQueryParam } from '../modules/trackList/getQueryParam';
+import { getQueryInfo } from '../modules/trackList/getQueryInfo';
 import { deleteParam } from '../modules/trackList/deleteParam';
 
 
@@ -19,6 +20,7 @@ function InnerIndex() {
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
+  const [queryInfo, setQueryInfo] = useState({});
   const [year, setYear] = useState(null);
   const [format, setFormat] = useState(null);
 
@@ -34,6 +36,8 @@ function InnerIndex() {
     console.log('queryParam', queryParam);
     const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
+    const thisQueryInfo = getQueryInfo(queryParam);
+    setQueryInfo(thisQueryInfo);
 
     if (queryParam.year) {
       setFormat('');
@@ -150,10 +154,7 @@ function InnerIndex() {
       <CategoryNav />
       <Section>
         <h2>「{categoryName}」の楽曲一覧</h2>
-        <ul className="filterResult">
-          <li>発売年: {year}</li>
-          <li>形態: {format}</li>
-        </ul>
+        <p>絞り込み: {JSON.stringify(queryInfo)}</p>
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
         <TrackList />
