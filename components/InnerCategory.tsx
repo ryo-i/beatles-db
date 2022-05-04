@@ -21,9 +21,7 @@ function InnerIndex() {
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
   const {categoryPath, setCategoryPath} = useContext(Context);
-  const [queryInfo, setQueryInfo] = useState({});
-  const [year, setYear] = useState(null);
-  const [format, setFormat] = useState(null);
+  const [queryInfo, setQueryInfo] = useState('');
 
 
   // Get Query Param
@@ -33,6 +31,9 @@ function InnerIndex() {
 
 
   useEffect(() => {
+    const thisQueryInfo = getQueryInfo(queryParam);
+    setQueryInfo(thisQueryInfo);
+
     if (category) {
       queryParam.category = category;
     }
@@ -41,19 +42,6 @@ function InnerIndex() {
     }
     const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
-    const thisQueryInfo = getQueryInfo(queryParam);
-    setQueryInfo(thisQueryInfo);
-
-    if (queryParam.year) {
-      setFormat('');
-      setYear(queryParam.year);
-    } else if (queryParam.format) {
-      setFormat(queryParam.format);
-      setYear('');
-    } else {
-      setFormat('');
-      setYear('');
-    }
 
     // fetch
     const url: string = '../api/beatles' + queryText;
@@ -160,8 +148,7 @@ function InnerIndex() {
     <>
       <CategoryNav />
       <Section>
-        <h2>「{categoryName}」の楽曲一覧</h2>
-        <p>絞り込み: {JSON.stringify(queryInfo)}</p>
+        <h2>{categoryName + queryInfo}</h2>
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
         <TrackList />

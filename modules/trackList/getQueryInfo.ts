@@ -1,15 +1,17 @@
 // Get Query Info
 const getQueryInfo = (queryParam) => {
-    if (!Object.keys(queryParam).length) {
-        return '';
-    } else {
-        let queryParamObject = {};
+    let queryInfoText: string = '';
+    let queryParamObject = {};
 
+    if (!Object.keys(queryParam).length) {
+        return queryInfoText;
+    } else {
         for (const property in queryParam) {
             queryParamObject[property] = queryParam[property];
         }
 
-        return queryParamObject;
+        queryInfoText = Object.entries(queryParamObject).map( x => x.join(": ")).join(", ");
+        return '(' + queryInfoText + ')';
     }
 };
 
