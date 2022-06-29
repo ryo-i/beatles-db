@@ -90,6 +90,7 @@ function InnerIndex() {
 
 
   // Track List
+  const hierarchy = '../' // フックにする？
   const TrackList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
@@ -103,14 +104,14 @@ function InnerIndex() {
               <li key={index} className={getTopTrack(data.order, index, tracksData)} data-order={data.order}>
                 <figure>
                   <p className="icon">
-                    <Link href={"../category/" + data.path}>
+                    <Link href={hierarchy + "category/" + data.path}>
                       <a>{data.icon}</a>
                     </Link>
                   </p>
                 </figure>
                 <dl>
                   <dt>
-                    <Link href={"../track/" + data.id}>
+                    <Link href={hierarchy + "track/" + data.id}>
                       <a>
                         <p className="num">{data.number}</p>
                         <p className="song">{data.track}</p>
@@ -120,12 +121,12 @@ function InnerIndex() {
                   <dd>
                     <p className="title-area">
                       <span className="year">
-                        <Link href={"../category/" + data.path + "?year=" + data.year}>
+                        <Link href={hierarchy + "category/" + data.path + "?year=" + data.year}>
                           <a>{data.year}</a>
                         </Link>
                       </span>
                       <span className="format">
-                        <Link href={"../category/" + data.path + "?format=" + data.format}>
+                        <Link href={hierarchy + "category/" + data.path + "?format=" + data.format}>
                           <a>{data.format}</a>
                         </Link>
                       </span>
