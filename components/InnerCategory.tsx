@@ -69,6 +69,7 @@ function InnerIndex() {
 
 
   // Pagination
+  const paginationPath = '/category/' + categoryPath;
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
     const thisPageParam = deleteParam(queryParam);
@@ -79,8 +80,8 @@ function InnerIndex() {
       <ul className="pagination">
         {pagination.map((data, index) =>
           <li key={index}>
-            <Link href={'/category/' + categoryPath  + queryText + pageKey + data.pageNum}>
-              <a  className={data.thisPage}>{data.pageNum}</a>
+            <Link href={paginationPath + queryText + pageKey + data.pageNum}>
+              <a className={data.thisPage}>{data.pageNum}</a>
             </Link>
           </li>
         )}
@@ -90,7 +91,7 @@ function InnerIndex() {
 
 
   // Track List
-  const hierarchy = '../' // フックにする？
+  const hierarchy = '../';
   const TrackList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;

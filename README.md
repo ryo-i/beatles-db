@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 絞り込み条件をタイトルテキスト内で表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- パス、変数の美修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
