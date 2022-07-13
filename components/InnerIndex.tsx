@@ -85,7 +85,8 @@ function InnerIndex() {
 
 
   // Track List
-  const hierarchy = '/';
+  let isCategory = false;
+  const hierarchy = isCategory ? '../' : '/';
   const TrackList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
@@ -116,12 +117,19 @@ function InnerIndex() {
                   <dd>
                     <p className="title-area">
                       <span className="year">
-                        <Link href={hierarchy + "/?year=" + data.year}>
+                      <Link href={
+                          isCategory ?
+                          hierarchy + "category/" + data.path + "?year=" + data.year :
+                          hierarchy + "/" + "?year=" + data.year
+                        }>
                           <a>{data.year}</a>
                         </Link>
                       </span>
                       <span className="format">
-                        <Link href={hierarchy + "/?format=" + data.format}>
+                      <Link href={isCategory ?
+                          hierarchy + "category/" + data.path + "?format=" + data.format :
+                          hierarchy + "/" + "?format=" + data.format
+                        }>
                           <a>{data.format}</a>
                         </Link>
                       </span>
