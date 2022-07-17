@@ -17,6 +17,7 @@ function InnerIndex() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isCategory, setIsCategory] = useState(false);
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
@@ -85,7 +86,6 @@ function InnerIndex() {
 
 
   // Track List
-  let isCategory = false;
   const hierarchy = isCategory ? '../' : '/';
   const TrackList = () => {
     if (error) {

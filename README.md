@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- indexとcategoryを三項演算子で共通化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- isCategoryをフック化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
