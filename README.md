@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- paginationPathを共通化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- urlを共通化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

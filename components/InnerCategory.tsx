@@ -40,11 +40,12 @@ function InnerIndex() {
     if (page) {
       queryParam.page = page;
     }
+    console.log('queryParam', queryParam);
     const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
 
     // fetch
-    const url: string = '../api/beatles' + queryText;
+    const url: string = isCategory ? '../api/beatles' + queryText : 'api/beatles' + queryText;
     console.log('url', url);
     async function getTracksData (url) {
       try {
