@@ -21,6 +21,7 @@ function InnerIndex() {
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
   const {categoryName, setCategoryName} = useContext(Context);
+  const {categoryPath, setCategoryPath} = useContext(Context);
   const [queryInfo, setQueryInfo] = useState('');
 
   // Get Query Param
@@ -64,7 +65,7 @@ function InnerIndex() {
 
 
   // Pagination
-  const paginationPath = '/';
+  const paginationPath = isCategory ? '/category/' + categoryPath : '/';
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
     const thisPageParam = deleteParam(queryParam);

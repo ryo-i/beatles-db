@@ -69,7 +69,7 @@ function InnerIndex() {
 
 
   // Pagination
-  const paginationPath = '/category/' + categoryPath;
+  const paginationPath = isCategory ? '/category/' + categoryPath : '/';
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
     const thisPageParam = deleteParam(queryParam);
