@@ -122,7 +122,7 @@ function InnerIndex() {
                       <Link href={
                           isCategory ?
                           hierarchy + "category/" + data.path + "?year=" + data.year :
-                          hierarchy + "/" + "?year=" + data.year
+                          hierarchy + "?year=" + data.year
                         }>
                           <a>{data.year}</a>
                         </Link>
@@ -130,7 +130,7 @@ function InnerIndex() {
                       <span className="format">
                       <Link href={isCategory ?
                           hierarchy + "category/" + data.path + "?format=" + data.format :
-                          hierarchy + "/" + "?format=" + data.format
+                          hierarchy + "?format=" + data.format
                         }>
                           <a>{data.format}</a>
                         </Link>
