@@ -17,9 +17,9 @@ function InnerIndex() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isCategory, setIsCategory] = useState(true);
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
+  const {isCategory, setIsCategory} = useContext(Context);
   const {categoryName, setCategoryName} = useContext(Context);
   const {categoryPath, setCategoryPath} = useContext(Context);
   const [queryInfo, setQueryInfo] = useState('');

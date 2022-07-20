@@ -7,6 +7,8 @@ import Data from '../../data/data.json';
 
 
 export const Context = createContext({} as {
+  isCategory: boolean
+  setIsCategory: React.Dispatch<React.SetStateAction<boolean>>
   categoryName: string
   setCategoryName: React.Dispatch<React.SetStateAction<string>>
   categoryPath: string
@@ -15,6 +17,7 @@ export const Context = createContext({} as {
 
 
 function Home({ categoryInfo }) {
+  const [isCategory, setIsCategory] = useState(true);
   const [categoryName, setCategoryName] = useState(categoryInfo.name);
   const [categoryPath, setCategoryPath] = useState(categoryInfo.path);
 
@@ -46,7 +49,7 @@ function Home({ categoryInfo }) {
       <main>
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-        <Context.Provider value={{categoryName, setCategoryName, categoryPath, setCategoryPath}} >
+        <Context.Provider value={{isCategory, setIsCategory, categoryName, setCategoryName, categoryPath, setCategoryPath}} >
           <InnerCategory />
         </Context.Provider>
       </main>
