@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>categoryContextを外部ファイルに <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>コンポーネントのindexとcategoryを統合 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

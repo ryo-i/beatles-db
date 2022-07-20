@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import { categoryContext } from '../../context/categoryContext';
 import Head from 'next/head';
 import Header from '../../components/Header';
-import InnerCategory from '../../components/InnerCategory';
+import InnerIndex from '../../components/InnerIndex';
 import Footer from '../../components/Footer';
 import Data from '../../data/data.json';
 
@@ -41,7 +41,7 @@ function Home({ categoryInfo }) {
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
         <categoryContext.Provider value={{isCategory, setIsCategory, categoryName, setCategoryName, categoryPath, setCategoryPath}} >
-          <InnerCategory />
+          <InnerIndex />
         </categoryContext.Provider>
       </main>
       <Footer />
