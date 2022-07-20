@@ -1,4 +1,5 @@
-import React, { useState, createContext }  from 'react';
+import React, { useState }  from 'react';
+import { categoryContext } from '../context/categoryContext';
 import Head from 'next/head';
 import Header from '../components/Header';
 import InnerIndex from '../components/InnerIndex';
@@ -10,16 +11,6 @@ const headerTitle = Data.header.title;
 const headerText = Data.header.text;
 const pageTitle = '楽曲一覧';
 const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
-
-
-export const Context = createContext({} as {
-  isCategory: boolean
-  setIsCategory: React.Dispatch<React.SetStateAction<boolean>>
-  categoryName: string
-  setCategoryName: React.Dispatch<React.SetStateAction<string>>
-  categoryPath: string
-  setCategoryPath: React.Dispatch<React.SetStateAction<string>>
-});
 
 
 function Home() {
@@ -39,9 +30,9 @@ function Home() {
       <main>
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-        <Context.Provider value={{isCategory, setIsCategory, categoryName, setCategoryName, categoryPath, setCategoryPath}} >
+        <categoryContext.Provider value={{isCategory, setIsCategory, categoryName, setCategoryName, categoryPath, setCategoryPath}} >
           <InnerIndex />
-        </Context.Provider>
+        </categoryContext.Provider>
       </main>
       <Footer />
     </>

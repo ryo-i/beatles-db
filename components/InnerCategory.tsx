@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { useRouter } from 'next/router';
-import { Context } from '../pages/category/[category]';
+import { categoryContext } from '../context/categoryContext';
 import Link from 'next/link';
 import CategoryNav from './CategoryNav';
 import Section from './Section';
@@ -19,9 +19,9 @@ function InnerIndex() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
-  const {isCategory, setIsCategory} = useContext(Context);
-  const {categoryName, setCategoryName} = useContext(Context);
-  const {categoryPath, setCategoryPath} = useContext(Context);
+  const {isCategory, setIsCategory} = useContext(categoryContext);
+  const {categoryName, setCategoryName} = useContext(categoryContext);
+  const {categoryPath, setCategoryPath} = useContext(categoryContext);
   const [queryInfo, setQueryInfo] = useState('');
 
   // Get Query Param

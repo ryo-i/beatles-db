@@ -1,19 +1,10 @@
-import React, { useState, createContext, useEffect }  from 'react';
+import React, { useState, useEffect }  from 'react';
+import { categoryContext } from '../../context/categoryContext';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import InnerCategory from '../../components/InnerCategory';
 import Footer from '../../components/Footer';
 import Data from '../../data/data.json';
-
-
-export const Context = createContext({} as {
-  isCategory: boolean
-  setIsCategory: React.Dispatch<React.SetStateAction<boolean>>
-  categoryName: string
-  setCategoryName: React.Dispatch<React.SetStateAction<string>>
-  categoryPath: string
-  setCategoryPath: React.Dispatch<React.SetStateAction<string>>
-});
 
 
 function Home({ categoryInfo }) {
@@ -49,9 +40,9 @@ function Home({ categoryInfo }) {
       <main>
         <h1>{ pageTitle }</h1>
         <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
-        <Context.Provider value={{isCategory, setIsCategory, categoryName, setCategoryName, categoryPath, setCategoryPath}} >
+        <categoryContext.Provider value={{isCategory, setIsCategory, categoryName, setCategoryName, categoryPath, setCategoryPath}} >
           <InnerCategory />
-        </Context.Provider>
+        </categoryContext.Provider>
       </main>
       <Footer />
     </>
