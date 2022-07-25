@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- コンポーネントのindexとcategoryを統合 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- categoryとisCategoryの処理を分離 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

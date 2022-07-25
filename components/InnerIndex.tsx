@@ -33,9 +33,12 @@ function InnerIndex() {
     const thisQueryInfo = getQueryInfo(queryParam);
     setQueryInfo(thisQueryInfo);
 
-    if (isCategory) {
+    if (category) {
       queryParam.category = category;
+    } else if (isCategory) {
+      queryParam.category = categoryPath;
     }
+
     if (page) {
       queryParam.page = page;
     }
@@ -65,7 +68,7 @@ function InnerIndex() {
     if (router.isReady && queryText !== null) {
       getTracksData(url);
     }
-  }, [router]);
+  }, [queryParam, router]);
 
 
   // Pagination
