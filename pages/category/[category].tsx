@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import InnerIndex from '../../components/InnerIndex';
 import Footer from '../../components/Footer';
 import Data from '../../data/data.json';
+import { getCaterogyInfo } from '../../modules/indexList/getCaterogyInfo';
 
 
 function Home({ categoryInfo }) {
@@ -66,41 +67,10 @@ export async function getStaticPaths() {
 }
 
 
-// This Category Info
-const thisCaterogyInfo = (category) => {
-  const categoryInfo = {
-    path: '',
-    name: ''
-  };
-
-  if (category === 'beatles') {
-    categoryInfo.path = 'beatles';
-    categoryInfo.name = 'Beatles';
-  } else if (category === 'john-yoko') {
-    categoryInfo.path = 'john-yoko';
-    categoryInfo.name = 'John & Yoko';
-  } else if (category === 'paul') {
-    categoryInfo.path = 'paul';
-    categoryInfo.name = 'Paul McCartney';
-  } else if (category === 'george') {
-    categoryInfo.path = 'george';
-    categoryInfo.name = 'George Harrison';
-  } else if (category === 'ringo') {
-    categoryInfo.path = 'ringo';
-    categoryInfo.name = 'Ringo Starr';
-  } else if (category === 'tony-beatles') {
-    categoryInfo.path = 'tony-beatles';
-    categoryInfo.name = 'Tony & Beatles';
-  }
-
-  return categoryInfo;
-}
-
-
 // Get CategoryInfo
 export async function getStaticProps({ params }) {
   const category = params.category;
-  const categoryInfo = thisCaterogyInfo(category);
+  const categoryInfo = getCaterogyInfo(category);
   // console.log('category', category);
   // console.log('categoryInfo', categoryInfo);
   return { props: { categoryInfo } };
