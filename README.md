@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- categoryとisCategoryの処理を分離 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- タブのcurrentスタイルをリロード時も適用（復旧） [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

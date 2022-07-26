@@ -29,14 +29,16 @@ const Nav = styled.nav`
 // Component
 function CategoryNav() {
   // Hooks
-  const [categoryName, setCaterogyName] = useState(null);
+  const [categoryName, setCategoryName] = useState(null);
 
   const router = useRouter();
   const { category } = router.query;
 
   useEffect(() => {
-    setCaterogyName(category);
-  }, [router]);
+    if (category) {
+      setCategoryName(category);
+    }
+  }, [router, category]);
 
   return (
     <Nav className="cagterogyNav">
