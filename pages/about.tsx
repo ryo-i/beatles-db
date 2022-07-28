@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>APIのインデントを手直し <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>楽曲一覧スクロール時に発生する通信を調べ中 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
@@ -85,7 +85,7 @@ function About() {
                 </section>
                 <section>
                     <h3>ソースコード（GitHub）</h3>
-                    <p><a href="https://github.com/ryo-i/xxxxx">リポジトリ</a></p>
+                    <p><a href="https://github.com/ryo-i/beatles-db">リポジトリ</a></p>
                 </section>
             </section>
             <Profile />

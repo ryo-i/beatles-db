@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- APIのインデントを手直し [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 楽曲一覧スクロール時に発生する通信を調べ中 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
