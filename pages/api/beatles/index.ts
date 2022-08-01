@@ -5,6 +5,8 @@ import { getFilterData }from '../../../modules/api/getFilterData';
 import { getNoCategoryData }from '../../../modules/api/getNoCategoryData';
 import { getPageSegmentation }from '../../../modules/api/getPageSegmentation';
 import { getDataLength }from '../../../modules/api/getDataLength';
+import { getYearsArray }from '../../../modules/api/getYearsArray';
+import { getFormatsArray }from '../../../modules/api/getFormatsArray';
 import { getTracksArray }from '../../../modules/api/getTracksArray';
 
 
@@ -42,10 +44,14 @@ export default (req, res) => {
   const pageParam = req.query.page;
   const dataLength = getDataLength(pageParam);
   const pageInfo = getPageSegmentation(pageParam, resultData);
+  const yarsArray = getYearsArray(resultData);
+  const formatsArray = getFormatsArray(resultData);
   const tracksArray = getTracksArray(dataLength, pageInfo, resultData, keyNumbers);
 
   const tracksData = {};
   tracksData['pageInfo'] = pageInfo;
+  tracksData['yearsList'] = yarsArray;
+  tracksData['formatsList'] = formatsArray;
   tracksData['trackList'] = tracksArray;
   // console.log('tracksData', tracksData);
   res.status(200).json(tracksData);

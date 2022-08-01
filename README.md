@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲一覧スクロール時に発生する通信を調べ中 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- yearとformatのAPIモジュール追加（中身は空）  [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
