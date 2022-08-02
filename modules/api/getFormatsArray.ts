@@ -1,39 +1,25 @@
 // Get Formats Array
 const getFormatsArray = (data, keyNumbers) => {
-  /* let startNum = dataLength -1;
-  console.log('dataLength', dataLength);
-  console.log('startNum', startNum);
-  console.log('pageInfo', pageInfo);
-  console.log('keyNumbers', keyNumbers);
+  const formats = ['Single', 'Album', 'EP'];
+  let allFormatsArray = [];
+  let resultFormatsArray = [];
+  // console.log('keyNumbers', keyNumbers);
 
-  let addLength = 50;
-  if ((startNum + addLength) > pageInfo.trackLength) {
-    addLength = pageInfo.trackRemainder;
+  for (let i = 0; i < data.length; i++) {
+    const thisFormat = data[i][keyNumbers.format];
+    allFormatsArray.push(thisFormat);
   }
+  // console.log('allFormatsArray', allFormatsArray);
 
-  console.log('startNum + addLength', startNum + addLength);
-  console.log('addLength', addLength);
-
-  const tracksArray = [];
-  for (var i = startNum; i < startNum + addLength; i++) {
-    const thisObj = {};
-    thisObj['id'] = data[i][keyNumbers.id];
-    thisObj['year'] = data[i][keyNumbers.year];
-    thisObj['icon'] = data[i][keyNumbers.icon];
-    thisObj['path'] = data[i][keyNumbers.path];
-    thisObj['artist'] = data[i][keyNumbers.artist];
-    thisObj['format'] = data[i][keyNumbers.format];
-    thisObj['title'] = data[i][keyNumbers.title];
-    thisObj['order'] = data[i][keyNumbers.order];
-    thisObj['number'] = data[i][keyNumbers.number];
-    thisObj['track'] = data[i][keyNumbers.track];
-    tracksArray.push(thisObj);
+  for (let i = 0; i < formats.length; i++) {
+    const isYears = allFormatsArray.includes(formats[i]);
+    if (isYears) {
+      resultFormatsArray.push(formats[i]);
+    }
   }
-  return tracksArray; */
+  // console.log('resultFormatsArray', resultFormatsArray);
 
-  let FormatsArray = [];
-
-  return FormatsArray;
+  return resultFormatsArray;
 };
 
 export { getFormatsArray };

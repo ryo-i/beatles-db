@@ -9,7 +9,7 @@ const getYearsArray = (data, keyNumbers) => {
     const thisYear = data[i][keyNumbers.year];
     allYearsArray.push(thisYear);
   }
-  // console.log('allYears', allYears);
+  // console.log('allYearsArray', allYearsArray);
 
   for (let i = 0; i < years.length; i++) {
     const isYears = allYearsArray.includes(years[i]);
@@ -17,7 +17,7 @@ const getYearsArray = (data, keyNumbers) => {
       resultYearsArray.push(years[i]);
     }
   }
-  // console.log('resultYears', resultYearsArray);
+  // console.log('resultYearsArray', resultYearsArray);
 
   return resultYearsArray;
 };

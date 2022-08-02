@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 発売年の有無をチェックし、yearsArrayを返す  [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- フォーマットの有無をチェックし、formatsArrayを返す  [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
