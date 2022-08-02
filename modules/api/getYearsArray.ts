@@ -1,39 +1,25 @@
 // Get Years Array
-const getYearsArray = (data) => {
-  /* let startNum = dataLength -1;
-  console.log('dataLength', dataLength);
-  console.log('startNum', startNum);
-  console.log('pageInfo', pageInfo);
-  console.log('keyNumbers', keyNumbers);
+const getYearsArray = (data, keyNumbers) => {
+  const years = ['1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '1969', '1970'];
+  let allYearsArray = [];
+  let resultYearsArray = [];
+  // console.log('keyNumbers', keyNumbers);
 
-  let addLength = 50;
-  if ((startNum + addLength) > pageInfo.trackLength) {
-    addLength = pageInfo.trackRemainder;
+  for (let i = 0; i < data.length; i++) {
+    const thisYear = data[i][keyNumbers.year];
+    allYearsArray.push(thisYear);
   }
+  // console.log('allYears', allYears);
 
-  console.log('startNum + addLength', startNum + addLength);
-  console.log('addLength', addLength);
-
-  const tracksArray = [];
-  for (var i = startNum; i < startNum + addLength; i++) {
-    const thisObj = {};
-    thisObj['id'] = data[i][keyNumbers.id];
-    thisObj['year'] = data[i][keyNumbers.year];
-    thisObj['icon'] = data[i][keyNumbers.icon];
-    thisObj['path'] = data[i][keyNumbers.path];
-    thisObj['artist'] = data[i][keyNumbers.artist];
-    thisObj['format'] = data[i][keyNumbers.format];
-    thisObj['title'] = data[i][keyNumbers.title];
-    thisObj['order'] = data[i][keyNumbers.order];
-    thisObj['number'] = data[i][keyNumbers.number];
-    thisObj['track'] = data[i][keyNumbers.track];
-    tracksArray.push(thisObj);
+  for (let i = 0; i < years.length; i++) {
+    const isYears = allYearsArray.includes(years[i]);
+    if (isYears) {
+      resultYearsArray.push(years[i]);
+    }
   }
-  return tracksArray; */
+  // console.log('resultYears', resultYearsArray);
 
-  let yearsArray = [];
-
-  return yearsArray;
+  return resultYearsArray;
 };
 
 export { getYearsArray };

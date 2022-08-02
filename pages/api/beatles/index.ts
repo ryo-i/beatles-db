@@ -44,14 +44,14 @@ export default (req, res) => {
   const pageParam = req.query.page;
   const dataLength = getDataLength(pageParam);
   const pageInfo = getPageSegmentation(pageParam, resultData);
-  const yarsArray = getYearsArray(resultData);
-  const formatsArray = getFormatsArray(resultData);
+  const yearsArray = getYearsArray(resultData, keyNumbers);
+  const formatsArray = getFormatsArray(resultData, keyNumbers);
   const tracksArray = getTracksArray(dataLength, pageInfo, resultData, keyNumbers);
 
   const tracksData = {};
   tracksData['pageInfo'] = pageInfo;
-  tracksData['yearsList'] = yarsArray;
-  tracksData['formatsList'] = formatsArray;
+  tracksData['yearList'] = yearsArray;
+  tracksData['formatList'] = formatsArray;
   tracksData['trackList'] = tracksArray;
   // console.log('tracksData', tracksData);
   res.status(200).json(tracksData);

@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>yearとformatのAPIモジュール追加（中身は空） <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>発売年の有無をチェックし、yearsArrayを返す <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
