@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- yearsArrayとformatArrayを曲絞り込みの前に実行  [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- yaerとformatのタグをページに表示 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

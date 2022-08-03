@@ -17,6 +17,8 @@ function InnerIndex() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [yearList, setYearList] = useState([]);
+  const [formatList, setFormatList] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
   const [tracksData, setTracksData] = useState([]);
   const {isCategory, setIsCategory} = useContext(categoryContext);
@@ -57,6 +59,8 @@ function InnerIndex() {
         const data = resJson;
         console.log('data', data);
         setTracksData(data.trackList);
+        setYearList(data.yearList);
+        setFormatList(data.formatList);
         setPageInfo(data.pageInfo);
       } catch(error) {
         setIsLoaded(true);
@@ -69,6 +73,25 @@ function InnerIndex() {
       getTracksData(url);
     }
   }, [queryParam, router]);
+
+
+  // Tag
+  const Tag = () => {
+    return (
+      <ul className="tag">
+        <li>Year:
+          {yearList.map((data, index) =>
+            <span key={index}>{data}, </span>
+          )}
+        </li>
+        <li>Format:
+          {formatList.map((data, index) =>
+            <span key={index}>{data}, </span>
+          )}
+        </li>
+      </ul>
+    );
+  };
 
 
   // Pagination
@@ -102,54 +125,52 @@ function InnerIndex() {
       return <p>読み込み中...</p>;
     } else {
       return (
-        <>
-          <ul className="trackList">
-            {tracksData.map((data, index) =>
-              <li key={index} className={getTopTrack(data.order, index, tracksData)} data-order={data.order}>
-                <figure>
-                  <p className="icon">
-                    <Link href={hierarchy + "category/" + data.path}>
-                      <a>{data.icon}</a>
-                    </Link>
-                  </p>
-                </figure>
-                <dl>
-                  <dt>
-                    <Link href={hierarchy + "track/" + data.id}>
-                      <a>
-                        <p className="num">{data.number}</p>
-                        <p className="song">{data.track}</p>
-                      </a>
-                    </Link>
-                  </dt>
-                  <dd>
-                    <p className="title-area">
-                      <span className="year">
-                      <Link href={
-                          isCategory ?
-                          hierarchy + "category/" + data.path + "?year=" + data.year :
-                          hierarchy + "?year=" + data.year
-                        }>
-                          <a>{data.year}</a>
-                        </Link>
-                      </span>
-                      <span className="format">
-                      <Link href={isCategory ?
-                          hierarchy + "category/" + data.path + "?format=" + data.format :
-                          hierarchy + "?format=" + data.format
-                        }>
-                          <a>{data.format}</a>
-                        </Link>
-                      </span>
-                      <span className="title">{data.title}</span>
-                      </p>
-                    <p className="artist">{data.artist}</p>
-                  </dd>
-                </dl>
-              </li>
-            )}
-          </ul>
-        </>
+        <ul className="trackList">
+          {tracksData.map((data, index) =>
+            <li key={index} className={getTopTrack(data.order, index, tracksData)} data-order={data.order}>
+              <figure>
+                <p className="icon">
+                  <Link href={hierarchy + "category/" + data.path}>
+                    <a>{data.icon}</a>
+                  </Link>
+                </p>
+              </figure>
+              <dl>
+                <dt>
+                  <Link href={hierarchy + "track/" + data.id}>
+                    <a>
+                      <p className="num">{data.number}</p>
+                      <p className="song">{data.track}</p>
+                    </a>
+                  </Link>
+                </dt>
+                <dd>
+                  <p className="title-area">
+                    <span className="year">
+                    <Link href={
+                        isCategory ?
+                        hierarchy + "category/" + data.path + "?year=" + data.year :
+                        hierarchy + "?year=" + data.year
+                      }>
+                        <a>{data.year}</a>
+                      </Link>
+                    </span>
+                    <span className="format">
+                    <Link href={isCategory ?
+                        hierarchy + "category/" + data.path + "?format=" + data.format :
+                        hierarchy + "?format=" + data.format
+                      }>
+                        <a>{data.format}</a>
+                      </Link>
+                    </span>
+                    <span className="title">{data.title}</span>
+                    </p>
+                  <p className="artist">{data.artist}</p>
+                </dd>
+              </dl>
+            </li>
+          )}
+        </ul>
       );
     }
   };
@@ -161,6 +182,7 @@ function InnerIndex() {
       <CategoryNav />
       <Section>
         <h2>{categoryName + queryInfo}</h2>
+        <Tag />
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
         <TrackList />
