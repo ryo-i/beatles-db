@@ -18,6 +18,7 @@ export default (req, res) => {
   let resultData = beatlesData.values;
   const query = req.query;
 
+  // category
   if (query.category) {
     const categoryPath = query.category;
     resultData = getFilterData(resultData, keyNumbers, 'path', categoryPath);
@@ -28,24 +29,27 @@ export default (req, res) => {
     console.log('resultData.length', resultData.length);
   }
 
+  // yars & formats array
+  const yearsArray = getYearsArray(resultData, keyNumbers);
+  const formatsArray = getFormatsArray(resultData, keyNumbers);
+
+  // year
   if (query.year) {
     const yearPath = query.year;
     resultData = getFilterData(resultData, keyNumbers, 'year', yearPath);
     console.log('yearPath', yearPath);
   }
 
+  // format
   if (query.format) {
     const formatPath = query.format;
     resultData = getFilterData(resultData, keyNumbers, 'format', formatPath);
     console.log('formatPath', formatPath);
   }
 
-
   const pageParam = req.query.page;
   const dataLength = getDataLength(pageParam);
   const pageInfo = getPageSegmentation(pageParam, resultData);
-  const yearsArray = getYearsArray(resultData, keyNumbers);
-  const formatsArray = getFormatsArray(resultData, keyNumbers);
   const tracksArray = getTracksArray(dataLength, pageInfo, resultData, keyNumbers);
 
   const tracksData = {};
