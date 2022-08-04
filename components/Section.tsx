@@ -1,9 +1,40 @@
 import styled from 'styled-components';
 
+const tabStyle = `{
+  background: #888;
+  color: #fff;
+  margin: 0 5px 0 0;
+  padding : 3px;
+  font-size: 10px;
+  border-radius: 3px;
+  text-decoration: none;
+}`;
+
+
 // CSS in JS
 const Section = styled.section`
   h2 {
     color: #333;
+    margin: 0 0 20px;
+  }
+  .tag {
+    padding: 0;
+    margin: 0 0 20px;
+    dl {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      dt {
+        margin: 0 0.5em 0 0;
+        font-size: 12px;
+        font-weight: normal;
+      }
+      dd {
+        margin: 0;
+        .year a,
+        .format a ${tabStyle}
+      }
+    }
   }
   .trackList {
     padding: 10px 0;
@@ -64,15 +95,7 @@ const Section = styled.section`
             font-weight: bold;
           }
           .year a,
-          .format a {
-            background: #888;
-            color: #fff;
-            margin: 0 5px 0 0;
-            padding : 3px;
-            font-size: 10px;
-            border-radius: 3px;
-            text-decoration: none;
-          }
+          .format a ${tabStyle}
         }
       }
     }

@@ -25,6 +25,7 @@ function InnerIndex() {
   const {categoryName, setCategoryName} = useContext(categoryContext);
   const {categoryPath, setCategoryPath} = useContext(categoryContext);
   const [queryInfo, setQueryInfo] = useState('');
+  const [hierarchy, setHierarchy] = useState('/');
 
   // Get Query Param
   const router = useRouter();
@@ -37,8 +38,11 @@ function InnerIndex() {
 
     if (category) {
       queryParam.category = category;
+      setIsCategory(true);
+      setHierarchy('../');
     } else if (isCategory) {
       queryParam.category = categoryPath;
+      setHierarchy('../');
     }
 
     if (page) {
@@ -79,16 +83,38 @@ function InnerIndex() {
   const Tag = () => {
     return (
       <ul className="tag">
-        <li>Year:
-          {yearList.map((data, index) =>
-            <span key={index}>{data}, </span>
-          )}
-        </li>
-        <li>Format:
-          {formatList.map((data, index) =>
-            <span key={index}>{data}, </span>
-          )}
-        </li>
+        <dl>
+          <dt>Year: </dt>
+          <dd>
+            {yearList.map((data, index) =>
+              <span key={index} className="year">
+                <Link href={
+                  isCategory ?
+                  hierarchy + "category/" + categoryPath + "?year=" + data :
+                  hierarchy + "?year=" + data
+                }>
+                  <a>{data}</a>
+                </Link>
+              </span>
+            )}
+          </dd>
+        </dl>
+        <dl>
+          <dt>Format:</dt>
+          <dd>
+            {formatList.map((data, index) =>
+              <span key={index} className="format">
+                <Link href={
+                  isCategory ?
+                  hierarchy + "category/" + categoryPath + "?format=" + data :
+                  hierarchy + "?format=" + data
+                }>
+                  <a>{data}</a>
+                </Link>
+              </span>
+            )}
+          </dd>
+        </dl>
       </ul>
     );
   };
@@ -117,7 +143,6 @@ function InnerIndex() {
 
 
   // Track List
-  const hierarchy = isCategory ? '../' : '/';
   const TrackList = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
@@ -147,7 +172,7 @@ function InnerIndex() {
                 <dd>
                   <p className="title-area">
                     <span className="year">
-                    <Link href={
+                      <Link href={
                         isCategory ?
                         hierarchy + "category/" + data.path + "?year=" + data.year :
                         hierarchy + "?year=" + data.year
@@ -156,7 +181,7 @@ function InnerIndex() {
                       </Link>
                     </span>
                     <span className="format">
-                    <Link href={isCategory ?
+                      <Link href={isCategory ?
                         hierarchy + "category/" + data.path + "?format=" + data.format :
                         hierarchy + "?format=" + data.format
                       }>
@@ -164,7 +189,7 @@ function InnerIndex() {
                       </Link>
                     </span>
                     <span className="title">{data.title}</span>
-                    </p>
+                  </p>
                   <p className="artist">{data.artist}</p>
                 </dd>
               </dl>
