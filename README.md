@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- タグにリンクとスタイルを設定 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- SP向けにスタイルを調整 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

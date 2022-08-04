@@ -3,11 +3,12 @@ import styled from 'styled-components';
 const tabStyle = `{
   background: #888;
   color: #fff;
-  margin: 0 5px 0 0;
+  margin: 0 5px 5px 0;
   padding : 3px;
   font-size: 10px;
   border-radius: 3px;
   text-decoration: none;
+  display: inline-block;
 }`;
 
 
@@ -23,16 +24,19 @@ const Section = styled.section`
     dl {
       margin: 0;
       display: flex;
-      align-items: center;
       dt {
-        margin: 0 0.5em 0 0;
+        width: 55px;
+        margin: 0;
+        padding: 3px 0 0;
         font-size: 12px;
-        font-weight: normal;
       }
       dd {
+        flex: 1;
         margin: 0;
         .year a,
-        .format a ${tabStyle}
+        .format a {
+          ${tabStyle}
+        }
       }
     }
   }
@@ -89,7 +93,7 @@ const Section = styled.section`
           font-size: 12px;
           color: #333;
           .title-area {
-            margin: 0 0 5px;
+            margin: 0;
           }
           .title {
             font-weight: bold;
