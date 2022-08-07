@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext }  from 'react';
 import { Context } from '../pages/track/[number]';
 import Link from 'next/link';
 import styled from 'styled-components';
+import Nav from './style/Nav';
 
 
 // CSS in JS
@@ -43,27 +44,6 @@ const Section = styled.section`
   }
 `;
 
-const Nav = styled.nav`
-  ul {
-    padding: 0;
-    display: flex;
-    list-style: none;
-    font-size: 12px;
-    li {
-      line-height: 1.5;
-      :not(:last-child) {
-        margin-right: 1.5em;
-        position: relative;
-        ::after {
-          content: ">";
-          position: absolute;
-          top: 0;
-          right: -1em;
-        }
-      }
-    }
-  }
-`;
 
 // Component
 function InnerTrack() {
@@ -251,17 +231,17 @@ function InnerTrack() {
   // JSX
   return (
     <>
-        <Nav>
-          <ul>
-            <li><Link href="/"><a>Home</a></Link></li>
-            <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
-            <li>{trackName}</li>
-          </ul>
-        </Nav>
-        <Section>
-          <h2>曲名：{trackName}</h2>
-          <TrackInfo />
-        </Section>
+      <Nav>
+        <ul>
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
+          <li>{trackName}</li>
+        </ul>
+      </Nav>
+      <Section>
+        <h2>{trackName}</h2>
+        <TrackInfo />
+      </Section>
     </>
   );
 }

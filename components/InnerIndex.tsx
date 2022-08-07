@@ -4,6 +4,7 @@ import { categoryContext } from '../context/categoryContext';
 import Link from 'next/link';
 import CategoryNav from './CategoryNav';
 import Section from './style/Section';
+import Nav from './style/Nav';
 import { getPagination } from '../modules/trackList/getPagination';
 import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
@@ -205,17 +206,21 @@ function InnerIndex() {
   return (
     <>
       <CategoryNav />
-      <Section>
-        <h2>
-          <Link href={
-            isCategory ?
-            hierarchy + "category/" + categoryPath :
-            hierarchy + "/"
-          }>
+      <Nav>
+        <ul>
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li>
+            <Link href={
+              isCategory ?
+              hierarchy + "category/" + categoryPath :
+              hierarchy + "/"
+            }>
             <a>{categoryName}</a>
-          </Link>
-          <span>{queryInfo}</span>
-        </h2>
+          </Link>{queryInfo}</li>
+        </ul>
+      </Nav>
+      <Section>
+        <h2>{categoryName}</h2>
         <Tag />
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
