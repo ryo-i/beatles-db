@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- SP向けにスタイルを調整 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 絞り込み状態の視覚化に向け調整中 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

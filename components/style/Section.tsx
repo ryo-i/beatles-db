@@ -17,6 +17,10 @@ const Section = styled.section`
   h2 {
     color: #333;
     margin: 0 0 20px;
+    span {
+      font-weight: normal;
+      font-size: 0.75em;
+    }
   }
   .tag {
     padding: 0;

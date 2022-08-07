@@ -15,7 +15,7 @@ const pageText = 'アーティスト名、アルバム名、人名などで絞�
 
 function Home() {
   const [isCategory, setIsCategory] = useState(false);
-  const [categoryName, setCategoryName] = useState('すべて');
+  const [categoryName, setCategoryName] = useState('All');
   const [categoryPath, setCategoryPath] = useState('');
 
   return (

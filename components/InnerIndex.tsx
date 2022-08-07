@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { categoryContext } from '../context/categoryContext';
 import Link from 'next/link';
 import CategoryNav from './CategoryNav';
-import Section from './Section';
+import Section from './style/Section';
 import { getPagination } from '../modules/trackList/getPagination';
 import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
@@ -121,9 +121,9 @@ function InnerIndex() {
 
 
   // Pagination
-  const paginationPath = isCategory ? '/category/' + categoryPath : '/';
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
+    const paginationPath = isCategory ? '/category/' + categoryPath : '/';
     const thisPageParam = deleteParam(queryParam);
     const queryText = getQueryParam(thisPageParam);
     const pageKey = getPageKey(queryText);
@@ -206,7 +206,7 @@ function InnerIndex() {
     <>
       <CategoryNav />
       <Section>
-        <h2>{categoryName + queryInfo}</h2>
+        <h2>{categoryName}<span>{queryInfo}</span></h2>
         <Tag />
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />

@@ -11,7 +11,7 @@ const getQueryInfo = (queryParam) => {
         }
 
         queryInfoText = Object.entries(queryParamObject).map( x => x.join(": ")).join(", ");
-        return '(' + queryInfoText + ')';
+        return ' (' + queryInfoText + ')';
     }
 };
 
