@@ -206,7 +206,16 @@ function InnerIndex() {
     <>
       <CategoryNav />
       <Section>
-        <h2>{categoryName}<span>{queryInfo}</span></h2>
+        <h2>
+          <Link href={
+            isCategory ?
+            hierarchy + "category/" + categoryPath :
+            hierarchy + "/"
+          }>
+            <a>{categoryName}</a>
+          </Link>
+          <span>{queryInfo}</span>
+        </h2>
         <Tag />
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
