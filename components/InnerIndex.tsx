@@ -80,6 +80,43 @@ function InnerIndex() {
   }, [queryParam, router]);
 
 
+  // Breadcrumb
+  const Breadcrumb = () => {
+    if (!isCategory && !queryInfo) {
+      return (
+        <ul className="breadcrumb">
+        </ul>
+      );
+    } else if (!isCategory && queryInfo) {
+      return (
+        <ul className="breadcrumb">
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li>{queryInfo}</li>
+        </ul>
+      );
+    } else if (isCategory && !queryInfo) {
+      return (
+        <ul className="breadcrumb">
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li>{categoryName}</li>
+        </ul>
+      );
+    } else if (isCategory && queryInfo) {
+      return (
+        <ul className="breadcrumb">
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li>
+            <Link href={hierarchy + "category/" + categoryPath}>
+              <a>{categoryName}</a>
+            </Link>
+          </li>
+          <li>{queryInfo}</li>
+        </ul>
+      );
+    }
+  };
+
+
   // Tag
   const Tag = () => {
     return (
@@ -207,17 +244,7 @@ function InnerIndex() {
     <>
       <CategoryNav />
       <Nav>
-        <ul>
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li>
-            <Link href={
-              isCategory ?
-              hierarchy + "category/" + categoryPath :
-              hierarchy + "/"
-            }>
-            <a>{categoryName}</a>
-          </Link>{queryInfo}</li>
-        </ul>
+        <Breadcrumb />
       </Nav>
       <Section>
         <h2>{categoryName}</h2>

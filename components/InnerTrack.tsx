@@ -111,6 +111,18 @@ function InnerTrack() {
   }, []);
 
 
+  // Breadcrumb
+  const Breadcrumb = () => {
+    return (
+      <ul className="breadcrumb">
+        <li><Link href="/"><a>Home</a></Link></li>
+        <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
+        <li>{trackName}</li>
+      </ul>
+    );
+  };
+
+
   // PrevNextNav
   function PrevNextNav() {
     if (Number(trackNumber) <= 1) {
@@ -220,7 +232,7 @@ function InnerTrack() {
             <dd>{trackData.remarks}</dd>
           </dl>
           <nav className="prevNextNav">
-              <PrevNextNav />
+            <PrevNextNav />
           </nav>
         </>
       );
@@ -232,11 +244,7 @@ function InnerTrack() {
   return (
     <>
       <Nav>
-        <ul>
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
-          <li>{trackName}</li>
-        </ul>
+        <Breadcrumb />
       </Nav>
       <Section>
         <h2>{trackName}</h2>
