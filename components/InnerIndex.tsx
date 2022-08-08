@@ -131,7 +131,9 @@ function InnerIndex() {
                   hierarchy + "category/" + categoryPath + "?year=" + data :
                   hierarchy + "?year=" + data
                 }>
-                  <a>{data}</a>
+                  <a className={
+                    queryParam.year === data ? "currentTag" : ""
+                  }>{data}</a>
                 </Link>
               </span>
             )}
@@ -147,7 +149,9 @@ function InnerIndex() {
                   hierarchy + "category/" + categoryPath + "?format=" + data :
                   hierarchy + "?format=" + data
                 }>
-                  <a>{data}</a>
+                  <a className={
+                    queryParam.format === data ? "currentTag" : ""
+                  }>{data}</a>
                 </Link>
               </span>
             )}

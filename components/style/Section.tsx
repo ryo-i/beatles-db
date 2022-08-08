@@ -16,11 +16,11 @@ const tabStyle = `{
 const Section = styled.section`
   h2 {
     color: #333;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
   }
   .tag {
     padding: 0;
-    margin: 0 0 20px;
+    margin: 0 0 30px;
     dl {
       margin: 0;
       display: flex;
@@ -33,9 +33,14 @@ const Section = styled.section`
       dd {
         flex: 1;
         margin: 0;
-        .year a,
-        .format a {
-          ${tabStyle}
+        .year,
+        .format {
+          a {
+            ${tabStyle}
+          }
+          .currentTag {
+            background: #c26772;
+          }
         }
       }
     }
@@ -135,7 +140,7 @@ const Section = styled.section`
       }
       .currentPage {
         color: #fff;
-        background: #A63744;
+        background: #c26772;
       }
     }
   }
