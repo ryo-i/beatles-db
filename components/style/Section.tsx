@@ -59,7 +59,7 @@ const Section = styled.section`
       .icon a {
         display: block;
         text-decoration: none;
-        background: #A63744;
+        background: #c26772;
         color: #fff;
         width: 40px;
         height: 40px;

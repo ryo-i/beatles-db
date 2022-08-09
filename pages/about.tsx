@@ -53,17 +53,15 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>タグにカレントスタイルを追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>カバー曲だけオリジナルを表示、タイトルのorder番号追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
             <section>
                 <h2>今後の予定</h2>
                 <ul>
-                    <li>絞り込み条件のタイトルを日本語にする <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
-                    <li>検索窓の追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>さらなる詳細の絞り込みを追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
-                    <li>トップとカテゴリのコンポーネンツを共通化できるか？ <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>検索窓の追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                 </ul>
             </section>
             <section>

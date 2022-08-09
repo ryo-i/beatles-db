@@ -9,6 +9,7 @@ import Nav from './style/Nav';
 const Section = styled.section`
   h2 {
     margin-bottom: 1.5em;
+    color: #333;
   }
   dl {
     display: flex;
@@ -157,19 +158,17 @@ function InnerTrack() {
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
     } else {
+      const isCover = trackData.artist !== trackData.original;
+      console.log
       return (
         <>
           <dl>
-            <dt>アーティスト名</dt>
+            <dt>アーティスト</dt>
             <dd>{trackData.artist}</dd>
-            <dt>カテゴリ</dt>
-            <dd>
-              <Link href={"../category/" + trackData.path}>
-                <a>{trackData.category}</a>
-              </Link>
-            </dd>
-            <dt>オリジナル</dt>
-            <dd>{trackData.original}</dd>
+            {isCover && <>
+              <dt>オリジナル</dt>
+              <dd>{trackData.original}</dd>
+            </>}
           </dl>
           <dl>
             <dt>作者</dt>
@@ -201,7 +200,7 @@ function InnerTrack() {
           </dl>
           <dl>
             <dt>収録作品</dt>
-            <dd>{trackData.title}</dd>
+            <dd data-order={trackData.order}>{trackData.title}</dd>
             <dt>発売年</dt>
             <dd>
               <Link href={"../?year=" + trackData.year}>

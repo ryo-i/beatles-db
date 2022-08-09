@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- タグにカレントスタイルを追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- カバー曲だけオリジナルを表示、タイトルのorder番号追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

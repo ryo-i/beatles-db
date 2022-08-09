@@ -230,7 +230,7 @@ function InnerIndex() {
                         <a>{data.format}</a>
                       </Link>
                     </span>
-                    <span className="title">{data.title}</span>
+                    <span className="title" data-order={data.order}>{data.title}</span>
                   </p>
                   <p className="artist">{data.artist}</p>
                 </dd>
