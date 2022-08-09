@@ -16,6 +16,9 @@ const Section = styled.section`
     flex-wrap: wrap;
     padding: 1em 0;
     border-bottom : 1px solid #ccc;
+    @media(max-width: 600px) {
+      display: block;
+    }
     dt, dd {
       padding: 0.5em 0;
       margin: 0;
@@ -23,12 +26,20 @@ const Section = styled.section`
     dt {
       width: 20%;
       padding-right: 1em;
+      @media(max-width: 600px) {
+        width: 100%;
+        padding: 0;
+      }
       ::after {
         content: "："
       }
     }
     dd {
       width: 80%;
+      @media(max-width: 600px) {
+        width: 100%;
+        padding: 0 0 15px;
+      }
     }
   }
   .prevNextNav ul {
