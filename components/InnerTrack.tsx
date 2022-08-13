@@ -175,7 +175,11 @@ function InnerTrack() {
         <>
           <dl>
             <dt>アーティスト</dt>
-            <dd>{trackData.artist}</dd>
+            <dd>
+              <Link href={"../?artist=" + trackData.artist}>
+                <a>{trackData.artist}</a>
+              </Link>
+            </dd>
             {isCover && <>
               <dt>オリジナル</dt>
               <dd>{trackData.original}</dd>
@@ -212,7 +216,7 @@ function InnerTrack() {
           <dl>
             <dt>収録作品</dt>
             <dd>
-              <Link href={"/category/" + trackData.path + "?order=" + trackData.order + "&title=" + trackData.title}>
+              <Link href={"../?order=" + trackData.order + "&title=" + trackData.title}>
                 <a>{trackData.title}</a>
               </Link>
             </dd>

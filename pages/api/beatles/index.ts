@@ -34,8 +34,10 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'year', query.year);
   } else if (query.format) {
     resultData = getFilterData(resultData, 'format', query.format);
-  }  else if (query.order) {
+  } else if (query.order) {
     resultData = getFilterData(resultData, 'order', query.order);
+  } else if (query.artist) {
+    resultData = getFilterData(resultData, 'artist', query.artist);
   }
 
   const pageParam = req.query.page;

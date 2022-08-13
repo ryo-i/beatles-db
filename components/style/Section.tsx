@@ -107,6 +107,10 @@ const Section = styled.section`
           .title {
             font-weight: bold;
           }
+          .title a,
+          .artist a {
+            color: #666;
+          }
           .year a,
           .format a ${tabStyle}
         }

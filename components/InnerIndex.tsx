@@ -236,7 +236,11 @@ function InnerIndex() {
                       </Link>
                     </span>
                   </p>
-                  <p className="artist">{data.artist}</p>
+                  <p className="artist">
+                      <Link href={hierarchy + "?artist=" + data.artist}>
+                        <a>{data.artist}</a>
+                      </Link>
+                  </p>
                 </dd>
               </dl>
             </li>
