@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- データ絞り込み処理をリファクタ [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- タイトル絞り込みリンク追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

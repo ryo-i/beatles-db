@@ -20,13 +20,9 @@ export default (req, res) => {
 
   // category
   if (query.category) {
-    const categoryPath = query.category;
-    resultData = getFilterData(resultData, 'path', categoryPath);
-    console.log('categoryPath', categoryPath);
+    resultData = getFilterData(resultData, 'path', query.category);
   } else {
     resultData = getNoCategoryData(resultData, keyNumbers);
-    console.log('no catgory');
-    console.log('resultData.length', resultData.length);
   }
 
   // yars & formats array
@@ -38,6 +34,8 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'year', query.year);
   } else if (query.format) {
     resultData = getFilterData(resultData, 'format', query.format);
+  }  else if (query.order) {
+    resultData = getFilterData(resultData, 'order', query.order);
   }
 
   const pageParam = req.query.page;
@@ -50,6 +48,5 @@ export default (req, res) => {
   tracksData['yearList'] = yearsArray;
   tracksData['formatList'] = formatsArray;
   tracksData['trackList'] = tracksArray;
-  // console.log('tracksData', tracksData);
   res.status(200).json(tracksData);
 }

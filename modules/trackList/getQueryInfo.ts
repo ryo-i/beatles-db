@@ -10,6 +10,8 @@ const getQueryInfo = (queryParam) => {
             queryParamObject[property] = queryParam[property];
         }
 
+        delete queryParamObject["order"];
+
         queryInfoText = Object.entries(queryParamObject).map( x => x.join(": ")).join(", ");
         return queryInfoText;
     }

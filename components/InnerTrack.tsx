@@ -211,7 +211,11 @@ function InnerTrack() {
           </dl>
           <dl>
             <dt>収録作品</dt>
-            <dd data-order={trackData.order}>{trackData.title}</dd>
+            <dd>
+              <Link href={"/category/" + trackData.path + "?order=" + trackData.order + "&title=" + trackData.title}>
+                <a>{trackData.title}</a>
+              </Link>
+            </dd>
             <dt>発売年</dt>
             <dd>
               <Link href={"../?year=" + trackData.year}>

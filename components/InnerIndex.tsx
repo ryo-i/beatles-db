@@ -230,7 +230,11 @@ function InnerIndex() {
                         <a>{data.format}</a>
                       </Link>
                     </span>
-                    <span className="title" data-order={data.order}>{data.title}</span>
+                    <span className="title">
+                      <Link href={hierarchy + "category/" + data.path + "?order=" + data.order + "&title=" + data.title}>
+                        <a>{data.title}</a>
+                      </Link>
+                    </span>
                   </p>
                   <p className="artist">{data.artist}</p>
                 </dd>
@@ -251,7 +255,9 @@ function InnerIndex() {
         <Breadcrumb />
       </Nav>
       <Section>
-        <h2>{categoryName}</h2>
+        <h2>{categoryName}
+          {queryInfo !== "" && <span> ({queryInfo})</span>}
+        </h2>
         <Tag />
         <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
         <Pagination />
