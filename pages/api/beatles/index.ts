@@ -21,7 +21,7 @@ export default (req, res) => {
   // category
   if (query.category) {
     const categoryPath = query.category;
-    resultData = getFilterData(resultData, keyNumbers, 'path', categoryPath);
+    resultData = getFilterData(resultData, 'path', categoryPath);
     console.log('categoryPath', categoryPath);
   } else {
     resultData = getNoCategoryData(resultData, keyNumbers);
@@ -33,18 +33,11 @@ export default (req, res) => {
   const yearsArray = getYearsArray(resultData, keyNumbers);
   const formatsArray = getFormatsArray(resultData, keyNumbers);
 
-  // year
+  // Get Filter Data
   if (query.year) {
-    const yearPath = query.year;
-    resultData = getFilterData(resultData, keyNumbers, 'year', yearPath);
-    console.log('yearPath', yearPath);
-  }
-
-  // format
-  if (query.format) {
-    const formatPath = query.format;
-    resultData = getFilterData(resultData, keyNumbers, 'format', formatPath);
-    console.log('formatPath', formatPath);
+    resultData = getFilterData(resultData, 'year', query.year);
+  } else if (query.format) {
+    resultData = getFilterData(resultData, 'format', query.format);
   }
 
   const pageParam = req.query.page;
