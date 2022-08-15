@@ -53,15 +53,17 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>アーティスト名の絞り込みリンクを追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>今後のの予定を追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
             <section>
                 <h2>今後の予定</h2>
                 <ul>
-                    <li>さらなる詳細の絞り込みを追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>詳細の絞り込みリンクを追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>詳細情報を分割してリスト化したい <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>検索窓の追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>出典のリンクを追加したい <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
             <section>
