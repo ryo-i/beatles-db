@@ -231,7 +231,10 @@ function InnerIndex() {
                       </Link>
                     </span>
                     <span className="title">
-                      <Link href={hierarchy + "category/" + data.path + "?order=" + data.order + "&title=" + data.title}>
+                      <Link href={isCategory ?
+                        hierarchy + "category/" + data.path + "?order=" + data.order + "&title=" + data.title :
+                        hierarchy + "?order=" + data.order + "&title=" + data.title
+                      }>
                         <a>{data.title}</a>
                       </Link>
                     </span>
