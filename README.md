@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲情報の項目を整理 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- originalが複数件の時の表示をリストに [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - A day in the life追記、名前修正など [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

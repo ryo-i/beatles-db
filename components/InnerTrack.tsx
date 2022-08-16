@@ -162,6 +162,28 @@ function InnerTrack() {
   }
 
 
+  // PeapleArray
+  function PeapleArray (props) {
+    const delimiter = ' / ';
+    const isMultiple = props.name.indexOf(delimiter) != -1;
+
+    if (isMultiple) {
+      let peopleArray = props.name.split(delimiter);
+      return (
+        <ul>
+          {peopleArray.map((data, index) =>
+            <li key={index}>{data}</li>
+          )}
+        </ul>
+      );
+    } else {
+      return (
+        <p>{props.name}</p>
+      );
+    }
+  }
+
+
   // Track Info
   const TrackInfo = () => {
     if (error) {
@@ -181,7 +203,9 @@ function InnerTrack() {
             </dd>
             {isCover && <>
               <dt>オリジナル</dt>
-              <dd>{trackData.original}</dd>
+              <dd>
+                <PeapleArray name={trackData.original} />
+              </dd>
             </>}
           </dl>
           <dl>
