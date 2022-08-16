@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>originalが複数件の時の表示をリストに <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>innerIndexのCSS設定は統合済みなので元にを戻す <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>A day in the life追記、名前修正など <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
