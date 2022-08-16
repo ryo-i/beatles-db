@@ -170,7 +170,6 @@ function InnerTrack() {
       return <p>読み込み中...</p>;
     } else {
       const isCover = trackData.artist !== trackData.original;
-      console.log
       return (
         <>
           <dl>

@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 楽曲情報の項目を整理 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- A day in the life追記、名前修正など [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 

@@ -54,7 +54,7 @@ function About() {
                 <h2>進捗</h2>
                 <ul>
                     <li>楽曲情報の項目を整理 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
-                    <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
+                    <li>A day in the life追記、名前修正など <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
             <section>
