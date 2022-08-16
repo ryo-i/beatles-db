@@ -173,7 +173,7 @@ function InnerTrack() {
         <ul>
           {peopleArray.map((data, index) =>
             <li key={index}>
-              <Link href={"../?original=" + data}>
+              <Link href={"../?" + props.paramKey + "=" + data}>
                 <a>{data}</a>
               </Link>
             </li>
@@ -183,7 +183,7 @@ function InnerTrack() {
     } else {
       return (
         <p>
-          <Link href={"../?original=" + props.name}>
+          <Link href={"../?" + props.paramKey + "=" + props.name}>
             <a>{props.name}</a>
           </Link>
         </p>
@@ -212,7 +212,7 @@ function InnerTrack() {
             {isCover && <>
               <dt>オリジナル</dt>
               <dd>
-                <PeapleArray name={trackData.original} />
+                <PeapleArray name={trackData.original} paramKey={'original'} />
               </dd>
             </>}
           </dl>
