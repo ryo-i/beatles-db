@@ -240,7 +240,10 @@ function InnerIndex() {
                     </span>
                   </p>
                   <p className="artist">
-                      <Link href={hierarchy + "?artist=" + data.artist}>
+                      <Link href={isCategory ?
+                        hierarchy + "category/" + data.path + "?artist=" + data.artist :
+                        hierarchy + "?artist=" + data.artist
+                      }>
                         <a>{data.artist}</a>
                       </Link>
                   </p>
