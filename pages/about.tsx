@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>楽曲一覧のアーティスト名のHomeとカテゴリを分岐 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>楽曲情報の項目を整理 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>original列のBeatlesにtheを追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

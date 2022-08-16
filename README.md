@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲一覧のアーティスト名のHomeとカテゴリを分岐 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 楽曲情報の項目を整理 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - original列のBeatlesにtheを追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
