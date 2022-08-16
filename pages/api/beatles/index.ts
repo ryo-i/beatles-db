@@ -20,7 +20,7 @@ export default (req, res) => {
 
   // category
   if (query.category) {
-    resultData = getFilterData(resultData, 'path', query.category);
+    resultData = getFilterData(resultData, 'path', query.category, 'exact');
   } else {
     resultData = getNoCategoryData(resultData, keyNumbers);
   }
@@ -31,13 +31,15 @@ export default (req, res) => {
 
   // Get Filter Data
   if (query.year) {
-    resultData = getFilterData(resultData, 'year', query.year);
+    resultData = getFilterData(resultData, 'year', query.year, 'exact');
   } else if (query.format) {
-    resultData = getFilterData(resultData, 'format', query.format);
+    resultData = getFilterData(resultData, 'format', query.format, 'exact');
   } else if (query.order) {
-    resultData = getFilterData(resultData, 'order', query.order);
+    resultData = getFilterData(resultData, 'order', query.order, 'exact');
   } else if (query.artist) {
-    resultData = getFilterData(resultData, 'artist', query.artist);
+    resultData = getFilterData(resultData, 'artist', query.artist, 'exact');
+  } else if (query.original) {
+    resultData = getFilterData(resultData, 'original', query.original, 'partial');
   }
 
   const pageParam = req.query.page;

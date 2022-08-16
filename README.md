@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- innerIndexのCSS設定は統合済みなので元にを戻す [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- originalのリンクを部分一致検索で実装 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - A day in the life追記、名前修正など [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

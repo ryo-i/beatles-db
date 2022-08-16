@@ -165,20 +165,28 @@ function InnerTrack() {
   // PeapleArray
   function PeapleArray (props) {
     const delimiter = ' / ';
-    const isMultiple = props.name.indexOf(delimiter) != -1;
+    const isMultiple = props.name.indexOf(delimiter) !== -1;
 
     if (isMultiple) {
       let peopleArray = props.name.split(delimiter);
       return (
         <ul>
           {peopleArray.map((data, index) =>
-            <li key={index}>{data}</li>
+            <li key={index}>
+              <Link href={"../?original=" + data}>
+                <a>{data}</a>
+              </Link>
+            </li>
           )}
         </ul>
       );
     } else {
       return (
-        <p>{props.name}</p>
+        <p>
+          <Link href={"../?original=" + props.name}>
+            <a>{props.name}</a>
+          </Link>
+        </p>
       );
     }
   }
