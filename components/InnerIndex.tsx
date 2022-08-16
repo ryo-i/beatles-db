@@ -189,6 +189,7 @@ function InnerIndex() {
   const {isCategory, setIsCategory} = useContext(categoryContext);
   const {categoryName, setCategoryName} = useContext(categoryContext);
   const {categoryPath, setCategoryPath} = useContext(categoryContext);
+  const [isQueryInfo, setIsQueryInfo] = useState(false);
   const [queryInfo, setQueryInfo] = useState('');
   const [hierarchy, setHierarchy] = useState('/');
 
@@ -197,9 +198,28 @@ function InnerIndex() {
   const queryParam = router.query;
   const { category, page } = router.query;
 
+
+  // Set Head
+  const setHead = () => {
+    if (!isCategory && isQueryInfo) {
+      setHeadTitle(queryInfo + ' の楽曲一覧 | ' + headerTitle);
+      setHeadText(queryInfo + ' の楽曲一覧です。');
+    } else if (isCategory && !isQueryInfo) {
+      setHeadTitle(categoryName + 'の楽曲一覧 | ' + headerTitle);
+      setHeadText(categoryName + 'の楽曲一覧です。');
+    } else if (isCategory && isQueryInfo) {
+      setHeadTitle(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧 | ' + headerTitle);
+      setHeadText(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧です。');
+    }
+  };
+
+
   useEffect(() => {
     const thisQueryInfo = getQueryInfo(queryParam);
     setQueryInfo(thisQueryInfo);
+    if (queryInfo !== '') {
+      setIsQueryInfo(true);
+    }
 
     if (category) {
       queryParam.category = category;
@@ -231,6 +251,7 @@ function InnerIndex() {
         setYearList(data.yearList);
         setFormatList(data.formatList);
         setPageInfo(data.pageInfo);
+        setHead();
       } catch(error) {
         setIsLoaded(true);
         setError(error);
@@ -244,7 +265,7 @@ function InnerIndex() {
   }, [queryParam, router]);
 
 
-  // Breadcrumb & head
+  // Breadcrumb
   const Breadcrumb = () => {
     if (!isCategory && !queryInfo) {
       return (
@@ -252,8 +273,6 @@ function InnerIndex() {
         </ul>
       );
     } else if (!isCategory && queryInfo) {
-      setHeadTitle(queryInfo + ' の楽曲一覧 | ' + headerTitle);
-      setHeadText(queryInfo + ' の楽曲一覧です。');
       return (
         <ul className="breadcrumb">
           <li><Link href="/"><a>Home</a></Link></li>
@@ -261,8 +280,6 @@ function InnerIndex() {
         </ul>
       );
     } else if (isCategory && !queryInfo) {
-      setHeadTitle(categoryName + 'の楽曲一覧 | ' + headerTitle);
-      setHeadText(categoryName + 'の楽曲一覧です。');
       return (
         <ul className="breadcrumb">
           <li><Link href="/"><a>Home</a></Link></li>
@@ -270,8 +287,6 @@ function InnerIndex() {
         </ul>
       );
     } else if (isCategory && queryInfo) {
-      setHeadTitle(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧 | ' + headerTitle);
-      setHeadText(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧です。');
       return (
         <ul className="breadcrumb">
           <li><Link href="/"><a>Home</a></Link></li>
