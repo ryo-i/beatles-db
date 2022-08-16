@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { useRouter } from 'next/router';
 import { categoryContext } from '../context/categoryContext';
+import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
 import CategoryNav from './CategoryNav';
 import Nav from './style/Nav';
+import Data from '../data/data.json';
 import { getPagination } from '../modules/trackList/getPagination';
 import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
@@ -13,6 +15,11 @@ import { getQueryInfo } from '../modules/trackList/getQueryInfo';
 import { deleteParam } from '../modules/trackList/deleteParam';
 
 
+const headerTitle = Data.header.title;
+const headerText = Data.header.text;
+
+
+// CSS in JS
 const tabStyle = `{
   background: #888;
   color: #fff;
@@ -171,6 +178,8 @@ const Section = styled.section`
 // Component
 function InnerIndex() {
   // Hooks
+  const [headTitle, setHeadTitle] = useState(headerTitle);
+  const [headText, setHeadText] = useState(headerText);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [yearList, setYearList] = useState([]);
@@ -235,7 +244,7 @@ function InnerIndex() {
   }, [queryParam, router]);
 
 
-  // Breadcrumb
+  // Breadcrumb & head
   const Breadcrumb = () => {
     if (!isCategory && !queryInfo) {
       return (
@@ -243,6 +252,8 @@ function InnerIndex() {
         </ul>
       );
     } else if (!isCategory && queryInfo) {
+      setHeadTitle(queryInfo + ' の楽曲一覧 | ' + headerTitle);
+      setHeadText(queryInfo + ' の楽曲一覧です。');
       return (
         <ul className="breadcrumb">
           <li><Link href="/"><a>Home</a></Link></li>
@@ -250,6 +261,8 @@ function InnerIndex() {
         </ul>
       );
     } else if (isCategory && !queryInfo) {
+      setHeadTitle(categoryName + 'の楽曲一覧 | ' + headerTitle);
+      setHeadText(categoryName + 'の楽曲一覧です。');
       return (
         <ul className="breadcrumb">
           <li><Link href="/"><a>Home</a></Link></li>
@@ -257,6 +270,8 @@ function InnerIndex() {
         </ul>
       );
     } else if (isCategory && queryInfo) {
+      setHeadTitle(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧 | ' + headerTitle);
+      setHeadText(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧です。');
       return (
         <ul className="breadcrumb">
           <li><Link href="/"><a>Home</a></Link></li>
@@ -415,6 +430,12 @@ function InnerIndex() {
   // JSX
   return (
     <>
+      <Head>
+        <title>{ headTitle }</title>
+        <meta name="description" content={ headText } />
+        <meta property="og:title" content={ headTitle } />
+        <meta property="og:description" content={ headText } />
+      </Head>
       <CategoryNav />
       <Nav>
         <Breadcrumb />

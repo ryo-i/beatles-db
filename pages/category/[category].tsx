@@ -1,23 +1,19 @@
 import React, { useState, useEffect }  from 'react';
 import { categoryContext } from '../../context/categoryContext';
-import Head from 'next/head';
 import Header from '../../components/Header';
 import InnerIndex from '../../components/InnerIndex';
 import Footer from '../../components/Footer';
-import Data from '../../data/data.json';
 import { getCaterogyInfo } from '../../modules/indexList/getCaterogyInfo';
+
+
+const pageTitle = '楽曲一覧';
+const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
 
 function Home({ categoryInfo }) {
   const [isCategory, setIsCategory] = useState(true);
   const [categoryName, setCategoryName] = useState(categoryInfo.name);
   const [categoryPath, setCategoryPath] = useState(categoryInfo.path);
-
-  const headerTitle = Data.header.title;
-  const headTitle = categoryName + 'の楽曲一覧 | ' + headerTitle;
-  const headText = categoryName + 'の楽曲一覧です。'
-  const pageTitle = '楽曲一覧';
-  const pageText = 'アーティスト名、アルバム名、人名などで絞り込みができます。';
 
 
   // Set Category Info
@@ -31,12 +27,6 @@ function Home({ categoryInfo }) {
 
   return (
     <>
-      <Head>
-        <title>{ headTitle }</title>
-        <meta name="description" content={ headText } />
-        <meta property="og:title" content={ headTitle } />
-        <meta property="og:description" content={ headText } />
-      </Head>
       <Header />
       <main>
         <h1>{ pageTitle }</h1>
