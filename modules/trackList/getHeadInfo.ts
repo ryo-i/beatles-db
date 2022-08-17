@@ -1,14 +1,18 @@
 import Data from '../../data/data.json';
 
+
+
 // getHeadInfo
-const getHeadInfo = (headTitle, headText, isCategory, queryInfo, categoryName) => {
+const getHeadInfo = (isCategory, queryInfo, categoryName) => {
     const headerTitle = Data.header.title;
     const headerText = Data.header.text;
 
+    console.log('isCategory', isCategory);
+    console.log('queryInfo', queryInfo);
+    console.log('categoryName', categoryName);
+
     let resultHeadTitle = '';
     let resultHeadText = '';
-    console.log('headTitle-1', headTitle);
-    console.log('headText-1', headText);
 
     if (!isCategory && !queryInfo) {
       resultHeadTitle = headerTitle;
@@ -32,7 +36,6 @@ const getHeadInfo = (headTitle, headText, isCategory, queryInfo, categoryName) =
       headTitle:resultHeadTitle,
       headText: resultHeadText
     }
-    console.log('result', result);
 
     return result;
 };

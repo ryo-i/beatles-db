@@ -228,7 +228,7 @@ function InnerIndex() {
     const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
 
-    const headINfo = getHeadInfo(headTitle, headText, isCategory, queryInfo, categoryName);
+    const headINfo = getHeadInfo(isCategory, thisQueryInfo, categoryName);
     console.log('headINfo', headINfo);
     setHeadTitle(headINfo.headTitle);
     setHeadText(headINfo.headText);
@@ -257,7 +257,7 @@ function InnerIndex() {
     if (router.isReady && queryText !== null) {
       getTracksData(url);
     }
-  }, [queryParam, router]);
+  }, [router, queryParam, categoryName]);
 
 
   // Breadcrumb
