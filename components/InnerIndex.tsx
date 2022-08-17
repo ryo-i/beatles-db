@@ -11,6 +11,7 @@ import { getPagination } from '../modules/trackList/getPagination';
 import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
 import { getQueryParam } from '../modules/trackList/getQueryParam';
+import { getHeadInfo } from '../modules/trackList/getHeadInfo';
 import { getQueryInfo } from '../modules/trackList/getQueryInfo';
 import { deleteParam } from '../modules/trackList/deleteParam';
 
@@ -199,27 +200,17 @@ function InnerIndex() {
   const { category, page } = router.query;
 
 
-  // Set Head
-  const setHead = () => {
-    if (!isCategory && isQueryInfo) {
-      setHeadTitle(queryInfo + ' の楽曲一覧 | ' + headerTitle);
-      setHeadText(queryInfo + ' の楽曲一覧です。');
-    } else if (isCategory && !isQueryInfo) {
-      setHeadTitle(categoryName + 'の楽曲一覧 | ' + headerTitle);
-      setHeadText(categoryName + 'の楽曲一覧です。');
-    } else if (isCategory && isQueryInfo) {
-      setHeadTitle(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧 | ' + headerTitle);
-      setHeadText(queryInfo + '（' + categoryName + '）' + 'の楽曲一覧です。');
-    }
-  };
-
-
   useEffect(() => {
     const thisQueryInfo = getQueryInfo(queryParam);
     setQueryInfo(thisQueryInfo);
-    if (queryInfo !== '') {
+    console.log('queryParam-1', queryParam);
+    console.log('thisQueryInfo-1', thisQueryInfo);
+    console.log('queryInfo-1', queryInfo);
+    if (thisQueryInfo !== '') {
       setIsQueryInfo(true);
+      console.log('isQueryInfo-1', isQueryInfo);
     }
+    console.log('isQueryInfo-2', isQueryInfo);
 
     if (category) {
       queryParam.category = category;
@@ -237,6 +228,11 @@ function InnerIndex() {
     const queryText = getQueryParam(queryParam);
     console.log('queryText', queryText);
 
+    const headINfo = getHeadInfo(headTitle, headText, isCategory, queryInfo, categoryName);
+    console.log('headINfo', headINfo);
+    setHeadTitle(headINfo.headTitle);
+    setHeadText(headINfo.headText);
+
     // fetch
     const url: string = isCategory ? '../api/beatles' + queryText : 'api/beatles' + queryText;
     console.log('url', url);
@@ -251,7 +247,6 @@ function InnerIndex() {
         setYearList(data.yearList);
         setFormatList(data.formatList);
         setPageInfo(data.pageInfo);
-        setHead();
       } catch(error) {
         setIsLoaded(true);
         setError(error);

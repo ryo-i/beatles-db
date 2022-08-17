@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- Breadcrumb設定とhead設定を分離 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- headInfoをモジュールに分離（値はズレたまま） [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - A day in the life追記、名前修正など [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
