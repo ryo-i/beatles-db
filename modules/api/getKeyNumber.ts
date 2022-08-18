@@ -13,6 +13,8 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.artist = i;
     } else if (data[i] === 'original') {
       keyNumbers.original = i;
+    } else if (data[i] === 'songwriter') {
+      keyNumbers.songwriter = i;
     } else if (data[i] === 'format') {
       keyNumbers.format = i;
     } else if (data[i] === 'title') {

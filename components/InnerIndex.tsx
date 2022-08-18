@@ -203,19 +203,15 @@ function InnerIndex() {
   useEffect(() => {
     const thisQueryInfo = getQueryInfo(queryParam);
     setQueryInfo(thisQueryInfo);
-    console.log('queryParam-1', queryParam);
-    console.log('thisQueryInfo-1', thisQueryInfo);
-    console.log('queryInfo-1', queryInfo);
+
     if (thisQueryInfo !== '') {
       setIsQueryInfo(true);
-      console.log('isQueryInfo-1', isQueryInfo);
     }
-    console.log('isQueryInfo-2', isQueryInfo);
 
     if (category) {
       queryParam.category = category;
-      setIsCategory(true);
       setHierarchy('../');
+      setIsCategory(true);
     } else if (isCategory) {
       queryParam.category = categoryPath;
       setHierarchy('../');
@@ -224,12 +220,9 @@ function InnerIndex() {
     if (page) {
       queryParam.page = page;
     }
-    console.log('queryParam', queryParam);
-    const queryText = getQueryParam(queryParam);
-    console.log('queryText', queryText);
 
+    const queryText = getQueryParam(queryParam);
     const headINfo = getHeadInfo(isCategory, thisQueryInfo, categoryName);
-    console.log('headINfo', headINfo);
     setHeadTitle(headINfo.headTitle);
     setHeadText(headINfo.headText);
 
@@ -240,17 +233,17 @@ function InnerIndex() {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
-        setIsLoaded(true);
         const data = resJson;
         console.log('data', data);
         setTracksData(data.trackList);
         setYearList(data.yearList);
         setFormatList(data.formatList);
         setPageInfo(data.pageInfo);
-      } catch(error) {
         setIsLoaded(true);
+      } catch(error) {
         setError(error);
         console.log('err', error);
+        setIsLoaded(true);
       }
     };
 

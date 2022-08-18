@@ -8,8 +8,8 @@
 
 ## 進捗（コミット）
 
-- DBの項目名をわかりやすい名前に修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- A day in the life追記、名前修正など [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- 作者を分割表示、リンク追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- DBの項目名をわかりやすい名前に修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 

@@ -40,6 +40,8 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'artist', query.artist, 'exact');
   } else if (query.original) {
     resultData = getFilterData(resultData, 'original', query.original, 'partial');
+  } else if (query.songwriter) {
+    resultData = getFilterData(resultData, 'songwriter', query.songwriter, 'partial');
   }
 
   const pageParam = req.query.page;

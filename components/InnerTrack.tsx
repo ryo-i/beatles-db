@@ -78,16 +78,16 @@ function InnerTrack() {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
-        setIsLoaded(true);
         const data = resJson;
         // console.log('data', data);
         // console.log('data.track', data.track);
         setTrackData(data);
         setTrackName(data.track);
-      } catch(error) {
         setIsLoaded(true);
+      } catch(error) {
         setError(error);
         console.log('err', error);
+        setIsLoaded(true);
       }
     };
 
@@ -112,7 +112,6 @@ function InnerTrack() {
         const data = resJson;
         const allTracksLength = data.trackInfo.allTrackLength;
         console.log('data', data);
-        console.log('allTracksLength', allTracksLength);
         setAllTracksLength(allTracksLength);
       } catch(error) {
         console.log('err', error);
@@ -218,7 +217,9 @@ function InnerTrack() {
           </dl>
           <dl>
             <dt>作者</dt>
-            <dd>{trackData.songwriter}</dd>
+            <dd>
+              <PeapleArray name={trackData.songwriter} paramKey={'songwriter'} />
+            </dd>
             <dt>リードボーカル</dt>
             <dd>{trackData.vocal}</dd>
             <dt>演奏</dt>

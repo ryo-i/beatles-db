@@ -53,8 +53,8 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>DBの項目名をわかりやすい名前に修正 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
-                    <li>A day in the life追記、名前修正など <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
+                    <li>作者を分割表示、リンク追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>DBの項目名をわかりやすい名前に修正 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
             <section>
