@@ -228,7 +228,7 @@ function InnerTrack() {
                 <li>Paul McCartney : {trackData.paul}</li>
                 <li>George Harrison : {trackData.george}</li>
                 <li>Ringo Starr : {trackData.ringo}</li>
-                <li>{trackData.others}</li>
+                <li>{trackData.musician}</li>
               </ul>
             </dd>
           </dl>
@@ -242,7 +242,7 @@ function InnerTrack() {
             <dt>ディレクター（映画）</dt>
             <dd>{trackData.film}</dd>
             <dt>ディレクター（MV）</dt>
-            <dd>{trackData.musicvideo}</dd>
+            <dd>{trackData.mv}</dd>
           </dl>
           <dl>
             <dt>収録作品</dt>
