@@ -221,7 +221,9 @@ function InnerTrack() {
               <PeapleArray name={trackData.songwriter} paramKey={'songwriter'} />
             </dd>
             <dt>リードボーカル</dt>
-            <dd>{trackData.vocal}</dd>
+            <dd>
+              <PeapleArray name={trackData.vocal} paramKey={'vocal'} />
+            </dd>
             <dt>演奏</dt>
             <dd>
               <ul>
