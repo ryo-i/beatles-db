@@ -79,7 +79,7 @@ function InnerTrack() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson;
-        // console.log('data', data);
+        console.log('data', data);
         // console.log('data.track', data.track);
         setTrackData(data);
         setTrackName(data.track);
@@ -166,7 +166,11 @@ function InnerTrack() {
     const delimiter = ' / ';
     const isMultiple = props.name.indexOf(delimiter) !== -1;
 
-    if (props.name && isMultiple) {
+      if (!props.name) {
+        return (
+          <p>読み込み中...</p>
+        );
+      } else if (isMultiple) {
       let peopleArray = props.name.split(delimiter);
       return (
         <ul>
@@ -179,7 +183,7 @@ function InnerTrack() {
           )}
         </ul>
       );
-    } else if (props.name) {
+    } else {
       return (
         <p>
           <Link href={"../?" + props.paramKey + "=" + props.name}>
