@@ -108,11 +108,11 @@ function InnerTrack() {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
-        setIsLoaded(true);
         const data = resJson;
         const allTracksLength = data.trackInfo.allTrackLength;
         console.log('data', data);
         setAllTracksLength(allTracksLength);
+        setIsLoaded(true);
       } catch(error) {
         console.log('err', error);
       }
@@ -166,7 +166,7 @@ function InnerTrack() {
     const delimiter = ' / ';
     const isMultiple = props.name.indexOf(delimiter) !== -1;
 
-    if (isMultiple) {
+    if (props.name && isMultiple) {
       let peopleArray = props.name.split(delimiter);
       return (
         <ul>
@@ -179,7 +179,7 @@ function InnerTrack() {
           )}
         </ul>
       );
-    } else {
+    } else if (props.name) {
       return (
         <p>
           <Link href={"../?" + props.paramKey + "=" + props.name}>
