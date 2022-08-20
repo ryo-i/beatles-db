@@ -128,8 +128,6 @@ function InnerTrack() {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
-    } else if (!trackData) {
-      return <p>データが見つかりません</p>;
     } else {
       return (
         <ul className="breadcrumb">
@@ -171,14 +169,16 @@ function InnerTrack() {
 
   // PeapleArray
   function PeapleArray (props) {
-    const delimiter = ' / ';
-    const isMultiple = props.name.indexOf(delimiter) !== -1;
-
       if (!props.name) {
         return (
           <p>読み込み中...</p>
         );
-      } else if (isMultiple) {
+      }
+
+      const delimiter = ' / ';
+      const isMultiple = props.name.indexOf(delimiter) !== -1;
+
+      if (isMultiple) {
       let peopleArray = props.name.split(delimiter);
       return (
         <ul>
@@ -209,8 +209,6 @@ function InnerTrack() {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
-    } else if (!trackData) {
-      return <p>データが見つかりません</p>;
     } else {
       const isCover = trackData.artist !== trackData.original;
       return (

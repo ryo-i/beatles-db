@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 読み込みエラー対策で条件追加3(trackData中心) [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 読み込みエラー対策で条件追加4(indexOf中心) [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - DBの項目名をわかりやすい名前に修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
