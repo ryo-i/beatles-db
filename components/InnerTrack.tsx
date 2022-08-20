@@ -124,13 +124,21 @@ function InnerTrack() {
 
   // Breadcrumb
   const Breadcrumb = () => {
-    return (
-      <ul className="breadcrumb">
-        <li><Link href="/"><a>Home</a></Link></li>
-        <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
-        <li>{trackName}</li>
-      </ul>
-    );
+    if (error) {
+      return <p>エラー: {error.message}</p>;
+    } else if (!isLoaded) {
+      return <p>読み込み中...</p>;
+    } else if (!trackData) {
+      return <p>データが見つかりません</p>;
+    } else {
+      return (
+        <ul className="breadcrumb">
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
+          <li>{trackName}</li>
+        </ul>
+      );
+    }
   };
 
 
@@ -201,6 +209,8 @@ function InnerTrack() {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
       return <p>読み込み中...</p>;
+    } else if (!trackData) {
+      return <p>データが見つかりません</p>;
     } else {
       const isCover = trackData.artist !== trackData.original;
       return (
