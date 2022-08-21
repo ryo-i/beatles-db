@@ -45,14 +45,14 @@ const Section = styled.section`
         .peaples {
           margin: 0;
           padding: 0;
-        li {
-          display: inline;
-          :not(:last-child)::after {
-            content: ", "
+          li {
+            display: inline;
+            :not(:last-child)::after {
+              content: ", "
+            }
           }
         }
       }
-
     }
   }
   .prevNextNav ul {

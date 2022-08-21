@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 人物表示、項目内が複数人を別リンクで設定 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- CSSのネストを修正 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - DBの項目名をわかりやすい名前に修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
