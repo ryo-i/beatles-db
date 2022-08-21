@@ -46,6 +46,8 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'vocal', query.vocal, 'partial');
   } else if (query.playing) {
     resultData = getFilterData(resultData, 'playing', query.playing, 'partial');
+  } else if (query.musician) {
+    resultData = getFilterData(resultData, 'musician', query.musician, 'partial');
   }
 
   const pageParam = req.query.page;

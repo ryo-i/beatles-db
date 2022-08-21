@@ -19,6 +19,8 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.vocal = i;
     } else if (data[i] === 'playing') {
       keyNumbers.playing = i;
+    } else if (data[i] === 'musician') {
+      keyNumbers.musician = i;
     } else if (data[i] === 'format') {
       keyNumbers.format = i;
     } else if (data[i] === 'title') {

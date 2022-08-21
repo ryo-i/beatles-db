@@ -169,48 +169,58 @@ function InnerTrack() {
 
   // PeapleArray
   function PeapleArray (props) {
-      if (!props.name) {
-        return (
-          <p>読み込み中...</p>
-        );
-      }
-
-      const delimiter = ' / ';
-      const isMultiple = props.name.indexOf(delimiter) !== -1;
-
-      if (isMultiple) {
-      let peopleArray = props.name.split(delimiter);
+    if (!props.name) {
       return (
-        <ul>
-          {peopleArray.map((data, index) =>
-            <li key={index}>
-              <Link href={"../?" + props.paramKey + "=" + data}>
-                <a>{data}</a>
-              </Link>
-            </li>
-          )}
-        </ul>
+        <p>読み込み中...</p>
       );
-    } else {
-      return (
-        <p>
-          <Link href={"../?" + props.paramKey + "=" + props.name}>
-            <a>{props.name}</a>
-          </Link>
-        </p>
-      );
+    } else if (props.name === '-') {
+      return null;
     }
+
+    const delimiterSlash = ' / ';
+    const delimiterColon = ' : ';
+    const isMultipleColon = props.name.indexOf(delimiterColon) !== -1;
+
+    let peopleArray = props.name.split(delimiterSlash).map((item) => {
+      if (isMultipleColon) {
+        return item.split(delimiterColon);
+      } else {
+        return item;
+      }
+    });
+
+    return (
+      <>
+        {peopleArray.map((data, index) =>
+          <li key={index}>
+            {
+              isMultipleColon ?
+              <li key={index}>
+                <Link href={"../?" + props.paramKey + "=" + data[0]}>
+                  <a>{data[0]}</a>
+                </Link>{": " + data[1]}
+              </li> :
+              <li key={index}>
+                <Link href={"../?" + props.paramKey + "=" + data}>
+                  <a>{data}</a>
+                </Link>
+              </li>
+            }
+          </li>
+        )}
+      </>
+    );
   }
 
 
   // Playing
   function Playing (props) {
     return (
-      props.data !== '-' && <>
+      props.part !== '-' && <>
         <li>
           <Link href={"../?playing=" + props.paramKey}>
             <a>{props.paramKey}</a>
-          </Link> : {props.data}
+          </Link> : {props.part}
         </li>
       </>
     );
@@ -230,42 +240,40 @@ function InnerTrack() {
           <dl>
             <dt>アーティスト</dt>
             <dd>
-              <Link href={"../?artist=" + trackData.artist}>
-                <a>{trackData.artist}</a>
-              </Link>
+              <ul>
+                <PeapleArray name={trackData.artist} paramKey={'artist'} />
+              </ul>
             </dd>
             {isCover && <>
               <dt>オリジナル</dt>
               <dd>
-                <PeapleArray name={trackData.original} paramKey={'original'} />
+                <ul>
+                  <PeapleArray name={trackData.original} paramKey={'original'} />
+                </ul>
               </dd>
             </>}
           </dl>
           <dl>
             <dt>作者</dt>
             <dd>
-              <PeapleArray name={trackData.songwriter} paramKey={'songwriter'} />
+              <ul>
+                <PeapleArray name={trackData.songwriter} paramKey={'songwriter'} />
+              </ul>
             </dd>
             <dt>リードボーカル</dt>
             <dd>
-              {
-                trackData.vocal !== '-' &&
+              <ul>
                 <PeapleArray name={trackData.vocal} paramKey={'vocal'} />
-              }
+              </ul>
             </dd>
             <dt>演奏</dt>
             <dd>
               <ul>
-                <Playing data={trackData.john} paramKey={'John Lennon'} />
-                <Playing data={trackData.paul} paramKey={'Paul McCartney'} />
-                <Playing data={trackData.george} paramKey={'George Harrison'} />
-                <Playing data={trackData.ringo} paramKey={'Ringo Starr'} />
-                <li>
-                  {
-                    trackData.musician !== '-' &&
-                    <>{trackData.musician}</>
-                  }
-                </li>
+                <Playing part={trackData.john} paramKey={'John Lennon'} />
+                <Playing part={trackData.paul} paramKey={'Paul McCartney'} />
+                <Playing part={trackData.george} paramKey={'George Harrison'} />
+                <Playing part={trackData.ringo} paramKey={'Ringo Starr'} />
+                <PeapleArray name={trackData.musician} paramKey={'musician'} />
               </ul>
             </dd>
           </dl>
