@@ -314,9 +314,17 @@ function InnerTrack() {
           </dl>
           <dl>
             <dt>プロデューサー</dt>
-            <dd>{trackData.producer}</dd>
+            <dd>
+              <ul>
+                <PeapleArray name={trackData.producer} paramKey={'producer'} />
+              </ul>
+            </dd>
             <dt>エンジニア</dt>
-            <dd>{trackData.engineer}</dd>
+            <dd>
+              <ul>
+                <PeapleArray name={trackData.engineer} paramKey={'engineer'} />
+              </ul>
+            </dd>
             <dt>アートワーク</dt>
             <dd>{trackData.artwork}</dd>
             <dt>ディレクター（映画）</dt>

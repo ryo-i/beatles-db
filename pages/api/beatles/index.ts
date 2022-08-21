@@ -48,6 +48,10 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'playing', query.playing, 'partial');
   } else if (query.musician) {
     resultData = getFilterData(resultData, 'musician', query.musician, 'partial');
+  } else if (query.producer) {
+    resultData = getFilterData(resultData, 'producer', query.producer, 'exact');
+  } else if (query.engineer) {
+    resultData = getFilterData(resultData, 'engineer', query.engineer, 'exact');
   }
 
   const pageParam = req.query.page;
