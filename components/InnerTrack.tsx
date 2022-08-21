@@ -203,6 +203,20 @@ function InnerTrack() {
   }
 
 
+  // Playing
+  function Playing (props) {
+    return (
+      props.data !== '-' && <>
+        <li>
+          <Link href={"../?playing=" + props.paramKey}>
+            <a>{props.paramKey}</a>
+          </Link> : {props.data}
+        </li>
+      </>
+    );
+  }
+
+
   // Track Info
   const TrackInfo = () => {
     if (error) {
@@ -234,32 +248,24 @@ function InnerTrack() {
             </dd>
             <dt>リードボーカル</dt>
             <dd>
-              <PeapleArray name={trackData.vocal} paramKey={'vocal'} />
+              {
+                trackData.vocal !== '-' &&
+                <PeapleArray name={trackData.vocal} paramKey={'vocal'} />
+              }
             </dd>
             <dt>演奏</dt>
             <dd>
               <ul>
+                <Playing data={trackData.john} paramKey={'John Lennon'} />
+                <Playing data={trackData.paul} paramKey={'Paul McCartney'} />
+                <Playing data={trackData.george} paramKey={'George Harrison'} />
+                <Playing data={trackData.ringo} paramKey={'Ringo Starr'} />
                 <li>
-                  <Link href={"../?playing=John Lennon"}>
-                    <a>John Lennon</a>
-                  </Link> : {trackData.john}
+                  {
+                    trackData.musician !== '-' &&
+                    <>{trackData.musician}</>
+                  }
                 </li>
-                <li>
-                  <Link href={"../?playing=Paul McCartney"}>
-                    <a>Paul McCartney</a>
-                  </Link> : {trackData.paul}
-                </li>
-                <li>
-                  <Link href={"../?playing=George Harrison"}>
-                    <a>George Harrison</a>
-                  </Link> : {trackData.george}
-                </li>
-                <li>
-                  <Link href={"../?playing=Ringo Starr"}>
-                    <a>Ringo Starr</a>
-                  </Link> : {trackData.ringo}
-                </li>
-                <li>{trackData.musician}</li>
               </ul>
             </dd>
           </dl>

@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 演奏にビートルズ4人のリンクを追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- リードボーカルと演奏が「-」の時は非表示に [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - DBの項目名をわかりやすい名前に修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
