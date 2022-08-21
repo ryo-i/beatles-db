@@ -182,11 +182,11 @@ function InnerTrack() {
 
   // PeapleArray
   function PeapleArray (props) {
-    if (!props.name) {
+    if (!props) {
       return (
         <p>読み込み中...</p>
       );
-    } else if (props.name === '-') {
+    } else if (props.name === '-' || props.name === '') {
       return null;
     }
 
@@ -326,11 +326,23 @@ function InnerTrack() {
               </ul>
             </dd>
             <dt>アートワーク</dt>
-            <dd>{trackData.artwork}</dd>
+            <dd>
+              <ul>
+                <PeapleArray name={trackData.artwork} paramKey={'artwork'} />
+              </ul>
+            </dd>
             <dt>ディレクター（映画）</dt>
-            <dd>{trackData.film}</dd>
+            <dd>
+              <ul>
+                <PeapleArray name={trackData.film} paramKey={'film'} />
+              </ul>
+            </dd>
             <dt>ディレクター（MV）</dt>
-            <dd>{trackData.mv}</dd>
+            <dd>
+              <ul>
+                <PeapleArray name={trackData.mv} paramKey={'mv'} />
+              </ul>
+            </dd>
           </dl>
           <dl>
             <dt>収録作品</dt>

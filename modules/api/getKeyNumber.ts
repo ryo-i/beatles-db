@@ -25,6 +25,12 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.producer = i;
     } else if (data[i] === 'engineer') {
       keyNumbers.engineer = i;
+    } else if (data[i] === 'artwork') {
+      keyNumbers.artwork = i;
+    } else if (data[i] === 'film') {
+      keyNumbers.film = i;
+    } else if (data[i] === 'mv') {
+      keyNumbers.mv = i;
     } else if (data[i] === 'format') {
       keyNumbers.format = i;
     } else if (data[i] === 'title') {

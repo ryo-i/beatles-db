@@ -49,9 +49,15 @@ export default (req, res) => {
   } else if (query.musician) {
     resultData = getFilterData(resultData, 'musician', query.musician, 'partial');
   } else if (query.producer) {
-    resultData = getFilterData(resultData, 'producer', query.producer, 'exact');
+    resultData = getFilterData(resultData, 'producer', query.producer, 'partial');
   } else if (query.engineer) {
-    resultData = getFilterData(resultData, 'engineer', query.engineer, 'exact');
+    resultData = getFilterData(resultData, 'engineer', query.engineer, 'partial');
+  } else if (query.artwork) {
+    resultData = getFilterData(resultData, 'artwork', query.artwork, 'partial');
+  } else if (query.film) {
+    resultData = getFilterData(resultData, 'film', query.film, 'partial');
+  } else if (query.mv) {
+    resultData = getFilterData(resultData, 'mv', query.mv, 'partial');
   }
 
   const pageParam = req.query.page;
