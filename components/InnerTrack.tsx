@@ -40,6 +40,19 @@ const Section = styled.section`
         width: 100%;
         padding: 0 0 15px;
       }
+      .peapleList {
+        margin: 0 0 5px;
+        .peaples {
+          margin: 0;
+          padding: 0;
+        li {
+          display: inline;
+          :not(:last-child)::after {
+            content: ", "
+          }
+        }
+      }
+
     }
   }
   .prevNextNav ul {
@@ -179,11 +192,24 @@ function InnerTrack() {
 
     const delimiterSlash = ' / ';
     const delimiterColon = ' : ';
+    const delimiterComma = ', ';
     const isMultipleColon = props.name.indexOf(delimiterColon) !== -1;
+
+    const peapleSplit = (resultArray) => {
+      let peapleSplitArray = resultArray[0].split(delimiterComma);
+      console.log('peapleSplitArray', peapleSplitArray);
+      resultArray[0] = peapleSplitArray;
+      return resultArray;
+    };
 
     let peopleArray = props.name.split(delimiterSlash).map((item) => {
       if (isMultipleColon) {
-        return item.split(delimiterColon);
+        let resultArray = item.split(delimiterColon);
+        const isMultipleComma = resultArray[0].indexOf(delimiterComma) !== -1;
+        if (isMultipleComma) {
+          peapleSplit(resultArray);
+        }
+        return resultArray;
       } else {
         return item;
       }
@@ -192,19 +218,28 @@ function InnerTrack() {
     return (
       <>
         {peopleArray.map((data, index) =>
-          <li key={index}>
+          <li key={index} className="peapleList">
             {
-              isMultipleColon ?
-              <li key={index}>
+              isMultipleColon && Array.isArray(data[0]) ? <>
+                <ul className="peaples">
+                  {data[0].map((data, index) => <>
+                    <li key={index}>
+                      <Link href={"../?" + props.paramKey + "=" + data}>
+                        <a>{data}</a>
+                      </Link>
+                    </li>
+                  </>)}{": " + data[1]}
+                </ul>
+              </> :
+              isMultipleColon ? <>
                 <Link href={"../?" + props.paramKey + "=" + data[0]}>
                   <a>{data[0]}</a>
                 </Link>{": " + data[1]}
-              </li> :
-              <li key={index}>
+              </> : <>
                 <Link href={"../?" + props.paramKey + "=" + data}>
                   <a>{data}</a>
                 </Link>
-              </li>
+              </>
             }
           </li>
         )}
@@ -217,7 +252,7 @@ function InnerTrack() {
   function Playing (props) {
     return (
       props.part !== '-' && <>
-        <li>
+        <li className="peapleList">
           <Link href={"../?playing=" + props.paramKey}>
             <a>{props.paramKey}</a>
           </Link> : {props.part}
