@@ -239,10 +239,26 @@ function InnerTrack() {
             <dt>演奏</dt>
             <dd>
               <ul>
-                <li>John Lennon : {trackData.john}</li>
-                <li>Paul McCartney : {trackData.paul}</li>
-                <li>George Harrison : {trackData.george}</li>
-                <li>Ringo Starr : {trackData.ringo}</li>
+                <li>
+                  <Link href={"../?playing=John Lennon"}>
+                    <a>John Lennon</a>
+                  </Link> : {trackData.john}
+                </li>
+                <li>
+                  <Link href={"../?playing=Paul McCartney"}>
+                    <a>Paul McCartney</a>
+                  </Link> : {trackData.paul}
+                </li>
+                <li>
+                  <Link href={"../?playing=George Harrison"}>
+                    <a>George Harrison</a>
+                  </Link> : {trackData.george}
+                </li>
+                <li>
+                  <Link href={"../?playing=Ringo Starr"}>
+                    <a>Ringo Starr</a>
+                  </Link> : {trackData.ringo}
+                </li>
                 <li>{trackData.musician}</li>
               </ul>
             </dd>
