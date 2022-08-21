@@ -184,12 +184,12 @@ function InnerTrack() {
   function PeapleArray (props) {
     if (error) {
       return <p>エラー: {error.message}</p>;
-    } else if (!props) {
+    } else if (props.name === '-' || props.name === '') {
+      return null;
+    } else if (!props.name) {
       return (
         <p>読み込み中...</p>
       );
-    } else if (props.name === '-' || props.name === '') {
-      return null;
     }
 
     const delimiterSlash = ' / ';
