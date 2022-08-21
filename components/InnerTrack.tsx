@@ -356,13 +356,22 @@ function InnerTrack() {
             </dd>
             <dt>発売日</dt>
             <dd>
-              {trackData.date}
+              <Link href={"../?date=" + trackData.date}>
+                <a>{trackData.date}</a>
+              </Link>
               （<Link href={"../?year=" + trackData.year}>
                 <a>{trackData.year}年</a>
               </Link>）
             </dd>
             <dt>レーベル</dt>
-            <dd>{trackData.label}（{trackData.country}）</dd>
+            <dd>
+              <Link href={"../?label=" + trackData.label}>
+                <a>{trackData.label}</a>
+              </Link>
+              （<Link href={"../?country=" + trackData.country}>
+                <a>{trackData.country}</a>
+              </Link>）
+            </dd>
             <dt>曲順</dt>
             <dd>
               Disc {trackData.disc}, Side {trackData.side}, No. {trackData.number}

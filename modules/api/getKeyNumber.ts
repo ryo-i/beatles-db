@@ -35,6 +35,12 @@ const getKeyNumber = (data, keyNumbers) => {
       keyNumbers.format = i;
     } else if (data[i] === 'title') {
       keyNumbers.title = i;
+    } else if (data[i] === 'date') {
+      keyNumbers.date = i;
+    } else if (data[i] === 'label') {
+      keyNumbers.label = i;
+    } else if (data[i] === 'country') {
+      keyNumbers.country = i;
     } else if (data[i] === 'order') {
       keyNumbers.order = i;
     } else if (data[i] === 'number') {

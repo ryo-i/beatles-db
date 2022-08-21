@@ -58,7 +58,14 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'film', query.film, 'partial');
   } else if (query.mv) {
     resultData = getFilterData(resultData, 'mv', query.mv, 'partial');
+  } else if (query.date) {
+    resultData = getFilterData(resultData, 'date', query.date, 'exact');
+  } else if (query.label) {
+    resultData = getFilterData(resultData, 'label', query.label, 'exact');
+  } else if (query.country) {
+    resultData = getFilterData(resultData, 'country', query.country, 'exact');
   }
+
 
   const pageParam = req.query.page;
   const dataLength = getDataLength(pageParam);
