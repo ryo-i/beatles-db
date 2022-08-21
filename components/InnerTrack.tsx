@@ -182,7 +182,9 @@ function InnerTrack() {
 
   // PeapleArray
   function PeapleArray (props) {
-    if (!props) {
+    if (error) {
+      return <p>エラー: {error.message}</p>;
+    } else if (!props.name) {
       return (
         <p>読み込み中...</p>
       );
