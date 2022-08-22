@@ -35,7 +35,9 @@ const HeaderTag = styled.header`
       padding: 5px;
       font-size: 14px;
       color: #333;
-      border: 1px solid #ccc;
+      border: 1px solid #999;
+      border-right: 0px;
+      border-radius: 5px 0 0 5px;
     }
     button {
       padding: 6px;
@@ -43,6 +45,7 @@ const HeaderTag = styled.header`
       font-size: 14px;
       color: #fff;
       border: 1px solid #999;
+      border-radius: 0 5px 5px 0;
       background: #666;
       :hover {
         cursor: pointer;
@@ -50,6 +53,17 @@ const HeaderTag = styled.header`
     }
   }
 `;
+
+
+// SearchForn
+const SearchForn = () => {
+  return (
+    <form className="search">
+      <input type="text" />
+      <button type="button">検索</button>
+    </form>
+  );
+};
 
 
 // Component
@@ -64,10 +78,7 @@ function Header() {
           <Link href="/"><a>Home</a></Link>
           <Link href="/about"><a>About</a></Link>
         </nav>
-        <form className="search">
-          <input type="text" />
-          <button type="button">検索</button>
-        </form>
+        <SearchForn />
       </div>
     </HeaderTag>
   );
