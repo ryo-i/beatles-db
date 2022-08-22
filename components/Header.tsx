@@ -31,8 +31,8 @@ const HeaderTag = styled.header`
     input {
       width: 200px;
       margin: 0;
-      height: 30px;
-      padding: 5px;
+      padding: 0 6px;
+      line-height: 30px;
       font-size: 14px;
       color: #333;
       border: 1px solid #999;
@@ -40,8 +40,9 @@ const HeaderTag = styled.header`
       border-radius: 5px 0 0 5px;
     }
     button {
-      padding: 6px;
-      line-height: 1em;
+      margin: 0;
+      padding: 0 6px;
+      line-height: 30px;
       font-size: 14px;
       color: #fff;
       border: 1px solid #999;
