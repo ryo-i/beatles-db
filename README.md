@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- router.push追加(同じページだとうまくいかない？) [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 検索をonSubmit → onClickに変更(仮でartistのみ) [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - DBの項目名をわかりやすい名前に修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

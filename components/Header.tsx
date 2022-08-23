@@ -64,9 +64,16 @@ const SearchForn = () => {
   const router = useRouter();
 
   return (
-    <form className="search" onSubmit={() => router.push('/?artist=' + seachValue)}>
-      <input type="text" value={seachValue} onChange={(e)=> setSeachValue(e.target.value)} />
-      <button type="submit" value="Submit">検索</button>
+    <form className="search"  onSubmit={(e) => e.preventDefault()}>
+      <input type="text" value={seachValue} onChange={(e) => setSeachValue(e.target.value)} />
+      <button type="button" onClick={() => {
+        if (seachValue) {
+          router.push({
+            pathname: '/',
+            query: { artist: seachValue } ,
+          });
+        }
+      }}>検索</button>
     </form>
   );
 };
