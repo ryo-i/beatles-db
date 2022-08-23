@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>検索窓スタイル修正(SP対策) <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>router.push追加(同じページだとうまくいかない？) <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>DBの項目名をわかりやすい名前に修正 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

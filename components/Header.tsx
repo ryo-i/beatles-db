@@ -1,4 +1,6 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Data from '../data/data.json';
 import styled from 'styled-components';
 import { pageSize } from '../styles/mixin';
@@ -58,10 +60,13 @@ const HeaderTag = styled.header`
 
 // SearchForn
 const SearchForn = () => {
+  const [seachValue, setSeachValue] = useState('');
+  const router = useRouter();
+
   return (
-    <form className="search">
-      <input type="text" />
-      <button type="button">検索</button>
+    <form className="search" onSubmit={() => router.push('/?artist=' + seachValue)}>
+      <input type="text" value={seachValue} onChange={(e)=> setSeachValue(e.target.value)} />
+      <button type="submit" value="Submit">検索</button>
     </form>
   );
 };

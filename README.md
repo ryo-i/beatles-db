@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 検索窓スタイル修正(SP対策) [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- router.push追加(同じページだとうまくいかない？) [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - DBの項目名をわかりやすい名前に修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

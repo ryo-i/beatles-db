@@ -33,7 +33,6 @@ const Track = ({ trackInfo }) => {
             <meta property="og:title" content={ headTitle } />
             <meta property="og:description" content={ pageText } />
         </Head>
-
         <Header />
         <main>
             <h1>楽曲情報</h1>
