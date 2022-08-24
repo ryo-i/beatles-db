@@ -64,6 +64,8 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'label', query.label, 'exact');
   } else if (query.country) {
     resultData = getFilterData(resultData, 'country', query.country, 'exact');
+  } else if (query.search) {
+    resultData = getFilterData(resultData, 'search', query.search, 'search');
   }
 
 

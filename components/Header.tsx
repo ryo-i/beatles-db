@@ -70,7 +70,7 @@ const SearchForn = () => {
         if (seachValue) {
           router.push({
             pathname: '/',
-            query: { artist: seachValue } ,
+            query: { search: seachValue } ,
           });
         }
       }}>検索</button>

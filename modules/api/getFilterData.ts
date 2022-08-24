@@ -5,12 +5,20 @@ import { keyNumbers } from './keyNumbers';
 const getFilterData = (data, key, value, match) => {
   const isExact = match === 'exact';
   const isPartial = match === 'partial';
+  const isSeach = match === 'search';
 
   const result = data.filter((item, index) => {
     if (isExact && item[keyNumbers[key]] === value) {
       return item;
     } else if (isPartial && item[keyNumbers[key]].indexOf(value) !== -1) {
       return item;
+    } else if (isSeach) {
+      for (let i = 0; i < item.length; i++) {
+        const isMatch = item[i].indexOf(value) !== -1;
+        if (isMatch) {
+          return item;
+        }
+      }
     }
   });
   return result;
