@@ -63,14 +63,24 @@ const SearchForn = () => {
   const [seachValue, setSeachValue] = useState('');
   const router = useRouter();
 
+
+  const getSeachValue = (seachValue) => {
+    let thisValue = seachValue;
+    thisValue = thisValue.replace(/^\s+|\s+$/g, '');
+    setSeachValue(thisValue);
+    return thisValue;
+  }
+
+
   return (
     <form className="search"  onSubmit={(e) => e.preventDefault()}>
       <input type="text" value={seachValue} onChange={(e) => setSeachValue(e.target.value)} />
       <button type="button" onClick={() => {
-        if (seachValue) {
+        let thisValue = getSeachValue(seachValue);;
+        if (thisValue) {
           router.push({
             pathname: '/',
-            query: { search: seachValue } ,
+            query: { search: thisValue } ,
           });
         }
       }}>検索</button>
