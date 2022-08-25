@@ -60,30 +60,42 @@ const HeaderTag = styled.header`
 
 // SearchForn
 const SearchForn = () => {
-  const [seachValue, setSeachValue] = useState('');
+  const [searchValue, setSearchValue] = useState('');
   const router = useRouter();
 
 
-  const getSeachValue = (seachValue) => {
-    let thisValue = seachValue;
+  const getSearchValue = (searchValue) => {
+    let thisValue = searchValue;
     thisValue = thisValue.replace(/^\s+|\s+$/g, '');
-    setSeachValue(thisValue);
+    setSearchValue(thisValue);
     return thisValue;
   }
 
 
+  const doSearch = () => {
+    let thisValue = getSearchValue(searchValue);
+    if (thisValue) {
+      router.push({
+        pathname: '/',
+        query: { search: thisValue } ,
+      });
+    }
+  };
+
+
   return (
     <form className="search"  onSubmit={(e) => e.preventDefault()}>
-      <input type="text" value={seachValue} onChange={(e) => setSeachValue(e.target.value)} />
-      <button type="button" onClick={() => {
-        let thisValue = getSeachValue(seachValue);;
-        if (thisValue) {
-          router.push({
-            pathname: '/',
-            query: { search: thisValue } ,
-          });
-        }
-      }}>検索</button>
+      <input
+        type="text"
+        value={searchValue}
+        onChange={(e) => setSearchValue(e.target.value)}
+        onKeyPress={(e) => {
+          if (e.key == 'Enter') {
+            e.preventDefault();
+            doSearch();
+          }
+        }} />
+      <button type="button" onClick={() => doSearch() }>検索</button>
     </form>
   );
 };
