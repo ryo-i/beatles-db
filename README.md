@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 前後の空白文字を削除 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 検索で大文字・小文字を区別しない [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - DBの項目名をわかりやすい名前に修正 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

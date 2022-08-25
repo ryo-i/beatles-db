@@ -14,7 +14,7 @@ const getFilterData = (data, key, value, match) => {
       return item;
     } else if (isSeach) {
       for (let i = 0; i < item.length; i++) {
-        const isMatch = item[i].indexOf(value) !== -1;
+        const isMatch = item[i].toLowerCase().indexOf(value.toLowerCase()) !== -1;
         if (isMatch) {
           return item;
         }
