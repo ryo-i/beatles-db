@@ -314,6 +314,19 @@ function InnerIndex() {
   };
 
 
+  // Information
+  const Information = () => {
+    return (
+      <>
+        <p className="queryInfo">{queryInfo !== "" && queryInfo}</p>
+        <p className="pageInfo">
+          全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）
+        </p>
+      </>
+    );
+  };
+
+
   // Pagination
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
@@ -425,10 +438,7 @@ function InnerIndex() {
       <Section>
         <h2>{categoryName}</h2>
         <Tag />
-        <p className="queryInfo">{queryInfo !== "" && queryInfo}</p>
-        <p className="pageInfo">
-          全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）
-        </p>
+        <Information />
         <Pagination />
         <TrackList />
         <Pagination />
