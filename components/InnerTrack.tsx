@@ -264,6 +264,30 @@ function InnerTrack() {
   }
 
 
+  // Remarks
+  function Remarks (props) {
+    let remarksArray = [];
+    const delimiterSlash = ' / ';
+    const isMultipleSlash = props.text.indexOf(delimiterSlash) !== -1;
+
+    if (isMultipleSlash) {
+      remarksArray = props.text.split(delimiterSlash).map((item) => {
+      return item;
+      });
+    } else {
+      return props.text;
+    }
+
+    return (
+      <ul>
+        {remarksArray.map((data, index) =>
+          <li key={index}>{data}</li>
+        )}
+      </ul>
+    );
+  }
+
+
   // Track Info
   const TrackInfo = () => {
     if (error) {
@@ -381,7 +405,7 @@ function InnerTrack() {
           </dl>
           <dl>
             <dt>備考</dt>
-            <dd>{trackData.remarks}</dd>
+            <dd><Remarks text={trackData.remarks} /></dd>
           </dl>
           <nav className="prevNextNav">
             <PrevNextNav />

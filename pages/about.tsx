@@ -53,7 +53,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>Informationをコンポーネント化 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>解説文をリスト形式に変更 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>マイ・ボニーの解説文を追加 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
