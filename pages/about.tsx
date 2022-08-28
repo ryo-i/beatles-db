@@ -53,14 +53,15 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>検索をエンターキーでも実行 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>タイトル周りの表記形式を変更 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
                     <li>映画関係の情報を追記 <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>
             <section>
                 <h2>今後の予定</h2>
                 <ul>
-                    <li>検索窓の追加 <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>Aboutページに使い方を書きたい <a href="https://github.com/ryo-i/beatles-db/issues/3">#3</a></li>
+                    <li>曲解説を追加したい <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                     <li>出典のリンクを追加したい <a href="https://github.com/ryo-i/beatles-db/issues/1">#1</a></li>
                 </ul>
             </section>

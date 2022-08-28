@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 検索をエンターキーでも実行 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- タイトル周りの表記形式を変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 映画関係の情報を追記 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

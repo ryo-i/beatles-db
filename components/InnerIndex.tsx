@@ -38,35 +38,20 @@ const Section = styled.section`
   h2 {
     color: #333;
     margin: 0 0 10px;
-    span {
-      font-size: 0.75em;
-      font-weight: normal;
-    }
   }
   .tag {
     padding: 0;
     margin: 0 0 30px;
-    dl {
-      margin: 0;
-      display: flex;
-      dt {
-        width: 55px;
-        margin: 0;
-        padding: 3px 0 0;
-        font-size: 12px;
+    li {
+      display: inline;
+    }
+    .year,
+    .format {
+      a {
+        ${tabStyle}
       }
-      dd {
-        flex: 1;
-        margin: 0;
-        .year,
-        .format {
-          a {
-            ${tabStyle}
-          }
-          .currentTag {
-            background: #c26772;
-          }
-        }
+      .currentTag {
+        background: #c26772;
       }
     }
   }
@@ -143,6 +128,10 @@ const Section = styled.section`
     li:first-child, .topTrack {
       border-top: 2px solid #999;
     }
+  }
+  .queryInfo {
+    font-weight: bold;
+    margin: 0px;
   }
   .pageInfo {
     font-size: 12px;
@@ -294,42 +283,32 @@ function InnerIndex() {
   const Tag = () => {
     return (
       <ul className="tag">
-        <dl>
-          <dt>Year: </dt>
-          <dd>
-            {yearList.map((data, index) =>
-              <span key={index} className="year">
-                <Link href={
-                  isCategory ?
-                  hierarchy + "category/" + categoryPath + "?year=" + data :
-                  hierarchy + "?year=" + data
-                }>
-                  <a className={
-                    queryParam.year === data ? "currentTag" : ""
-                  }>{data}</a>
-                </Link>
-              </span>
-            )}
-          </dd>
-        </dl>
-        <dl>
-          <dt>Format:</dt>
-          <dd>
-            {formatList.map((data, index) =>
-              <span key={index} className="format">
-                <Link href={
-                  isCategory ?
-                  hierarchy + "category/" + categoryPath + "?format=" + data :
-                  hierarchy + "?format=" + data
-                }>
-                  <a className={
-                    queryParam.format === data ? "currentTag" : ""
-                  }>{data}</a>
-                </Link>
-              </span>
-            )}
-          </dd>
-        </dl>
+          {yearList.map((data, index) =>
+            <li key={index} className="year">
+              <Link href={
+                isCategory ?
+                hierarchy + "category/" + categoryPath + "?year=" + data :
+                hierarchy + "?year=" + data
+              }>
+                <a className={
+                  queryParam.year === data ? "currentTag" : ""
+                }>{data}</a>
+              </Link>
+            </li>
+          )}
+          {formatList.map((data, index) =>
+            <li key={index} className="format">
+              <Link href={
+                isCategory ?
+                hierarchy + "category/" + categoryPath + "?format=" + data :
+                hierarchy + "?format=" + data
+              }>
+                <a className={
+                  queryParam.format === data ? "currentTag" : ""
+                }>{data}</a>
+              </Link>
+            </li>
+          )}
       </ul>
     );
   };
@@ -444,11 +423,12 @@ function InnerIndex() {
         <Breadcrumb />
       </Nav>
       <Section>
-        <h2>{categoryName}
-          {queryInfo !== "" && <span> ({queryInfo})</span>}
-        </h2>
+        <h2>{categoryName}</h2>
         <Tag />
-        <p className="pageInfo">全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）</p>
+        <p className="queryInfo">{queryInfo !== "" && queryInfo}</p>
+        <p className="pageInfo">
+          全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）
+        </p>
         <Pagination />
         <TrackList />
         <Pagination />
