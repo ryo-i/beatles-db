@@ -266,6 +266,16 @@ function InnerTrack() {
 
   // Remarks
   function Remarks (props) {
+    if (error) {
+      return <p>エラー: {error.text}</p>;
+    } else if (props.text === '-' || props.text === '') {
+      return null;
+    } else if (!props.text) {
+      return (
+        <p>読み込み中...</p>
+      );
+    }
+
     let remarksArray = [];
     const delimiterSlash = ' / ';
     const isMultipleSlash = props.text.indexOf(delimiterSlash) !== -1;
