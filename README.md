@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - Informationをコンポーネント化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- 映画関係の情報を追記 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- マイ・ボニーの解説文を追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 
