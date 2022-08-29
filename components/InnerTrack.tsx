@@ -390,6 +390,10 @@ function InnerTrack() {
                 <a>{trackData.format}</a>
               </Link>）
             </dd>
+            <dt>曲順</dt>
+            <dd>
+            No. {trackData.number} (Disc {trackData.disc}, Side {trackData.side})
+            </dd>
             <dt>発売日</dt>
             <dd>
               <Link href={"../?date=" + trackData.date}>
@@ -407,10 +411,6 @@ function InnerTrack() {
               （<Link href={"../?country=" + trackData.country}>
                 <a>{trackData.country}</a>
               </Link>）
-            </dd>
-            <dt>曲順</dt>
-            <dd>
-              Disc {trackData.disc}, Side {trackData.side}, No. {trackData.number}
             </dd>
           </dl>
           <dl>
