@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 曲順の位置、書式を変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- Aboutにアプリの使い方を記載 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - マイ・ボニーの解説文を追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
