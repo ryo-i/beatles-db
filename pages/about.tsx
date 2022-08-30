@@ -58,7 +58,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>Aboutに出典を記載 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>出典の掲載場所を間違えたため移動 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>マイ・ボニーの解説文を追加 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
@@ -171,6 +171,14 @@ function About() {
                     <p>楽曲情報のリンクを押すと絞り込みができます。</p>
                 </section>
                 <section>
+                    <h3>前後の曲へのリンク</h3>
+                    <p>楽曲一覧ページの最下部の「前の曲」「次の曲」リンクから前後の曲へ移動できます。</p>
+                    <figure>
+                        <img src="img/bdb_011.jpg" alt="前後の曲へのリンク" />
+                    </figure>
+                </section>
+            </section>
+            <section>
                 <h2>出典</h2>
                 <p>英語版Wikipediaのビートルズ関連のページから主に引用しています。情報が足りない部分は日本語版Wikipedia、公式サイト、CDライナーノートなどから補っています。</p>
                 <ul>
@@ -182,14 +190,6 @@ function About() {
                     <li><a href="https://en.wikipedia.org/wiki/George_Harrison_discography" target="_blank">George Harrison discography - Wikipedia</a></li>
                     <li><a href="https://en.wikipedia.org/wiki/Ringo_Starr_discography" target="_blank">Ringo Starr discography - Wikipedia</a></li>
                 </ul>
-                </section>
-                <section>
-                    <h3>前後の曲へのリンク</h3>
-                    <p>楽曲一覧ページの最下部の「前の曲」「次の曲」リンクから前後の曲へ移動できます。</p>
-                    <figure>
-                        <img src="img/bdb_011.jpg" alt="前後の曲へのリンク" />
-                    </figure>
-                </section>
             </section>
             <section>
                 <h2>詳細</h2>
