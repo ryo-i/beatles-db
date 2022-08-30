@@ -58,14 +58,13 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>Aboutにアプリの使い方を記載 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>Aboutに出典を記載 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>マイ・ボニーの解説文を追加 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
             <section>
                 <h2>今後の予定</h2>
                 <ul>
-                    <li>Aboutページに使い方を書きたい <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>曲解説を追加したい <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                     <li>出典のリンクを追加したい <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
@@ -170,6 +169,19 @@ function About() {
                         <li>備考: イイダリョウがコツコツと書いている作品解説、感想など</li>
                     </ul>
                     <p>楽曲情報のリンクを押すと絞り込みができます。</p>
+                </section>
+                <section>
+                <h2>出典</h2>
+                <p>英語版Wikipediaのビートルズ関連のページから主に引用しています。情報が足りない部分は日本語版Wikipedia、公式サイト、CDライナーノートなどから補っています。</p>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/The_Beatles_discography" target="_blank">The Beatles discography - Wikipedia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/The_Beatles_in_film" target="_blank">The Beatles in film - Wikipedia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/John_Lennon_discography" target="_blank">John Lennon discography - Wikipedia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Yoko_Ono_discography" target="_blank">Yoko Ono discography - Wikipedia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Paul_McCartney_discography" target="_blank">Paul McCartney discography - Wikipedia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/George_Harrison_discography" target="_blank">George Harrison discography - Wikipedia</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Ringo_Starr_discography" target="_blank">Ringo Starr discography - Wikipedia</a></li>
+                </ul>
                 </section>
                 <section>
                     <h3>前後の曲へのリンク</h3>
