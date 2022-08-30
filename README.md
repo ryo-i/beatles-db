@@ -9,7 +9,7 @@
 ## 進捗（コミット）
 
 - 出典の掲載場所を間違えたため移動 [#3](https://github.com/ryo-i/beatles-db/issues/3)
-- マイ・ボニーの解説文を追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
+- MVに非公開作品系を追記 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 
