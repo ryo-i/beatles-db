@@ -58,15 +58,14 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>出典の掲載場所を間違えたため移動 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>出典のリンクを追加 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>My Bonny追記、sorce追加 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
             <section>
                 <h2>今後の予定</h2>
                 <ul>
-                    <li>曲解説を追加したい <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
-                    <li>出典のリンクを追加したい <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
+                    <li>曲解説を追加中 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
             <section>

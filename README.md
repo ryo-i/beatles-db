@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 出典の掲載場所を間違えたため移動 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 出典のリンクを追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - My Bonny追記、sorce追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

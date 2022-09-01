@@ -22,6 +22,7 @@ const Section = styled.section`
     dt, dd {
       padding: 0.5em 0;
       margin: 0;
+      word-break : break-all;
     }
     dt {
       width: 20%;
@@ -184,12 +185,8 @@ function InnerTrack() {
   function PeapleArray (props) {
     if (error) {
       return <p>エラー: {error.message}</p>;
-    } else if (props.name === '-' || props.name === '') {
+    } else if (props.name === '-' || props.name === '' || !props.name) {
       return null;
-    } else if (!props.name) {
-      return (
-        <p>読み込み中...</p>
-      );
     }
 
     const delimiterSlash = ' / ';
@@ -264,16 +261,12 @@ function InnerTrack() {
   }
 
 
-  // Remarks
-  function Remarks (props) {
+  // Remark Array
+  function RemarkArray (props) {
     if (error) {
       return <p>エラー: {error.text}</p>;
-    } else if (props.text === '-' || props.text === '') {
+    } else if (props.text === '-' || props.text === '' || !props.text) {
       return null;
-    } else if (!props.text) {
-      return (
-        <p>読み込み中...</p>
-      );
     }
 
     let remarksArray = [];
@@ -292,6 +285,36 @@ function InnerTrack() {
       <ul>
         {remarksArray.map((data, index) =>
           <li key={index}>{data}</li>
+        )}
+      </ul>
+    );
+  }
+
+
+  // Source Array
+  function SourceArray (props) {
+    if (error) {
+      return <p>エラー: {error.source}</p>;
+    } else if (props.source === '-' || props.source === '' || !props.source) {
+      return null;
+    }
+
+    let sourceArray = [];
+    const delimiterSlash = ' / ';
+    const isMultipleSlash = props.source.indexOf(delimiterSlash) !== -1;
+
+    if (isMultipleSlash) {
+      sourceArray = props.source.split(delimiterSlash).map((item) => {
+      return item;
+      });
+    } else {
+      return props.source;
+    }
+
+    return (
+      <ul>
+        {sourceArray.map((data, index) =>
+          <li key={index}><a href={data} target="_blank">{data}</a></li>
         )}
       </ul>
     );
@@ -415,7 +438,11 @@ function InnerTrack() {
           </dl>
           <dl>
             <dt>備考</dt>
-            <dd><Remarks text={trackData.remarks} /></dd>
+            <dd><RemarkArray text={trackData.remarks} /></dd>
+          </dl>
+          <dl>
+            <dt>出典</dt>
+            <dd><SourceArray source={trackData.source} /></dd>
           </dl>
           <nav className="prevNextNav">
             <PrevNextNav />
