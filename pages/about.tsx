@@ -58,7 +58,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>出典のリンクを追加 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>スラッシュ分割での配列作成をモジュール化 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>My Bonny追記、sorce追加 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
@@ -166,6 +166,7 @@ function About() {
                         <li>発売日: 作品の発売日と発売年</li>
                         <li>レーベル: 作品を発売したレーベルの名前と発売国</li>
                         <li>備考: イイダリョウがコツコツと書いている作品解説、感想など</li>
+                        <li>出典: 楽曲情報の引用元となったページのurl</li>
                     </ul>
                     <p>楽曲情報のリンクを押すと絞り込みができます。</p>
                 </section>

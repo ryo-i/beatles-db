@@ -3,6 +3,7 @@ import { Context } from '../pages/track/[number]';
 import Link from 'next/link';
 import styled from 'styled-components';
 import Nav from './style/Nav';
+import { getDividedArray } from '../modules/trackInfo/getDividedArray';
 
 
 // CSS in JS
@@ -269,17 +270,7 @@ function InnerTrack() {
       return null;
     }
 
-    let remarksArray = [];
-    const delimiterSlash = ' / ';
-    const isMultipleSlash = props.text.indexOf(delimiterSlash) !== -1;
-
-    if (isMultipleSlash) {
-      remarksArray = props.text.split(delimiterSlash).map((item) => {
-      return item;
-      });
-    } else {
-      return props.text;
-    }
+    let remarksArray = getDividedArray(props.text);
 
     return (
       <ul>
@@ -299,17 +290,7 @@ function InnerTrack() {
       return null;
     }
 
-    let sourceArray = [];
-    const delimiterSlash = ' / ';
-    const isMultipleSlash = props.source.indexOf(delimiterSlash) !== -1;
-
-    if (isMultipleSlash) {
-      sourceArray = props.source.split(delimiterSlash).map((item) => {
-      return item;
-      });
-    } else {
-      return props.source;
-    }
+    let sourceArray = getDividedArray(props.source);
 
     return (
       <ul>
