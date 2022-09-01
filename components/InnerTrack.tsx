@@ -23,7 +23,7 @@ const Section = styled.section`
     dt, dd {
       padding: 0.5em 0;
       margin: 0;
-      word-break : break-all;
+      word-break: break-all;
     }
     dt {
       width: 20%;
@@ -186,8 +186,10 @@ function InnerTrack() {
   function PeapleArray (props) {
     if (error) {
       return <p>エラー: {error.message}</p>;
-    } else if (props.name === '-' || props.name === '' || !props.name) {
+    } else if (props.text === '-' || props.text === '') {
       return null;
+    } else if (!props.text) {
+      return '読み込み中...'
     }
 
     const delimiterSlash = ' / ';
@@ -266,8 +268,10 @@ function InnerTrack() {
   function RemarkArray (props) {
     if (error) {
       return <p>エラー: {error.text}</p>;
-    } else if (props.text === '-' || props.text === '' || !props.text) {
+    } else if (props.text === '-' || props.text === '') {
       return null;
+    } else if (!props.text) {
+      return '読み込み中...'
     }
 
     let remarksArray = getDividedArray(props.text);
@@ -286,8 +290,10 @@ function InnerTrack() {
   function SourceArray (props) {
     if (error) {
       return <p>エラー: {error.source}</p>;
-    } else if (props.source === '-' || props.source === '' || !props.source) {
+    } else if (props.text === '-' || props.text === '') {
       return null;
+    } else if (!props.text) {
+      return '読み込み中...'
     }
 
     let sourceArray = getDividedArray(props.source);

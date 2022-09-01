@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 重複したファイルを削除 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 楽曲情報が得られないエラー（修正中） [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - My Bonny追記、sorce追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
