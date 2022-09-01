@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- スラッシュ分割での配列作成をモジュール化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- 重複したファイルを削除 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - My Bonny追記、sorce追加 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
