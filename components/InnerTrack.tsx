@@ -186,10 +186,10 @@ function InnerTrack() {
   function PeapleArray (props) {
     if (error) {
       return <p>エラー: {error.message}</p>;
-    } else if (props.text === '-' || props.text === '') {
+    } else if (props.name === '-' || props.name === '') {
       return null;
-    } else if (!props.text) {
-      return '読み込み中...'
+    } else if (!props.name) {
+      return <p>読み込み中...</p>;
     }
 
     const delimiterSlash = ' / ';
@@ -271,7 +271,7 @@ function InnerTrack() {
     } else if (props.text === '-' || props.text === '') {
       return null;
     } else if (!props.text) {
-      return '読み込み中...'
+      return <p>読み込み中...</p>;
     }
 
     let remarksArray = getDividedArray(props.text);
@@ -290,10 +290,10 @@ function InnerTrack() {
   function SourceArray (props) {
     if (error) {
       return <p>エラー: {error.source}</p>;
-    } else if (props.text === '-' || props.text === '') {
+    } else if (props.source === '-' || props.source === '') {
       return null;
-    } else if (!props.text) {
-      return '読み込み中...'
+    } else if (!props.source) {
+      return <p>読み込み中...</p>;
     }
 
     let sourceArray = getDividedArray(props.source);
