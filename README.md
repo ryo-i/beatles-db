@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 楽曲情報が得られないエラー修正-2 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- API読み込みを常時に [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

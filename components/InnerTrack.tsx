@@ -112,7 +112,7 @@ function InnerTrack() {
       setNextNumber(Number(trackNumber) + 1);
       setPrevNumber(Number(trackNumber) - 1);
     }
-  }, [trackNumber]);
+  }, []);
 
 
   // Get All Tracks Length
