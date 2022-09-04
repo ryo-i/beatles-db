@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- jsxタグ内の三項演算子をやめてみる（結果は変わらず） [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- カレントclassをフックに（結果は変わらず） [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

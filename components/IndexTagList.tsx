@@ -1,4 +1,4 @@
-import React, { useContext }  from 'react';
+import React, { useState, useEffect, useContext }  from 'react';
 import Link from 'next/link';
 import { categoryContext } from '../context/categoryContext';
 import { indexContext } from '../context/indexContext';
@@ -38,10 +38,22 @@ const TagList = () => {
   const {formatList, setFormatList} = useContext(indexContext);
   const {currentYear, setCurrentYear} = useContext(indexContext);
   const {currentFormat, setCurrentFormat} = useContext(indexContext);
+  const [tagListPath, setTagListPath] = useState('');
+  const [yearTagList, setYearTagList] = useState([]);
+  const [formatTagList, setFormatTagList] = useState([]);
 
-  const tagListPath = isCategory ? 'category/' + categoryPath : '';
-  const yearTagList = getTagList(yearList, currentYear);
-  const formatTagList = getTagList(formatList, currentFormat);
+
+  useEffect(() => {
+    if (isCategory) {
+      setTagListPath('category/' + categoryPath);
+    }
+
+    const getYearTagList = getTagList(yearList, currentYear);
+    const getFormatTagList = getTagList(formatList, currentFormat);
+    setYearTagList(getYearTagList);
+    setFormatTagList(getFormatTagList);
+  }, [isCategory, yearList, formatList]);
+
 
   return (
     <Nav>
