@@ -7,7 +7,9 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import CategoryNav from './CategoryNav';
 import IndexBreadcrumb from './IndexBreadcrumb';
+import TagList from './IndexTagList';
 import Nav from './style/Nav';
+import tagStyle from './style/tagStyle';
 import Data from '../data/data.json';
 import { getPagination } from '../modules/trackList/getPagination';
 import { getPageKey } from '../modules/trackList/getPageKey';
@@ -20,19 +22,6 @@ import { deleteParam } from '../modules/trackList/deleteParam';
 
 const headerTitle = Data.header.title;
 const headerText = Data.header.text;
-
-
-// CSS in JS
-const tabStyle = `{
-  background: #888;
-  color: #fff;
-  margin: 0 5px 5px 0;
-  padding : 3px;
-  font-size: 10px;
-  border-radius: 3px;
-  text-decoration: none;
-  display: inline-block;
-}`;
 
 
 // CSS in JS
@@ -50,7 +39,7 @@ const Section = styled.section`
     .year,
     .format {
       a {
-        ${tabStyle}
+        ${tagStyle}
       }
       .currentTag {
         background: #c26772;
@@ -120,7 +109,7 @@ const Section = styled.section`
             color: #666;
           }
           .year a,
-          .format a ${tabStyle}
+          .format a ${tagStyle}
         }
       }
     }
@@ -184,11 +173,13 @@ function InnerIndex() {
   const [isQueryInfo, setIsQueryInfo] = useState(false);
   const [queryInfo, setQueryInfo] = useState('');
   const [hierarchy, setHierarchy] = useState('/');
+  const [currentYear, setCurrentYear] = useState('');
+  const [currentFormat, setCurrentFormat] = useState('');
 
   // Get Query Param
   const router = useRouter();
   const queryParam = router.query;
-  const { category, page } = router.query;
+  const { category, page, year, format} = router.query;
 
 
   useEffect(() => {
@@ -210,6 +201,14 @@ function InnerIndex() {
 
     if (page) {
       queryParam.page = page;
+    }
+
+    if (year) {
+      setCurrentYear(queryParam.year[0]);
+    }
+
+    if (format) {
+      setCurrentYear(queryParam.format[0])
     }
 
     const queryText = getQueryParam(queryParam);
@@ -242,41 +241,6 @@ function InnerIndex() {
       getTracksData(url);
     }
   }, [router, queryParam, categoryName]);
-
-
-  // Tag
-  const Tag = () => {
-    return (
-      <ul className="tag">
-          {yearList.map((data, index) =>
-            <li key={index} className="year">
-              <Link href={
-                isCategory ?
-                hierarchy + "category/" + categoryPath + "?year=" + data :
-                hierarchy + "?year=" + data
-              }>
-                <a className={
-                  queryParam.year === data ? "currentTag" : ""
-                }>{data}</a>
-              </Link>
-            </li>
-          )}
-          {formatList.map((data, index) =>
-            <li key={index} className="format">
-              <Link href={
-                isCategory ?
-                hierarchy + "category/" + categoryPath + "?format=" + data :
-                hierarchy + "?format=" + data
-              }>
-                <a className={
-                  queryParam.format === data ? "currentTag" : ""
-                }>{data}</a>
-              </Link>
-            </li>
-          )}
-      </ul>
-    );
-  };
 
 
   // Information
@@ -397,19 +361,26 @@ function InnerIndex() {
         <meta property="og:description" content={ headText } />
       </Head>
       <CategoryNav />
-      <Nav>
-        <indexContext.Provider value={{queryInfo, setQueryInfo, hierarchy, setHierarchy}} >
+      <indexContext.Provider value={{
+        queryInfo, setQueryInfo,
+        hierarchy, setHierarchy,
+        yearList, setYearList,
+        formatList, setFormatList,
+        currentYear, setCurrentYear,
+        currentFormat, setCurrentFormat
+      }} >
+        <Nav>
           <IndexBreadcrumb />
-        </indexContext.Provider>
-      </Nav>
-      <Section>
-        <h2>{categoryName}</h2>
-        <Tag />
-        <Information />
-        <Pagination />
-        <TrackList />
-        <Pagination />
-      </Section>
+        </Nav>
+        <Section>
+          <h2>{categoryName}</h2>
+          <TagList />
+          <Information />
+          <Pagination />
+          <TrackList />
+          <Pagination />
+        </Section>
+      </indexContext.Provider>
     </>
   );
 }
