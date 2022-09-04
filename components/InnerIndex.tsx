@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import CategoryNav from './CategoryNav';
 import IndexBreadcrumb from './IndexBreadcrumb';
 import TagList from './IndexTagList';
+import Information from './IndexInformation';
 import Nav from './style/Nav';
 import tagStyle from './style/tagStyle';
 import Data from '../data/data.json';
@@ -247,19 +248,6 @@ function InnerIndex() {
   }, [router, queryParam, categoryName]);
 
 
-  // Information
-  const Information = () => {
-    return (
-      <>
-        <p className="queryInfo">{queryInfo !== "" && queryInfo}</p>
-        <p className="pageInfo">
-          全{pageInfo['trackLength']}件 - {pageInfo['thisPage']}ページ目（{pageInfo['pageLength']}ページ中）
-        </p>
-      </>
-    );
-  };
-
-
   // Pagination
   const Pagination = () => {
     const pagination = getPagination(pageInfo);
@@ -371,7 +359,8 @@ function InnerIndex() {
         yearList, setYearList,
         formatList, setFormatList,
         currentYear, setCurrentYear,
-        currentFormat, setCurrentFormat
+        currentFormat, setCurrentFormat,
+        pageInfo, setPageInfo
       }} >
         <Nav>
           <IndexBreadcrumb />

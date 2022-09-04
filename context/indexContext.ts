@@ -13,4 +13,6 @@ export const indexContext = createContext({} as {
     setCurrentYear: React.Dispatch<React.SetStateAction<string>>
     currentFormat: string
     setCurrentFormat: React.Dispatch<React.SetStateAction<string>>
+    pageInfo: {[key: string]: string}
+    setPageInfo: React.Dispatch<React.SetStateAction<{[key: string]: string}>>
 });

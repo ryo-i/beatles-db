@@ -58,7 +58,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>タグ一覧のカレントスタイルを復旧 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>Informationを外部コンポーネント化 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>項目数のズレ？を更新 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
