@@ -41,7 +41,7 @@ const TagList = () => {
   const [tagListPath, setTagListPath] = useState('');
   const [yearTagList, setYearTagList] = useState([]);
   const [formatTagList, setFormatTagList] = useState([]);
-  const [isSettings, setSettings] = useState(false);
+  const [isSettings, setIsSettings] = useState(false);
 
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const TagList = () => {
     const getFormatTagList = getTagList(formatList, currentFormat);
     setFormatTagList(getFormatTagList);
 
-    setSettings(true);
+    setIsSettings(true);
   }, [isCategory, yearList, formatList]);
 
 
