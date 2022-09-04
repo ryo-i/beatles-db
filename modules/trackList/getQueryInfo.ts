@@ -10,7 +10,9 @@ const getQueryInfo = (queryParam) => {
             queryParamObject[property] = queryParam[property];
         }
 
+        delete queryParamObject["category"];
         delete queryParamObject["order"];
+        delete queryParamObject["page"];
 
         queryInfoText = Object.entries(queryParamObject).map( x => x.join(": ")).join(", ");
         return queryInfoText;
