@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
 import CategoryNav from './CategoryNav';
+import IndexBreadcrumb from './IndexBreadcrumb';
 import Nav from './style/Nav';
 import Data from '../data/data.json';
 import { getPagination } from '../modules/trackList/getPagination';
@@ -242,43 +243,6 @@ function InnerIndex() {
   }, [router, queryParam, categoryName]);
 
 
-  // Index Bread Crumb
-  const IndexBreadcrumb = () => {
-    if (!isCategory && !queryInfo) {
-      return (
-        <ul className="breadcrumb">
-        </ul>
-      );
-    } else if (!isCategory && queryInfo) {
-      return (
-        <ul className="breadcrumb">
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li>{queryInfo}</li>
-        </ul>
-      );
-    } else if (isCategory && !queryInfo) {
-      return (
-        <ul className="breadcrumb">
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li>{categoryName}</li>
-        </ul>
-      );
-    } else if (isCategory && queryInfo) {
-      return (
-        <ul className="breadcrumb">
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li>
-            <Link href={hierarchy + "category/" + categoryPath}>
-              <a>{categoryName}</a>
-            </Link>
-          </li>
-          <li>{queryInfo}</li>
-        </ul>
-      );
-    }
-  };
-
-
   // Tag
   const Tag = () => {
     return (
@@ -433,7 +397,7 @@ function InnerIndex() {
       </Head>
       <CategoryNav />
       <Nav>
-        <IndexBreadcrumb />
+        <IndexBreadcrumb queryInfo={queryInfo} hierarchy={hierarchy} />
       </Nav>
       <Section>
         <h2>{categoryName}</h2>

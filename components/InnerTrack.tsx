@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext }  from 'react';
 import { Context } from '../pages/track/[number]';
 import Link from 'next/link';
 import styled from 'styled-components';
+import TrackBreadcrumb from './TrackBreadcrumb';
 import PrevNextNav from './PrevNextNav';
 import Nav from './style/Nav';
 import { getDividedArray } from '../modules/trackInfo/getDividedArray';
@@ -97,24 +98,6 @@ function InnerTrack() {
       getTracksData(url);
     }
   }, []);
-
-
-  // Track Bread Crumb
-  const TrackBreadcrumb = () => {
-    if (error) {
-      return <p>エラー: {error.message}</p>;
-    } else if (!isLoaded) {
-      return <p>読み込み中...</p>;
-    } else {
-      return (
-        <ul className="breadcrumb">
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li><Link href={"/category/" + trackData.path}><a>{trackData.category}</a></Link></li>
-          <li>{trackName}</li>
-        </ul>
-      );
-    }
-  };
 
 
   // PeapleArray
@@ -377,7 +360,7 @@ function InnerTrack() {
   return (
     <>
       <Nav>
-        <TrackBreadcrumb />
+        <TrackBreadcrumb trackData={trackData} />
       </Nav>
       <Section>
         <h2>{trackName}</h2>

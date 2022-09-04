@@ -24,7 +24,6 @@ const Nav = styled.nav`
 // PrevNextNav
 function PrevNextNav() {
     // Hooks
-    const [isLoaded, setIsLoaded] = useState(false);
     const {trackNumber, setTrackNumber} = useContext(Context);
     const [prevNumber, setPrevNumber] = useState(0);
     const [nextNumber, setNextNumber] = useState(0);
@@ -42,7 +41,6 @@ function PrevNextNav() {
             const allTracksLength = data.trackInfo.allTrackLength;
             console.log('data', data);
             setAllTracksLength(allTracksLength);
-            setIsLoaded(true);
         } catch(error) {
             console.log('err', error);
         }
