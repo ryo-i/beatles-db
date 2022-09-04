@@ -15,6 +15,8 @@ const TagList = () => {
   const {currentYear, setCurrentYear} = useContext(indexContext);
   const {currentFormat, setCurrentFormat} = useContext(indexContext);
 
+  console.log('currentYear', currentYear);
+  console.log('currentFormat', currentFormat);
 
   return (
     <ul className="tag">

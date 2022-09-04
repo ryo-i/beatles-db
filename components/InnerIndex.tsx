@@ -204,11 +204,15 @@ function InnerIndex() {
     }
 
     if (year) {
-      setCurrentYear(queryParam.year[0]);
+      setCurrentYear(String(queryParam.year));
+    } else {
+      setCurrentYear('');
     }
 
     if (format) {
-      setCurrentYear(queryParam.format[0])
+      setCurrentFormat(String(queryParam.format));
+    } else {
+      setCurrentFormat('');
     }
 
     const queryText = getQueryParam(queryParam);
