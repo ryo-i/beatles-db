@@ -1,6 +1,7 @@
 import React, { useState, useContext }  from 'react';
 import Link from 'next/link';
 import { categoryContext } from '../context/categoryContext';
+import { indexContext } from '../context/indexContext';
 
 
 // Index Bread Crumb
@@ -9,8 +10,9 @@ const IndexBreadcrumb = (props) => {
     const {isCategory, setIsCategory} = useContext(categoryContext);
     const {categoryPath, setCategoryPath} = useContext(categoryContext);
     const {categoryName, setCategoryName} = useContext(categoryContext);
-    const queryInfo = props.queryInfo;
-    const hierarchy = props.hierarchy;
+    const {queryInfo, setQueryInfo} = useContext(indexContext);
+    const {hierarchy, setHierarchy} = useContext(indexContext);
+
 
     if (!isCategory && !queryInfo) {
         return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { Context } from '../pages/track/[number]';
+import { trackContext } from '../context/trackContext';
 import Link from 'next/link';
 import styled from 'styled-components';
 import TrackBreadcrumb from './TrackBreadcrumb';
@@ -360,7 +361,9 @@ function InnerTrack() {
   return (
     <>
       <Nav>
-        <TrackBreadcrumb trackData={trackData} />
+        <trackContext.Provider value={{trackData, setTrackData}} >
+          <TrackBreadcrumb />
+        </trackContext.Provider>
       </Nav>
       <Section>
         <h2>{trackName}</h2>

@@ -1,13 +1,14 @@
 import React, { useState, useContext }  from 'react';
 import Link from 'next/link';
 import { Context } from '../pages/track/[number]';
+import { trackContext } from '../context/trackContext';
 
 
 // Track Bread Crumb
-const TrackBreadcrumb = (props) => {
+const TrackBreadcrumb = () => {
   // Hooks
   const {trackName, setTrackName} = useContext(Context);
-  const trackData = props.trackData;
+  const {trackData, setTrackData} = useContext(trackContext);
 
   return (
     <ul className="breadcrumb">

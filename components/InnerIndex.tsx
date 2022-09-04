@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext }  from 'react';
 import { useRouter } from 'next/router';
 import { categoryContext } from '../context/categoryContext';
+import { indexContext } from '../context/indexContext';
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -397,7 +398,9 @@ function InnerIndex() {
       </Head>
       <CategoryNav />
       <Nav>
-        <IndexBreadcrumb queryInfo={queryInfo} hierarchy={hierarchy} />
+        <indexContext.Provider value={{queryInfo, setQueryInfo, hierarchy, setHierarchy}} >
+          <IndexBreadcrumb />
+        </indexContext.Provider>
       </Nav>
       <Section>
         <h2>{categoryName}</h2>

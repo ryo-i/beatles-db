@@ -7,4 +7,4 @@ export const categoryContext = createContext({} as {
     setCategoryName: React.Dispatch<React.SetStateAction<string>>
     categoryPath: string
     setCategoryPath: React.Dispatch<React.SetStateAction<string>>
-  });
+});
