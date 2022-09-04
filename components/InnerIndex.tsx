@@ -9,17 +9,16 @@ import CategoryNav from './CategoryNav';
 import IndexBreadcrumb from './IndexBreadcrumb';
 import TagList from './IndexTagList';
 import Information from './IndexInformation';
+import Pagination from './IndexPagination';
 import Nav from './style/Nav';
 import tagStyle from './style/tagStyle';
 import Data from '../data/data.json';
-import { getPagination } from '../modules/trackList/getPagination';
-import { getPageKey } from '../modules/trackList/getPageKey';
 import { getTopTrack } from '../modules/trackList/getTopTrack';
 import { getQueryParam } from '../modules/trackList/getQueryParam';
 import { getHeadInfo } from '../modules/trackList/getHeadInfo';
 import { getQueryInfo } from '../modules/trackList/getQueryInfo';
+import { getPageKey } from '../modules/trackList/getPageKey';
 import { deleteParam } from '../modules/trackList/deleteParam';
-
 
 const headerTitle = Data.header.title;
 const headerText = Data.header.text;
@@ -128,32 +127,6 @@ const Section = styled.section`
   .pageInfo {
     font-size: 12px;
   }
-  .pagination {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    li {
-      border: none;
-      margin: 0 10px 0 0;
-      padding: 0;
-      a {
-        display: block;
-        color: #333;
-        text-decoration: none;
-        background: #eee;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        text-align: center;
-        font-size: 12px;
-        border-radius: 3px;
-      }
-      .currentPage {
-        color: #fff;
-        background: #c26772;
-      }
-    }
-  }
 `;
 
 
@@ -176,6 +149,8 @@ function InnerIndex() {
   const [hierarchy, setHierarchy] = useState('/');
   const [currentYear, setCurrentYear] = useState('');
   const [currentFormat, setCurrentFormat] = useState('');
+  const [pageParam, setPageParam] = useState('');
+  const [pageKey, setPageKey] = useState('');
 
   // Get Query Param
   const router = useRouter();
@@ -216,10 +191,18 @@ function InnerIndex() {
       setCurrentFormat('');
     }
 
+    // Head
     const queryText = getQueryParam(queryParam);
     const headINfo = getHeadInfo(isCategory, thisQueryInfo, categoryName);
     setHeadTitle(headINfo.headTitle);
     setHeadText(headINfo.headText);
+
+    // Page Param
+    const resultPageParam = deleteParam(queryParam);
+    const resultQueryText = getQueryParam(resultPageParam);
+    const pageKey = getPageKey(resultQueryText);
+    setPageParam(resultQueryText);
+    setPageKey(pageKey);
 
     // fetch
     const url: string = isCategory ? '../api/beatles' + queryText : 'api/beatles' + queryText;
@@ -246,28 +229,6 @@ function InnerIndex() {
       getTracksData(url);
     }
   }, [router, queryParam, categoryName]);
-
-
-  // Pagination
-  const Pagination = () => {
-    const pagination = getPagination(pageInfo);
-    const paginationPath = isCategory ? '/category/' + categoryPath : '/';
-    const thisPageParam = deleteParam(queryParam);
-    const queryText = getQueryParam(thisPageParam);
-    const pageKey = getPageKey(queryText);
-
-    return (
-      <ul className="pagination">
-        {pagination.map((data, index) =>
-          <li key={index}>
-            <Link href={paginationPath + queryText + pageKey + data.pageNum}>
-              <a className={data.thisPage}>{data.pageNum}</a>
-            </Link>
-          </li>
-        )}
-      </ul>
-    );
-  };
 
 
   // Track List
@@ -360,7 +321,9 @@ function InnerIndex() {
         formatList, setFormatList,
         currentYear, setCurrentYear,
         currentFormat, setCurrentFormat,
-        pageInfo, setPageInfo
+        pageInfo, setPageInfo,
+        pageParam, setPageParam,
+        pageKey, setPageKey
       }} >
         <Nav>
           <IndexBreadcrumb />

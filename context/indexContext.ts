@@ -15,4 +15,8 @@ export const indexContext = createContext({} as {
     setCurrentFormat: React.Dispatch<React.SetStateAction<string>>
     pageInfo: {[key: string]: string}
     setPageInfo: React.Dispatch<React.SetStateAction<{[key: string]: string}>>
+    pageParam: string
+    setPageParam: React.Dispatch<React.SetStateAction<string>>
+    pageKey: string
+    setPageKey: React.Dispatch<React.SetStateAction<string>>
 });
