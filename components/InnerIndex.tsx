@@ -30,22 +30,6 @@ const Section = styled.section`
     color: #333;
     margin: 0 0 10px;
   }
-  .tag {
-    padding: 0;
-    margin: 0 0 30px;
-    li {
-      display: inline;
-    }
-    .year,
-    .format {
-      a {
-        ${tagStyle}
-      }
-      .currentTag {
-        background: #c26772;
-      }
-    }
-  }
   .trackList {
     padding: 10px 0;
     li {
@@ -119,13 +103,6 @@ const Section = styled.section`
     li:first-child, .topTrack {
       border-top: 2px solid #999;
     }
-  }
-  .queryInfo {
-    font-weight: bold;
-    margin: 0px;
-  }
-  .pageInfo {
-    font-size: 12px;
   }
 `;
 

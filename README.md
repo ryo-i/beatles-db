@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- パンくずなどの不要な表記を削除 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- Styleをコンポーネントに分割（設定変更も） [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
