@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext }  from 'react';
 import { Context } from '../pages/track/[number]';
 import Link from 'next/link';
 import styled from 'styled-components';
+import PrevNextNav from './PrevNextNav';
 import Nav from './style/Nav';
 import { getDividedArray } from '../modules/trackInfo/getDividedArray';
 
@@ -57,18 +58,6 @@ const Section = styled.section`
       }
     }
   }
-  .prevNextNav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 20px 0 0;
-    padding: 15px;
-    background: #eee;
-    border-radius: 5px;
-    .non {
-      color: #aaa;
-    }
-  }
 `;
 
 
@@ -78,11 +67,8 @@ function InnerTrack() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const {trackNumber, setTrackNumber} = useContext(Context);
-  const [prevNumber, setPrevNumber] = useState(0);
-  const [nextNumber, setNextNumber] = useState(0);
   const {trackName, setTrackName} = useContext(Context);
   const [trackData, setTrackData] = useState<{[key: string]: string}>({});
-  const [allTracksLength, setAllTracksLength] = useState(0);
 
 
   //  Get Tracks Data
@@ -109,36 +95,12 @@ function InnerTrack() {
     if (trackNumber) {
       console.log('trackNumber', trackNumber);
       getTracksData(url);
-      setNextNumber(Number(trackNumber) + 1);
-      setPrevNumber(Number(trackNumber) - 1);
     }
   }, []);
 
 
-  // Get All Tracks Length
-  useEffect(() => {
-    const url: string = '../api/beatles/tracklength';
-
-    async function getAllTracksLength (url: string) {
-      try {
-        const res = await fetch(url);
-        const resJson = await res.json();
-        const data = resJson;
-        const allTracksLength = data.trackInfo.allTrackLength;
-        console.log('data', data);
-        setAllTracksLength(allTracksLength);
-        setIsLoaded(true);
-      } catch(error) {
-        console.log('err', error);
-      }
-    };
-
-    getAllTracksLength(url);
-  }, []);
-
-
-  // Breadcrumb
-  const Breadcrumb = () => {
+  // Track Bread Crumb
+  const TrackBreadcrumb = () => {
     if (error) {
       return <p>エラー: {error.message}</p>;
     } else if (!isLoaded) {
@@ -153,33 +115,6 @@ function InnerTrack() {
       );
     }
   };
-
-
-  // PrevNextNav
-  function PrevNextNav() {
-    if (Number(trackNumber) <= 1) {
-      return (
-        <ul>
-          <li className="non">◀︎ 前の曲</li>
-          <li><Link href="/track/[nextNumber]" as={`/track/${nextNumber}`}><a>次の曲</a></Link> ▶︎</li>
-        </ul>
-      );
-    } else if (Number(trackNumber) >= allTracksLength) {
-      return (
-        <ul>
-          <li>◀︎ <Link href="/track/[prevNumber]" as={`/track/${prevNumber}`}><a>前の曲</a></Link></li>
-          <li className="non">次の曲 ▶︎</li>
-        </ul>
-      );
-    }
-
-    return (
-      <ul>
-        <li>◀︎ <Link href="/track/[prevNumber]" as={`/track/${prevNumber}`}><a>前の曲</a></Link></li>
-        <li><Link href="/track/[nextNumber]" as={`/track/${nextNumber}`}><a>次の曲</a></Link> ▶︎</li>
-      </ul>
-    );
-  }
 
 
   // PeapleArray
@@ -431,9 +366,7 @@ function InnerTrack() {
             <dt>出典</dt>
             <dd><SourceArray source={trackData.source} /></dd>
           </dl>
-          <nav className="prevNextNav">
-            <PrevNextNav />
-          </nav>
+          <PrevNextNav />
         </>
       );
     }
@@ -444,7 +377,7 @@ function InnerTrack() {
   return (
     <>
       <Nav>
-        <Breadcrumb />
+        <TrackBreadcrumb />
       </Nav>
       <Section>
         <h2>{trackName}</h2>

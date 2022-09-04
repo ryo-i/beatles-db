@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- API読み込みを常時に [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- PrevNextNavを外部コンポーネント化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）

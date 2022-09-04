@@ -242,8 +242,8 @@ function InnerIndex() {
   }, [router, queryParam, categoryName]);
 
 
-  // Breadcrumb
-  const Breadcrumb = () => {
+  // Index Bread Crumb
+  const IndexBreadcrumb = () => {
     if (!isCategory && !queryInfo) {
       return (
         <ul className="breadcrumb">
@@ -433,7 +433,7 @@ function InnerIndex() {
       </Head>
       <CategoryNav />
       <Nav>
-        <Breadcrumb />
+        <IndexBreadcrumb />
       </Nav>
       <Section>
         <h2>{categoryName}</h2>
