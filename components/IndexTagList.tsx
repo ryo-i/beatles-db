@@ -41,21 +41,28 @@ const TagList = () => {
   const [tagListPath, setTagListPath] = useState('');
   const [yearTagList, setYearTagList] = useState([]);
   const [formatTagList, setFormatTagList] = useState([]);
+  const [isSettings, setSettings] = useState(false);
 
 
   useEffect(() => {
     if (isCategory) {
       setTagListPath('category/' + categoryPath);
+    } else {
+      setTagListPath('');
     }
 
     const getYearTagList = getTagList(yearList, currentYear);
-    const getFormatTagList = getTagList(formatList, currentFormat);
     setYearTagList(getYearTagList);
+
+    const getFormatTagList = getTagList(formatList, currentFormat);
     setFormatTagList(getFormatTagList);
+
+    setSettings(true);
   }, [isCategory, yearList, formatList]);
 
 
   return (
+    isSettings &&
     <Nav>
       <ul className="tag">
         {yearList.map((data, index) =>
