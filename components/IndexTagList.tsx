@@ -4,6 +4,7 @@ import { categoryContext } from '../context/categoryContext';
 import { indexContext } from '../context/indexContext';
 import styled from 'styled-components';
 import tagStyle from './style/tagStyle';
+import { getTagList } from '../modules/trackList/getTagList';
 
 
 // CSS in JS
@@ -38,32 +39,24 @@ const TagList = () => {
   const {currentYear, setCurrentYear} = useContext(indexContext);
   const {currentFormat, setCurrentFormat} = useContext(indexContext);
 
+  const tagListPath = isCategory ? 'category/' + categoryPath : '';
+  const yearTagList = getTagList(yearList, currentYear);
+  const formatTagList = getTagList(formatList, currentFormat);
+
   return (
     <Nav>
       <ul className="tag">
         {yearList.map((data, index) =>
           <li key={index} className="year">
-            <Link href={
-              isCategory ?
-              hierarchy + "category/" + categoryPath + "?year=" + data :
-              hierarchy + "?year=" + data
-            }>
-              <a className={
-                currentYear === data ? "currentTag" : ""
-              }>{data}</a>
+            <Link href={hierarchy + tagListPath + "?year=" + data}>
+              <a className={yearTagList[index]}>{data}</a>
             </Link>
           </li>
         )}
         {formatList.map((data, index) =>
           <li key={index} className="format">
-            <Link href={
-              isCategory ?
-              hierarchy + "category/" + categoryPath + "?format=" + data :
-              hierarchy + "?format=" + data
-            }>
-              <a className={
-                currentFormat === data ? "currentTag" : ""
-              }>{data}</a>
+            <Link href={hierarchy + tagListPath + "?format=" + data}>
+              <a className={formatTagList[index]}>{data}</a>
             </Link>
           </li>
         )}
