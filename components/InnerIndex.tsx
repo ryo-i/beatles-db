@@ -183,13 +183,13 @@ function InnerIndex() {
 
     // fetch
     const url: string = isCategory ? '../api/beatles' + queryText : 'api/beatles' + queryText;
-    console.log('url', url);
+    // console.log('url', url);
     async function getTracksData (url) {
       try {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson;
-        console.log('data', data);
+        // console.log('data', data);
         setTracksData(data.trackList);
         setYearList(data.yearList);
         setFormatList(data.formatList);

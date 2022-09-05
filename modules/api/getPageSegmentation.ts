@@ -4,8 +4,6 @@ const getPageSegmentation = (pageParam, data) => {
   if (!pageParam || isNaN(pageParam)) {
     thisPage = 1;
   }
-  // console.log('data.length', data.length);
-  // console.log('thisPage', thisPage);
 
   const pageSegmentation = {};
   pageSegmentation['trackLength'] = data.length;
@@ -13,7 +11,6 @@ const getPageSegmentation = (pageParam, data) => {
   pageSegmentation['pageLength'] = Math.ceil(pageSegmentation['trackLength'] / pageSegmentation['pageUnit']);
   pageSegmentation['thisPage'] = thisPage;
   pageSegmentation['trackRemainder'] = pageSegmentation['trackLength'] % pageSegmentation['pageUnit'];
-  // console.log('pageSegmentation', pageSegmentation);
 
   return pageSegmentation;
 };

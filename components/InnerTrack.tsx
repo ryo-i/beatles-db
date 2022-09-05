@@ -82,8 +82,7 @@ function InnerTrack() {
         const res = await fetch(url);
         const resJson = await res.json();
         const data = resJson;
-        console.log('data', data);
-        // console.log('data.track', data.track);
+        // console.log('data', data);
         setTrackData(data);
         setTrackName(data.track);
         setIsLoaded(true);
@@ -95,7 +94,7 @@ function InnerTrack() {
     };
 
     if (trackNumber) {
-      console.log('trackNumber', trackNumber);
+      // console.log('trackNumber', trackNumber);
       getTracksData(url);
     }
   }, []);
@@ -118,7 +117,6 @@ function InnerTrack() {
 
     const peapleSplit = (resultArray) => {
       let peapleSplitArray = resultArray[0].split(delimiterComma);
-      console.log('peapleSplitArray', peapleSplitArray);
       resultArray[0] = peapleSplitArray;
       return resultArray;
     };

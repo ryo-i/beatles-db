@@ -68,7 +68,6 @@ export default (req, res) => {
     resultData = getFilterData(resultData, 'search', query.search, 'search');
   }
 
-
   const pageParam = req.query.page;
   const dataLength = getDataLength(pageParam);
   const pageInfo = getPageSegmentation(pageParam, resultData);

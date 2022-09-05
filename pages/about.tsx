@@ -58,7 +58,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>フックの誤字修正（set部分） <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>console.logの削除、コメントアウト <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>項目数のズレ？を更新 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>

@@ -39,7 +39,7 @@ function PrevNextNav() {
             const resJson = await res.json();
             const data = resJson;
             const allTracksLength = data.trackInfo.allTrackLength;
-            console.log('data', data);
+            // console.log('data', data);
             setAllTracksLength(allTracksLength);
         } catch(error) {
             console.log('err', error);

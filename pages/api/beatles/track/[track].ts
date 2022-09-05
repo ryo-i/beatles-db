@@ -22,8 +22,8 @@ export default (req, res) => {
       query: { track }
   } = req;
 
-  console.log('req.query', req.query);
+  // console.log('req.query', req.query);
   const trackObjData = getTrackObjData(track);
-  console.log('trackObjData', trackObjData);
+  // console.log('trackObjData', trackObjData);
   res.status(200).json(trackObjData);
 }

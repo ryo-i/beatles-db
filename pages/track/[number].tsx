@@ -62,8 +62,8 @@ export async function getStaticProps({ params }) {
     const number = params.number;
     const res = await fetch(`https://beatles-db.vercel.app/api/beatles/track/${number}`);
     const trackInfo = await res.json();
-    console.log('number', number);
-    console.log('trackInfo', trackInfo);
+    // console.log('number', number);
+    // console.log('trackInfo', trackInfo);
     return { props: { trackInfo } };
 }
 

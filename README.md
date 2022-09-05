@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- フックの誤字修正（set部分） [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- console.logの削除、コメントアウト [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
