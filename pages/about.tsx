@@ -8,7 +8,7 @@ import Data from '../data/data.json';
 
 const headerTitle = Data.header.title;
 const pageTitle = 'このアプリについて';
-const pageText = '「ビートルズDB」はビートルズが結成から解散まで（1961〜1970年）にリリースした楽曲のデータベースです。同時期にリリースしたバックバンド活動、ソロ活動の作品も掲載しています。';
+const pageText = '「ビートルズDB」はビートルズが結成から解散までにリリースした楽曲（1961〜1970年）のデータベースです。同時期にリリースしたバックバンド活動、ソロ活動の作品も掲載しています。';
 const headTitle = pageTitle + ' | ' + headerTitle;
 
 
@@ -58,7 +58,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>console.logの削除、コメントアウト <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>descriptionを修正 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>項目数のズレ？を更新 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
