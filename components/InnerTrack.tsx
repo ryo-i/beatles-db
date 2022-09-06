@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext }  from 'react';
-import { Context } from '../pages/track/[number]';
+import { numberContext } from '../context/numberContext';
 import { trackContext } from '../context/trackContext';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -68,8 +68,8 @@ function InnerTrack() {
   // Hooks
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const {trackNumber, setTrackNumber} = useContext(Context);
-  const {trackName, setTrackName} = useContext(Context);
+  const {trackNumber, setTrackNumber} = useContext(numberContext);
+  const {trackName, setTrackName} = useContext(numberContext);
   const [trackData, setTrackData] = useState<{[key: string]: string}>({});
 
 

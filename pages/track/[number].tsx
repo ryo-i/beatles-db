@@ -1,5 +1,5 @@
-import React, { useState, createContext }  from 'react';
-import styled from 'styled-components';
+import React, { useState }  from 'react';
+import { numberContext } from '../../context/numberContext';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import InnerTrack from '../../components/InnerTrack';
@@ -7,12 +7,12 @@ import Footer from '../../components/Footer';
 import Data from '../../data/data.json';
 
 
-export const Context = createContext({} as {
+/* export const Context = createContext({} as {
     trackNumber: string
     setTrackNumber: React.Dispatch<React.SetStateAction<string>>
     trackName: string
     setTrackName: React.Dispatch<React.SetStateAction<string>>
-});
+}); */
 
 
 // Component
@@ -36,9 +36,9 @@ const Track = ({ trackInfo }) => {
         <Header />
         <main>
             <h1>楽曲情報</h1>
-            <Context.Provider value={{trackNumber, setTrackNumber, trackName, setTrackName}} >
+            <numberContext.Provider value={{trackNumber, setTrackNumber, trackName, setTrackName}} >
                 <InnerTrack />
-            </Context.Provider>
+            </numberContext.Provider>
         </main>
         <Footer />
         </>

@@ -1,13 +1,13 @@
 import React, { useState, useContext }  from 'react';
 import Link from 'next/link';
-import { Context } from '../pages/track/[number]';
+import { numberContext } from '../context/numberContext';
 import { trackContext } from '../context/trackContext';
 
 
 // Track Bread Crumb
 const TrackBreadcrumb = () => {
   // Hooks
-  const {trackName, setTrackName} = useContext(Context);
+  const {trackName, setTrackName} = useContext(numberContext);
   const {trackData, setTrackData} = useContext(trackContext);
 
   return (

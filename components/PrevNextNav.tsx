@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext }  from 'react';
-import { Context } from '../pages/track/[number]';
+import { numberContext } from '../context/numberContext';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -24,7 +24,7 @@ const Nav = styled.nav`
 // PrevNextNav
 function PrevNextNav() {
     // Hooks
-    const {trackNumber, setTrackNumber} = useContext(Context);
+    const {trackNumber, setTrackNumber} = useContext(numberContext);
     const [prevNumber, setPrevNumber] = useState(0);
     const [nextNumber, setNextNumber] = useState(0);
     const [allTracksLength, setAllTracksLength] = useState(0);

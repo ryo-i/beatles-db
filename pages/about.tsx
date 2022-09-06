@@ -58,7 +58,7 @@ function About() {
             <section>
                 <h2>進捗</h2>
                 <ul>
-                    <li>descriptionを修正 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
+                    <li>numberContextを外部化 <a href="https://github.com/ryo-i/beatles-db/issues/3" target="_blank">#3</a></li>
                     <li>項目数のズレ？を更新 <a href="https://github.com/ryo-i/beatles-db/issues/1" target="_blank">#1</a></li>
                 </ul>
             </section>
