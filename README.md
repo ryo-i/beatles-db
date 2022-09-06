@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- コメントアウトを削除 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- コンテキストにセミコロン追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
