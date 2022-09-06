@@ -7,14 +7,6 @@ import Footer from '../../components/Footer';
 import Data from '../../data/data.json';
 
 
-/* export const Context = createContext({} as {
-    trackNumber: string
-    setTrackNumber: React.Dispatch<React.SetStateAction<string>>
-    trackName: string
-    setTrackName: React.Dispatch<React.SetStateAction<string>>
-}); */
-
-
 // Component
 const Track = ({ trackInfo }) => {
     const [trackNumber, setTrackNumber] = useState(trackInfo.id);

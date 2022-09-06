@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- numberContextを外部化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- コメントアウトを削除 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
