@@ -26,7 +26,8 @@ const Section = styled.section`
     dt, dd {
       padding: 0.5em 0;
       margin: 0;
-      word-break: break-all;
+      overflow-wrap: break-word;
+	    word-wrap: break-word;
     }
     dt {
       width: 20%;
