@@ -121,7 +121,6 @@ function InnerIndex() {
   const {isCategory, setIsCategory} = useContext(categoryContext);
   const {categoryName, setCategoryName} = useContext(categoryContext);
   const {categoryPath, setCategoryPath} = useContext(categoryContext);
-  const [isQueryInfo, setIsQueryInfo] = useState(false);
   const [queryInfo, setQueryInfo] = useState('');
   const [hierarchy, setHierarchy] = useState('/');
   const [currentYear, setCurrentYear] = useState('');
@@ -138,10 +137,6 @@ function InnerIndex() {
   useEffect(() => {
     const thisQueryInfo = getQueryInfo(queryParam);
     setQueryInfo(thisQueryInfo);
-
-    if (thisQueryInfo !== '') {
-      setIsQueryInfo(true);
-    }
 
     if (category) {
       queryParam.category = category;
