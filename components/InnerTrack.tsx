@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import TrackBreadcrumb from './TrackBreadcrumb';
 import PrevNextNav from './PrevNextNav';
 import Nav from './style/Nav';
+import { getPeopleArray } from '../modules/trackInfo/getPeopleArray';
 import { getDividedArray } from '../modules/trackInfo/getDividedArray';
 
 
@@ -111,29 +112,9 @@ function InnerTrack() {
       return <p>読み込み中...</p>;
     }
 
-    const delimiterSlash = ' / ';
     const delimiterColon = ' : ';
-    const delimiterComma = ', ';
     const isMultipleColon = props.name.indexOf(delimiterColon) !== -1;
-
-    const peapleSplit = (resultArray) => {
-      let peapleSplitArray = resultArray[0].split(delimiterComma);
-      resultArray[0] = peapleSplitArray;
-      return resultArray;
-    };
-
-    let peopleArray = props.name.split(delimiterSlash).map((item) => {
-      if (isMultipleColon) {
-        let resultArray = item.split(delimiterColon);
-        const isMultipleComma = resultArray[0].indexOf(delimiterComma) !== -1;
-        if (isMultipleComma) {
-          peapleSplit(resultArray);
-        }
-        return resultArray;
-      } else {
-        return item;
-      }
-    });
+    const peopleArray = getPeopleArray(props, isMultipleColon)
 
     return (
       <>
@@ -214,7 +195,7 @@ function InnerTrack() {
       return <p>読み込み中...</p>;
     }
 
-    let sourceArray = getDividedArray(props.source);
+    const sourceArray = getDividedArray(props.source);
 
     return (
       <ul>

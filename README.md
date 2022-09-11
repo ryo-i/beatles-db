@@ -8,7 +8,7 @@
 
 ## 進捗（コミット）
 
-- 改行設定を変更 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- getPeopleArrayを外部モジュール化 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
