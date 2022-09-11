@@ -1,8 +1,10 @@
-// getPeopleArray
-const getPeopleArray = (props, isMultipleColon) => {
+// Get People Array
+const getPeopleArray = (props) => {
+    let resultArray = [];
     const delimiterSlash = ' / ';
     const delimiterColon = ' : ';
     const delimiterComma = ', ';
+    const isMultipleColon = props.name.indexOf(delimiterColon) !== -1;
 
     const peapleSplit = (resultArray) => {
       let peapleSplitArray = resultArray[0].split(delimiterComma);
@@ -10,7 +12,7 @@ const getPeopleArray = (props, isMultipleColon) => {
       return resultArray;
     };
 
-    let peopleArray = props.name.split(delimiterSlash).map((item) => {
+    resultArray = props.name.split(delimiterSlash).map((item) => {
       if (isMultipleColon) {
         let resultArray = item.split(delimiterColon);
         const isMultipleComma = resultArray[0].indexOf(delimiterComma) !== -1;
@@ -23,7 +25,7 @@ const getPeopleArray = (props, isMultipleColon) => {
       }
     });
 
-    return peopleArray;
+    return resultArray;
   };
 
   export { getPeopleArray };

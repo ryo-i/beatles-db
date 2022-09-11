@@ -114,7 +114,7 @@ function InnerTrack() {
 
     const delimiterColon = ' : ';
     const isMultipleColon = props.name.indexOf(delimiterColon) !== -1;
-    const peopleArray = getPeopleArray(props, isMultipleColon)
+    const peopleArray = getPeopleArray(props);
 
     return (
       <>

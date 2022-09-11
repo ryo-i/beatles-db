@@ -1,4 +1,4 @@
-// getDividedArray
+// Get Divided Array
 const getDividedArray = (text) => {
     let resultArray = [];
     const delimiterSlash = ' / ';
