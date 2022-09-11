@@ -3,7 +3,7 @@ import { categoryContext } from '../../context/categoryContext';
 import Header from '../../components/Header';
 import InnerIndex from '../../components/InnerIndex';
 import Footer from '../../components/Footer';
-import { getCaterogyInfo } from '../../modules/indexList/getCaterogyInfo';
+import { getCaterogyInfo } from '../../modules/trackList/getCaterogyInfo';
 
 
 const pageTitle = '楽曲一覧';
