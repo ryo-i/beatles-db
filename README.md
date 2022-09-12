@@ -8,9 +8,9 @@
 
 ## 進捗（コミット）
 
-- 不要になったフラグを削除 [#3](https://github.com/ryo-i/beatles-db/issues/3)
+- ブログのリンク追加 [#3](https://github.com/ryo-i/beatles-db/issues/3)
 - 項目数のズレ？を更新 [#1](https://github.com/ryo-i/beatles-db/issues/1)
 
 ## 詳細（ブログ）
 
-※参考：[作成中]
+※参考：[【React/Next.js】「ビートルズDB」を作った（ビートルズの楽曲を検索できるアプリ）](https://www.i-ryo.com/entry/2022/09/13/065345)
